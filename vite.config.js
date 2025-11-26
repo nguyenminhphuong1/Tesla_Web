@@ -9,6 +9,7 @@ export default defineConfig({
   assetsInclude: ['**/*.glb', '**/*.gltf', '**/*.png', '**/*.jpg', '**/*.jpeg', '**/*.mp4', '**/*.webm', '**/*.svg'],
   
   server: {
+    host: '0.0.0.0',
     port: 3000,
     open: true,
     allowedHosts: [
@@ -20,7 +21,7 @@ export default defineConfig({
   },
   
   build: {
-    outDir: 'dist',
+    outDir: 'build',
     sourcemap: true
   }
 }); 

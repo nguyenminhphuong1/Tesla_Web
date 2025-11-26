@@ -45,12 +45,8 @@ const Navigation: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Thêm useEffect để load theme từ localStorage
   useEffect(() => {
-    const savedTheme = localStorage.getItem('thadorobot-theme');
-    if (savedTheme) {
-      setIsDarkTheme(savedTheme === 'dark');
-    }
+    setIsDarkTheme(true);
   }, []);
 
   // Thêm useEffect để áp dụng theme vào body

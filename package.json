@@ -1,5 +1,6 @@
 {
   "name": "thadorobot-3d-website",
+  "homepage": "https://thadorobot.com",
   "version": "3.0.0",
   "description": "Website 3D tương tác hiện đại showcase sản phẩm robot công nghiệp Thadorobot với React Three Fiber",
   "type": "module",
@@ -41,7 +42,6 @@
   "bugs": {
     "url": "https://github.com/thadorobot/3d-website/issues"
   },
-  "homepage": "https://thadorobot.com",
   "dependencies": {
     "@react-three/drei": "^9.88.0",
     "@react-three/fiber": "^8.15.0",

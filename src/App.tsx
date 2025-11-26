@@ -87,8 +87,8 @@ function App() {
 
         <main>
           <Routes>
-            {/* Route cho Trang chủ */}
-            <Route path="/home" element={(
+            {/* Route cho Trang chủ - tên miền gốc */}
+            <Route path="/" element={(
               <div className="homepage">
                 <HeroSection />
                 <SolutionsHexagon />
@@ -170,10 +170,10 @@ function App() {
             {/* Route cho Liên hệ */}
             <Route path="/contactus" element={<ContactUs />} />
             
-            {/* Route mặc định - redirect về /home */}
+            {/* Route mặc định - redirect về / */}
             <Route
               path="*"
-              element={<Navigate to="/home" replace />}
+              element={<Navigate to="/" replace />}
             />
             
           </Routes>

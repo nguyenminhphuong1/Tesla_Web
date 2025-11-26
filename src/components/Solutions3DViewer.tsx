@@ -2,9 +2,11 @@ import React, { useState, useEffect, Suspense } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Environment, useGLTF, Float, Html } from '@react-three/drei';
-import { useAppStore } from '../store/appStore';
+// import { useAppStore } from '../store/appStore'; // No longer needed
 import { useTranslation } from 'react-i18next';
+import { useNavigate } from 'react-router-dom';
 import solutionsData from '../data/solutions.json';
+import VideoViewer from './VideoViewer';
 
 
 
@@ -62,7 +64,7 @@ const Solutions3DViewer: React.FC = () => {
   const { t: tSolutions } = useTranslation('solutions');
   const [isLoading, setIsLoading] = useState(true);
   const [activeTab, setActiveTab] = useState<'overview' | 'features' | 'technology' | 'benefits'>('overview');
-  const { setCurrentSection } = useAppStore();
+  const navigate = useNavigate();
   
   // Combine data from solutions.json with translations
   const solutions: Solution[] = (solutionsData as any[]).map((solution) => {
@@ -78,6 +80,16 @@ const Solutions3DViewer: React.FC = () => {
   });
 
   const [selectedSolutionIndex, setSelectedSolutionIndex] = useState<number>(0);
+
+  // Handle CTA button clicks
+  const handleContactClick = () => {
+    navigate('/contactus');
+  };
+
+  const handleDemoClick = () => {
+    // Navigate to contact page with demo parameter
+    navigate('/contactus?type=demo');
+  };
 
   useEffect(() => {
     const timer = setTimeout(() => setIsLoading(false), 500);
@@ -108,6 +120,9 @@ const Solutions3DViewer: React.FC = () => {
     <div className="solutions-3d-viewer">
       {/* Main Content */}
       <div className="solutions-main">
+        {/* Video Viewer Component */}
+        <VideoViewer />
+        
         <div className="solutions-grid">
           {/* Menu Panel */}
           <div className="solutions-menu-panel">
@@ -289,14 +304,14 @@ const Solutions3DViewer: React.FC = () => {
               <button
                 className="btn btn-primary"
                 style={{ background: 'var(--gradient-primary)' }}
-                onClick={() => setCurrentSection('contact')}
+                onClick={handleContactClick}
               >
                 <span>{t('solutions_3d.cta_consultation')}</span>
               </button>
-              <button className="btn btn-secondary">
+              <button className="btn btn-secondary" onClick={handleDemoClick}>
                 <span>{t('solutions_3d.cta_brochure')}</span>
               </button>
-              <button className="btn btn-outline">
+              <button className="btn btn-outline" onClick={handleDemoClick}>
                 <span>{t('solutions_3d.cta_view_demo')}</span>
               </button>
             </div>
@@ -355,10 +370,10 @@ const Solutions3DViewer: React.FC = () => {
           <h2>{t('solutions_3d.cta_title')}</h2>
           <p>{t('solutions_3d.cta_subtitle')}</p>
           <div className="cta-buttons">
-            <button className="btn btn-primary" onClick={() => setCurrentSection('contact')}>
+            <button className="btn btn-primary" onClick={handleContactClick}>
               <span>{t('solutions_3d.cta_contact')}</span>
             </button>
-            <button className="btn btn-secondary">
+            <button className="btn btn-secondary" onClick={handleDemoClick}>
               <span>{t('solutions_3d.cta_demo')}</span>
             </button>
           </div>

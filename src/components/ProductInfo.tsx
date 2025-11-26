@@ -103,7 +103,8 @@ export default function ProductInfo() {
       }
     }
 
-    return products.slice().sort((a, b) => a.name.localeCompare(b.name, 'vi', { numeric: true, sensitivity: 'base' }))
+    // return products.slice().sort((a, b) => a.name.localeCompare(b.name, 'vi', { numeric: true, sensitivity: 'base' }))
+    return products.slice()
   }
 
   const handleBrandChange = (brand: Brand | null) => {
@@ -214,15 +215,9 @@ export default function ProductInfo() {
               </div>
 
               <div className="products-grid">
-                {getCurrentProducts().map((product, index) => (
-                  <motion.div
-                    key={product.id}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.3, delay: index * 0.1 }}
-                  >
-                    <ProductCard product={product} onViewDetails={handleViewDetails} />
-                  </motion.div>
+                {getCurrentProducts().map((product) => (
+             
+                  <ProductCard product={product} onViewDetails={handleViewDetails} />
                 ))}
               </div>
             </motion.div>

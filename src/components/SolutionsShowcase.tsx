@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { motion, useInView, useAnimation } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Environment, Float } from '@react-three/drei';
 import { useGLTF } from '@react-three/drei';
@@ -38,53 +38,10 @@ const SolutionsShowcase: React.FC = () => {
     };
   });
 
-  // Animation refs và controls
+  // Animation refs
   const headerRef = useRef(null);
   const visualRef = useRef(null);
   const contentRef = useRef(null);
-  
-  const headerInView = useInView(headerRef, { once: true,amount:0.4 });
-  const visualInView = useInView(visualRef, { once: true,amount:0.8 });
-  const contentInView = useInView(contentRef, { once: true,amount:0.8 });
-  
-  const headerControls = useAnimation();
-  const visualControls = useAnimation();
-  const contentControls = useAnimation();
-
-  // Animation effects
-  useEffect(() => {
-    if (headerInView) {
-      headerControls.start("visible");
-    }
-  }, [headerInView]);
-
-  useEffect(() => {
-    if (visualInView) {
-      visualControls.start("visible");
-    }
-  }, [visualInView]);
-
-  useEffect(() => {
-    if (contentInView) {
-      contentControls.start("visible");
-    }
-  }, [contentInView]);
-
-  // Animation variants
-  const headerVariants = {
-    hidden: { opacity: 0, y: -50 },
-    visible: { opacity: 1, y: 0 }
-  };
-
-  const visualVariants = {
-    hidden: { opacity: 0, scale: 0.8 },
-    visible: { opacity: 1, scale: 1 }
-  };
-
-  const contentVariants = {
-    hidden: { opacity: 0, x: 100 },
-    visible: { opacity: 1, x: 0 }
-  };
 
   // Auto cycle through solutions
   useEffect(() => {
@@ -106,10 +63,18 @@ const SolutionsShowcase: React.FC = () => {
         <motion.div 
           ref={headerRef}
           className="section-header"
-          variants={headerVariants}
+          variants={{
+            hidden: { opacity: 0, scale: 0.8, y: -30 },
+            visible: { 
+              opacity: 1, 
+              scale: 1, 
+              y: 0,
+              transition: { duration: 0.6, ease: 'easeOut' }
+            }
+          }}
           initial="hidden"
-          animate={headerControls}
-          transition={{ duration: 0.8, ease: "easeOut" }}
+          whileInView="visible"
+          viewport={{ once: false, amount: 0.2 }}
         >
           <h2 className="section-title">
             {t('solutions_showcase.section_title')}
@@ -123,10 +88,18 @@ const SolutionsShowcase: React.FC = () => {
           <motion.div 
             ref={visualRef}
             className="solutions-visual"
-            variants={visualVariants}
+            variants={{
+              hidden: { opacity: 0, scale: 0.1, y: 50 },
+              visible: { 
+                opacity: 1, 
+                scale: 1, 
+                y: 0,
+                transition: { duration: 0.6, ease: 'easeOut' }
+              }
+            }}
             initial="hidden"
-            animate={visualControls}
-            transition={{ duration: 1, ease: "easeOut" }}
+            whileInView="visible"
+            viewport={{ once: false, amount: 0.2 }}
           >
             <div className="solutions-3d-container">
               <Suspense fallback={<LoadingFallback />}>
@@ -164,10 +137,18 @@ const SolutionsShowcase: React.FC = () => {
           <motion.div 
             ref={contentRef}
             className="solutions-content"
-            variants={contentVariants}
+            variants={{
+              hidden: { opacity: 0, scale: 0.1, y: 50 },
+              visible: { 
+                opacity: 1, 
+                scale: 1, 
+                y: 0,
+                transition: { duration: 0.6, ease: 'easeOut' }
+              }
+            }}
             initial="hidden"
-            animate={contentControls}
-            transition={{ duration: 0.8, ease: "easeOut" }}
+            whileInView="visible"
+            viewport={{ once: false, amount: 0.2 }}
           >
             <div className="solution-header">
               <div 

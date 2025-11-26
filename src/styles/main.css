@@ -86,7 +86,6 @@ main{
 }
 html {
   font-size: 13px;
-  overflow-x: visible;
 }
 
 @media (max-width: 1400px) {
@@ -103,7 +102,6 @@ body {
   background: var(--bg-primary);
   position: relative;
   z-index: 100;
-  overflow-x: hidden;
 }
 
 /* ===== ULTRA MODERN TECH BACKGROUND ===== */
@@ -498,19 +496,15 @@ body * {
 
 /* ===== RESPONSIVE DESIGN ===== */
 @media (max-width: 768px) {
-  .container {
-    padding: 0 var(--space-md);
+  html{
+    font-size: 10px;
   }
-  
   body::after {
     background-size: 40px 40px;
   }
 }
 
 @media (max-width: 480px) {
-  .container {
-    padding: 0 var(--space-sm);
-  }
   
   body::after {
     background-size: 30px 30px;

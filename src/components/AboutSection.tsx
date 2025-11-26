@@ -1,5 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+import { useNavigate } from 'react-router-dom';
 import { useAppStore } from '../store/appStore';
 import LogoCarousel from './LogoCarousel';
 import TimelineAnimation from './TimelineAnimation';  
@@ -7,6 +8,7 @@ import TimelineAnimation from './TimelineAnimation';
 const AboutSection: React.FC = () => {
   const { setCurrentSection } = useAppStore();
   const { t } = useTranslation();
+  const navigate = useNavigate();
 
   // Hàm tạo màu sắc cho timeline dựa trên năm
   const getTimelineColor = (year: string): string => {
@@ -164,14 +166,20 @@ const AboutSection: React.FC = () => {
             <div className="cta-buttons">
               <button 
                 className="btn btn-primary"
-                onClick={() => setCurrentSection('contact')}
+                onClick={() => {
+                  setCurrentSection('contact');
+                  navigate('/contactus');
+                }}
               >
                 <span>{t('about.cta.contact_btn')}</span>
               </button>
               
               <button 
                 className="btn btn-secondary"
-                onClick={() => setCurrentSection('solutions')}
+                onClick={() => {
+                  setCurrentSection('solutions');
+                  navigate('/solutions');
+                }}
               >
                 <span>{t('about.cta.solutions_btn')}</span>
               </button>

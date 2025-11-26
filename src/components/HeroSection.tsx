@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
-import {motion, useInView, useAnimation, animate} from 'framer-motion';
+import {motion, useInView, useAnimation, animate, useScroll, useTransform} from 'framer-motion';
 import productsData from '../data/products.json';
 import type { Brand, Product } from '../types/products';
 import { useTranslation } from 'react-i18next';
@@ -18,16 +18,32 @@ const HeroSection: React.FC = () => {
   const aboutImageRef = useRef(null);
   const robotCardsRef = useRef(null);
   const sectionHeaderRef = useRef(null);
+  const solutionSectionRef = useRef<HTMLElement | null>(null);
   
   const aboutImageInView = useInView(aboutImageRef, { once: true });
-  const robotCardsInView = useInView(robotCardsRef, { once: true,amount:0.8 });
   const sectionHeaderInView = useInView(sectionHeaderRef, { once: true, amount: 0.6 });
   
   const aboutImageControls = useAnimation();
-  const robotCardsControls = useAnimation();
   const sectionTitleControls = useAnimation();
   
   
+  // Scroll progress for solution section (trigger-based)
+  const { scrollYProgress } = useScroll({
+    target: solutionSectionRef,
+    offset: ["start end", "end start"]
+  });
+  const scaleSolutionProgress = useTransform(scrollYProgress, [0, 1], [0, 1]);
+  const [solutionActivated, setSolutionActivated] = useState(false);
+
+  useEffect(() => {
+    const unsubscribe = scaleSolutionProgress.on("change", (v) => {
+      if (!solutionActivated && v >= 0.2) {
+        setSolutionActivated(true);
+      }
+    });
+    return () => unsubscribe();
+  }, [solutionActivated, scaleSolutionProgress]);
+
   // Animation cho about image và counters
   useEffect(() => {
     if (aboutImageInView) {
@@ -61,12 +77,6 @@ const HeroSection: React.FC = () => {
     } 
   }, [aboutImageInView]);
 
-  // Animation cho robot cards
-  useEffect(() => {
-    if (robotCardsInView) {
-      robotCardsControls.start("visible");
-    } 
-  }, [robotCardsInView]);
 
   // Animation cho section title
   useEffect(() => {
@@ -154,10 +164,22 @@ const HeroSection: React.FC = () => {
         {/* Main Hero Content */}
         <div className="hero-section-content">
           <div className="hero-section-video">
+          {/* Hình nền cho mobile (light/dark) */}
+          <img
+            className="hero-image hero-image--light"
+            src={'/assets/home_background_light.png'}
+            alt="Background Light"
+          />
+          <img
+            className="hero-image hero-image--dark"
+            src={'/assets/home_background_dark.png'}
+            alt="Background Dark"
+          />
+          
           {/* Video nền (light) */}
           <video 
             className="hero-video hero-video--light" 
-            src={'/assets/0001-0500-light.mkv'} 
+            src={'/assets/0001-0500-light.mp4'} 
             autoPlay 
             muted 
             loop 
@@ -169,7 +191,7 @@ const HeroSection: React.FC = () => {
           {/* Video overlay (dark) */}
           <video 
             className="hero-video hero-video--dark" 
-            src={'/assets/0001-0500-dark.mkv'} 
+            src={'/assets/0001-0500-dark.mp4'} 
             autoPlay 
             muted 
             loop 
@@ -199,53 +221,77 @@ const HeroSection: React.FC = () => {
               </div>
           </div>
         </div>
-        <section className='section-stack-cards'>
-          <div ref={sectionHeaderRef} className="section-header" style={{position: 'sticky',top: '20px',margin: '0 0',borderRadius: 'var(--radius-xl)',padding: 'var(--space-2xl)',background: 'var(--bg-glass-sticky)',backdropFilter: 'blur(20px)'}}>
-            <motion.h2 
-              className="section-title"
-              variants={sectionTitleVariants}
+        <div ref={sectionHeaderRef} className="section-header" style={{top: '20px',margin: '0 0',borderRadius: 'var(--radius-xl)',padding: 'var(--space-2xl)',background: 'var(--bg-glass-sticky)',backdropFilter: 'blur(20px)'}}>
+          <motion.h2 
+            className="section-title"
+            variants={sectionTitleVariants}
+            initial="hidden"
+            animate={sectionTitleControls}
+          >
+            {t('hero.about_title').split(' ')[0]} <span style={{color: 'var(--primary)'}} className="text-company">{t('hero.about_title').split(' ').slice(1).join(' ')}</span>
+          </motion.h2>
+          <div className="hero-about-layout">
+            <motion.div 
+              ref={aboutImageRef}
+              className="hero-about-image"
+              variants={aboutImageVariants}
               initial="hidden"
-              animate={sectionTitleControls}
+              animate={aboutImageControls}
+              transition={{ duration: 1, delay: 0.3}}
             >
-              {t('hero.about_title').split(' ')[0]} <span style={{color: 'var(--primary)'}} className="text-company">{t('hero.about_title').split(' ').slice(1).join(' ')}</span>
-            </motion.h2>
-            <div className="hero-about-layout">
-              <motion.div 
-                ref={aboutImageRef}
-                className="hero-about-image"
-                variants={aboutImageVariants}
-                initial="hidden"
-                animate={aboutImageControls}
-                transition={{ duration: 1, delay: 0.3}}
-              >
-                <img src="/assets/Office_aboutus.png" alt="Logo ThaDo Robot" />
-              </motion.div>
-              
-              <div className="hero-about-content">
-                <p className="section-subtitle">
-                {t('hero.about_desc')}
-                </p>
-                <div className="hero-stats">
-                    <div className="hero-stat">
-                        <div className="hero-stat-number">{projectsCount}+</div>
-                      <div className="hero-stat-label">{t('hero.stats_projects')}</div>
-                    </div>
-                    <div className="hero-stat">
-                      <div className="hero-stat-number">{yearsCount}+</div>
-                      <div className="hero-stat-label">{t('hero.stats_years')}</div>
-                    </div>
-                    <div className="hero-stat">
-                      <div className="hero-stat-number">{satisfactionCount}%</div>
-                      <div className="hero-stat-label">{t('hero.stats_satisfaction')}</div>
-                    </div>
+              <img src="/assets/Office_aboutus.png" alt="Logo ThaDo Robot" />
+            </motion.div>
+            
+            <div className="hero-about-content">
+               <p className="section-subtitle">
+               {t('hero.about_desc')}
+               </p>
+               
+                 {/* Company Criteria */}
+                 <div className="hero-criteria">
+                   <div className="criteria-item">
+                     <div className="criteria-icon criteria-icon--quality"></div>
+                     <div className="criteria-text">
+                       <h4>Chất lượng</h4>
+                       <p>Cam kết sản phẩm đạt tiêu chuẩn cao nhất</p>
+                     </div>
+                   </div>
+                   <div className="criteria-item">
+                     <div className="criteria-icon criteria-icon--reputation"></div>
+                     <div className="criteria-text">
+                       <h4>Uy tín</h4>
+                       <p>Xây dựng niềm tin qua nhiều năm kinh nghiệm</p>
+                     </div>
+                   </div>
+                   <div className="criteria-item">
+                     <div className="criteria-icon criteria-icon--professional"></div>
+                     <div className="criteria-text">
+                       <h4>Chuyên nghiệp</h4>
+                       <p>Đội ngũ kỹ thuật chuyên môn cao</p>
+                     </div>
+                   </div>
+                 </div>
+               
+               
+               <div className="hero-stats">
+                  <div className="hero-stat">
+                      <div className="hero-stat-number">{projectsCount}+</div>
+                    <div className="hero-stat-label">{t('hero.stats_projects')}</div>
                   </div>
-              </div>
+                  <div className="hero-stat">
+                    <div className="hero-stat-number">{yearsCount}+</div>
+                    <div className="hero-stat-label">{t('hero.stats_years')}</div>
+                  </div>
+                  <div className="hero-stat">
+                    <div className="hero-stat-number">{satisfactionCount}%</div>
+                    <div className="hero-stat-label">{t('hero.stats_satisfaction')}</div>
+                  </div>
+                </div>
             </div>
           </div>
-        </section>
+        </div>
 
         {/* Robot Showcase */}
-        <section className='section-stack-cards'>
           <div className="hero-robots-showcase">
             <h2 className="hero-robots-showcase-title"> {t('hero.robots_title')}</h2>
             <div ref={robotCardsRef} className="robots-grid">
@@ -256,12 +302,17 @@ const HeroSection: React.FC = () => {
                   onClick={() => navigate(`/product/${product.id}`)}
                   style={{ cursor: 'pointer' }}
                   variants={{
-                    hidden: { opacity: 0.2, x: 600 - (index * 100) },
-                    visible: { opacity: 1, x: 0 }
+                    hidden: { opacity: 0, scale: 0.1, y: 50 },
+                    visible: { 
+                      opacity: 1, 
+                      scale: 1, 
+                      y: 0,
+                      transition: { duration: 0.6, ease: 'easeOut', delay: index * 0.1 }
+                    }
                   }}
                   initial="hidden"
-                  animate={robotCardsControls}
-                  transition={{ duration: 1.2, delay: index * 0.1 }}
+                  whileInView="visible"
+                  viewport={{ once: false, amount: 0.2 }}
                 >
                   <div className="robot-image">
                     <img src={product.image} alt={product.name} />
@@ -274,10 +325,9 @@ const HeroSection: React.FC = () => {
               ))}
             </div>
           </div>
-        </section>
 
         {/* Solution Section */}
-        <section className='section-stack-cards solution-stackcards'>
+        <section ref={solutionSectionRef} className='section-stack-cards solution-stackcards'>
           <div className="hero-solution">
             <h2 className="hero-solution-title"> {t('hero.solutions_title')}</h2>
             {/* Features Section */}
@@ -286,16 +336,19 @@ const HeroSection: React.FC = () => {
                 className="features-container"
               >
                 {features.map((feature, index) => (
-                  <div 
+                  <motion.div 
                     key={index}
                     className={`feature-card`}
+                    initial={{ scale: 0.35 }}
+                    animate={{ scale: solutionActivated ? 1 : 0.35 }}
+                    transition={{ type: 'spring', stiffness: 200, damping: 25, delay: index * 0.05 }}
                   >
                     <div className="feature-content"onClick={() => navigate('/solutions')}>
                       <h3>{feature.title}</h3>
                       <p>{feature.description}</p>
                     </div>
                     <div className="feature-arrow">→</div>
-                  </div>
+                  </motion.div>
                 ))}
               </div>
             </div>
@@ -304,33 +357,53 @@ const HeroSection: React.FC = () => {
               <div 
                 className="tech-highlights-grid"
               >
-                <div className="tech-highlight">
+                <motion.div 
+                  className="tech-highlight"
+                  initial={{ scale: 0.5 }}
+                  animate={{ scale: solutionActivated ? 1 : 0.5 }}
+                  transition={{ type: 'spring', stiffness: 200, damping: 25, delay: 0.1 }}
+                >
                   <div className="tech-content">
                     <h4>{t('hero.tech_battery_title')}</h4>
                     <p>{t('hero.tech_battery_desc')}</p>
                   </div>
-                </div>
+                </motion.div>
                 
-                <div className="tech-highlight">
+                <motion.div 
+                  className="tech-highlight"
+                  initial={{ scale: 0.5 }}
+                  animate={{ scale: solutionActivated ? 1 : 0.5 }}
+                  transition={{ type: 'spring', stiffness: 200, damping: 25, delay: 0.15 }}
+                >
                   <div className="tech-content">
                     <h4>{t('hero.tech_5g_title')}</h4>
                     <p>{t('hero.tech_5g_desc')}</p>
                   </div>
-                </div>
+                </motion.div>
                 
-                <div className="tech-highlight">
+                <motion.div 
+                  className="tech-highlight"
+                  initial={{ scale: 0.5 }}
+                  animate={{ scale: solutionActivated ? 1 : 0.5 }}
+                  transition={{ type: 'spring', stiffness: 200, damping: 25, delay: 0.2 }}
+                >
                   <div className="tech-content">
                     <h4>{t('hero.tech_ai_title')}</h4>
                     <p>{t('hero.tech_ai_desc')}</p>
                   </div>
-                </div>
+                </motion.div>
                 
-                <div className="tech-highlight">
+                <motion.div 
+                  className="tech-highlight"
+                  initial={{ scale: 0.5 }}
+                  animate={{ scale: solutionActivated ? 1 : 0.5 }}
+                  transition={{ type: 'spring', stiffness: 200, damping: 25, delay: 0.25 }}
+                >
                   <div className="tech-content">
                     <h4>{t('hero.tech_safety_title')}</h4>
                     <p>{t('hero.tech_safety_desc')}</p>
                   </div>
-                </div>
+                </motion.div>
               </div>
             </div>
           </div>
