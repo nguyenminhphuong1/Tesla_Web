@@ -1,0 +1,20 @@
+[
+  {
+    "id": "agv",
+    "color": "#00d4ff",
+    "gradient": "linear-gradient(135deg, #00d4ff, #0099cc)",
+    "modelPath": "/assets/models/industrial_-_3d_agv__trolley_-_omrom.glb"
+  },
+  {
+    "id": "camera",
+    "color": "#ff6b35",
+    "gradient": "linear-gradient(135deg, #ff6b35, #cc5500)",
+    "modelPath": "/assets/models/logistic_robot_test__2.glb"
+  },
+  {
+    "id": "warehouse",
+    "color": "#10b981",
+    "gradient": "linear-gradient(135deg, #10b981, #059669)",
+    "modelPath": "/assets/models/assembly_solar.glb"
+  }
+]

@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import App from './App';
+import './i18n';
 import './styles/main.css';
 import './styles/components.css';
 
@@ -33,7 +34,7 @@ try {
       font-family: Arial, sans-serif;
       padding: 2rem;
     ">
-      <h1 style="color: #00d4ff; font-size: 3rem; margin-bottom: 1rem;">🤖 Thadorobot</h1>
+      <h1 style="color: #00d4ff; font-size: 3rem; margin-bottom: 1rem;"> Thadorobot</h1>
       <p style="font-size: 1.2rem; margin-bottom: 2rem;">Website 3D tương tác</p>
       <div style="
         background: rgba(255,255,255,0.1); 

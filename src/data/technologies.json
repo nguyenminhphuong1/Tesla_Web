@@ -1,0 +1,20 @@
+[
+  {
+    "id": "ai-ml",
+    "modelKey": "logistic_robot_test__2",
+    "color": "#00d4ff",
+    "icon": ""
+  },
+  {
+    "id": "iot",
+    "modelKey": "simulation_laser_cutting_robot_systems",
+    "color": "#ff6b35",
+    "icon": ""
+  },
+  {
+    "id": "robotics",
+    "modelKey": "industrial_agv_trolley_omrom",
+    "color": "#8b5cf6",
+    "icon": ""
+  }
+]

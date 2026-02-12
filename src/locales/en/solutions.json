@@ -1,0 +1,134 @@
+{
+  "agv": {
+    "title": "Automated Guided Vehicle",
+    "titleEn": "Automated Guided Vehicle",
+    "description": "Intelligent automated guided vehicle system for logistics and manufacturing",
+    "features": [
+      "SLAM Laser Navigation",
+      "Load capacity 500-2000kg",
+      "WMS/ERP Integration",
+      "Multi-layer Security",
+      "Real-time Reporting",
+      "Predictive Maintenance"
+    ],
+    "applications": [
+      "Automated Warehouse",
+      "Flexible Manufacturing",
+      "Hospital",
+      "Distribution Center",
+      "Smart Factory",
+      "Logistics"
+    ],
+    "benefits": [
+      "Reduce 60% operating costs",
+      "Increase 80% efficiency",
+      "100% Safety",
+      "24/7 Flexibility"
+    ],
+    "technology": [
+      "SLAM Navigation",
+      "LiDAR Sensing",
+      "AI Path Planning",
+      "5G Connectivity",
+      "Edge Computing",
+      "IoT Integration"
+    ],
+    "stats": [
+      { "labelKey": "load_capacity", "value": "2000kg" },
+      { "labelKey": "speed", "value": "2m/s" },
+      { "labelKey": "battery", "value": "8h" },
+      { "labelKey": "accuracy", "value": "±5mm" }
+    ]
+  },
+  "camera": {
+    "title": "AI Recognition Camera",
+    "titleEn": "Autonomous Mobile Robot",
+    "description": "Autonomous mobile robot with advanced AI for complex environments",
+    "features": [
+      "Face Recognition",
+      "Object Detection",
+      "Motion Tracking",
+      "License Plate Recognition",
+      "Quality Inspection",
+      "Security & Safety Monitoring"
+    ],
+    "applications": [
+      "E-commerce & Retail",
+      "Manufacturing",
+      "Logistics & Supply Chain",
+      "Food & Beverage",
+      "Healthcare & Pharmaceuticals",
+      "Monitoring & Recognition"
+    ],
+    "benefits": [
+      "Self-learning and adaptation",
+      "Natural interaction",
+      "High security",
+      "Easy expansion"
+    ],
+    "technology": [
+      "Deep Learning",
+      "Computer Vision",
+      "Natural Language Processing",
+      "Cloud AI",
+      "5G Network",
+      "Blockchain"
+    ],
+    "stats": [
+      { "labelKey": "load_capacity", "value": "1500kg" },
+      { "labelKey": "speed", "value": "1.5m/s" },
+      { "labelKey": "battery", "value": "10h" },
+      { "labelKey": "accuracy", "value": "±3mm" }
+    ]
+  },
+  "warehouse": {
+    "title": "Smart Warehouse",
+    "titleEn": "Smart Warehouse",
+    "description": "Fully automated warehouse system with robots and AI",
+    "features": [
+      "Real-time Inventory Management",
+      "Automated Material Handling",
+      "Space Optimization",
+      "Order Fulfillment Automation",
+      "Data Analytics & Forecasting",
+      "Smart Monitoring & Security"
+    ],
+    "applications": [
+      "E-commerce",
+      "Manufacturing",
+      "Pharmaceuticals",
+      "Food & Beverage",
+      "Automotive",
+      "Electronics"
+    ],
+    "benefits": [
+      "Optimize space",
+      "Reduce errors",
+      "Increase speed",
+      "Save costs"
+    ],
+    "technology": [
+      "AS/RS Technology",
+      "WMS Integration",
+      "IoT Sensors",
+      "AI Analytics",
+      "Cloud Platform",
+      "Digital Twin"
+    ],
+    "stats": [
+      { "labelKey": "capacity", "value": "50,000m³" },
+      { "labelKey": "throughput", "value": "10,000/h" },
+      { "labelKey": "accuracy", "value": "99.9%" },
+      { "labelKey": "savings", "value": "70%" }
+    ]
+  },
+  "stats": {
+    "load_capacity": "Load Capacity",
+    "speed": "Speed",
+    "battery": "Battery",
+    "accuracy": "Accuracy",
+    "capacity": "Capacity",
+    "throughput": "Throughput",
+    "savings": "Savings"
+  }
+}

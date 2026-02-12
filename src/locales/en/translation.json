@@ -1,0 +1,365 @@
+{
+  
+  "nav": {
+  "home": "Home",
+  "products": "Products",
+  "solutions": "Solutions",
+  "technology": "Technology",
+    "about": "About us",
+  "blog": "Blog",
+  "contact": "Contact",
+    "find_product": "Find Product Category",
+    "toggle_language": "Switch language",
+    "toggle_theme_light": "Switch to light mode",
+    "toggle_theme_dark": "Switch to dark mode",
+    "search": "Search"
+  },
+  "breadcrumb": {
+    "home": "Home",
+    "blog": "Blog"
+  },
+  "blog_page": {
+    "not_found": "Post not found",
+    "author": "Author",
+    "back_to_list": "Back to list",
+    "list_title": "All Posts",
+    "list_subtitle": "Discover articles about programming and technology"
+  },
+  "hero": {
+    "badge": "Smart Robot Solutions",
+    "title_line1": "The future of",
+    "title_highlight": "Automation",
+    "title_line2": "starts here",
+    "btn_products": "Explore products",
+    "btn_solutions": "Solutions",
+    "about_title": "About Thadorobot",
+    "about_desc": "The company has a team of engineers with many years of experience in the fields of electrical software, electronics, and automation. We provide automation solutions, industrial equipment, and custom manufacturing to meet requirements with the goal of improving productivity and quality at reasonable costs, while committing to on-time delivery.",
+    "stats_projects": "Successful projects",
+    "stats_years": "Years of experience",
+    "stats_satisfaction": "Customer satisfaction",
+    "robots_title": "Our Products",
+    "solutions_title": "Our Solutions",
+    "feature_1_title": "Autonomous AGV Robot",
+    "feature_1_desc": "Autonomous mobile robots with AI and advanced sensors",
+    "feature_2_title": "AI Vision Camera",
+    "feature_2_desc": "High-accuracy object detection and recognition",
+    "feature_3_title": "Smart Warehouse",
+    "feature_3_desc": "Automated warehouse operations with safety and efficiency",
+    "tech_battery_title": "Li-ion Battery",
+    "tech_battery_desc": "Up to 8 hours of operation",
+    "tech_5g_title": "5G Connectivity",
+    "tech_5g_desc": "Ultra-fast and stable connection",
+    "tech_ai_title": "AI Navigation",
+    "tech_ai_desc": "Accurate positioning with AI",
+    "tech_safety_title": "Safety System",
+    "tech_safety_desc": "Multi-layer safety system"
+  },
+  "solutions_showcase": {
+    "section_title": "Technology Solutions",
+    "section_subtitle": "Discover advanced solutions to help your business grow sustainably",
+    "btn_explore": "Explore details",
+    "btn_contact": "Contact us",
+    "features_title": "Highlights",
+    "solution_badge": "Solution"
+  },
+  "solutions_hex": {
+    "title_prefix": "Solutions",
+    "subtitle": "Explore intelligent systems and services that help your business grow sustainably",
+    "features_title": "Key features",
+    "btn_explore": "Explore details",
+    "btn_contact": "Contact us"
+  },
+  "solutions_3d": {
+    "hero_badge": "Leading Technology Solutions",
+    "hero_title": "The future of",
+    "hero_highlight": "Automation",
+    "hero_title_end": "starts here",
+    "hero_subtitle": "Discover advanced robotic automation solutions designed specifically for Industry 4.0",
+    "hero_stat_projects": "Successful projects",
+    "hero_stat_experience": "Years of experience",
+    "hero_stat_satisfaction": "Customer satisfaction",
+    "menu_title": "Our Solutions",
+    "menu_subtitle": "Select a solution to view details",
+    "tab_overview": "Overview",
+    "tab_features": "Features",
+    "tab_technology": "Technology",
+    "tab_benefits": "Benefits",
+    "overview_applications": "Main Applications",
+    "model_title": "3D Model",
+    "model_subtitle": "Interact with the 3D model to explore technical details",
+    "model_loading": "Loading 3D model...",
+    "model_controls": {
+      "rotate": "Rotate",
+      "zoom": "Zoom",
+      "vr": "VR"
+    },
+    "cta_title": "Ready to start your project?",
+    "cta_subtitle": "Contact us for free consultation and detailed quote",
+    "cta_contact": "Contact now",
+    "cta_demo": "Request demo",
+    "cta_consultation": "Implementation consultation",
+    "cta_brochure": "Download brochure",
+    "cta_view_demo": "View demo",
+    "chat_text": "Chat with us"
+  },
+  "services": {
+    "section_title": "Technology Services",
+    "section_subtitle": "Providing advanced technology services to drive digital transformation",
+    "ai_ml": {
+      "title": "AI & Machine Learning",
+      "description": "Developing AI and ML solutions for intelligent automation.",
+      "features": [
+        "Computer Vision",
+        "Natural Language Processing",
+        "Predictive Analytics", 
+        "Deep Learning Models"
+      ]
+    },
+    "iot": {
+      "title": "Internet of Things",
+      "description": "Connect and monitor smart devices in IoT ecosystem.",
+      "features": [
+        "Sensor Networks",
+        "Real-time Monitoring",
+        "Data Analytics",
+        "Cloud Integration"
+      ]
+    },
+    "robotics": {
+      "title": "Industrial Robotics",
+      "description": "Industrial robot solutions for manufacturing automation.",
+      "features": [
+        "Collaborative Robots",
+        "Automated Assembly",
+        "Quality Inspection",
+        "Material Handling"
+      ]
+    },
+    "automation": {
+      "title": "Process Automation",
+      "description": "Automate production and business processes.",
+      "features": [
+        "Workflow Automation",
+        "Process Optimization",
+        "Performance Monitoring",
+        "Error Prevention"
+      ]
+    },
+    "analytics": {
+      "title": "Data Analytics",
+      "description": "Data analysis to optimize performance and decision making.",
+      "features": [
+        "Big Data Processing",
+        "Business Intelligence",
+        "Performance Metrics",
+        "Predictive Modeling"
+      ]
+    },
+    "maintenance": {
+      "title": "Predictive Maintenance",
+      "description": "Predictive maintenance to minimize downtime.",
+      "features": [
+        "Condition Monitoring",
+        "Failure Prediction",
+        "Maintenance Scheduling",
+        "Cost Optimization"
+      ]
+    }
+  },
+  "home_sections": {
+    "case_studies_title": "Featured Projects",
+    "case_studies_subtitle": "Successful projects we have delivered",
+    "services_support_title": "Support Services",
+    "services_support_subtitle": "Experienced experts ready to support 24/7",
+    "cta_title": "Ready for Digital Transformation?",
+    "cta_desc": "Contact us today for a free consultation and start your transformation journey with THADOROBOT",
+    "cta_btn_contact": "Contact Now",
+    "cta_btn_demo": "Request Demo",
+    "cta_btn_docs": "Technical Docs",
+    "services_cards": {
+      "strategy_title": "Strategic Consulting",
+      "strategy_desc": "Assessment and optimal solution proposals for your business",
+      "deployment_title": "System Deployment",
+      "deployment_desc": "Install and configure robotic automation systems",
+      "training_title": "Staff Training",
+      "training_desc": "Train operation and maintenance teams",
+      "maintenance_title": "Scheduled Maintenance",
+      "maintenance_desc": "Inspect and maintain systems on schedule",
+      "support_title": "24/7 Support",
+      "support_desc": "Technical team ready to support anytime, anywhere",
+      "optimization_title": "Continuous Optimization",
+      "optimization_desc": "Improve and upgrade systems in real-time"
+    }
+  },
+  "technology_page": {
+    "section_title": "Advanced Technology",
+    "section_subtitle": "Explore modern technologies in automation and robotics",
+    "btn_solutions": "View solutions",
+    "btn_products": "Products",
+    "stat_accuracy": "Accuracy",
+    "stat_uptime": "Uptime",
+    "stat_cost": "Cost saving",
+    "stat_productivity": "Productivity increase up to",
+    "features_title": "Key Features",
+    "applications_title": "Applications"
+  },
+  "product": {
+    "view_details": "View details",
+    "all_brands": "All brands",
+    "all_categories": "All categories",
+    "categories": "Categories",
+    "products": "products",
+    "no_products": "No products",
+    "no_products_in_category": "No products in {{brand}} - {{category}}",
+    "no_products_found": "No products found with current filter.",
+    "not_found": "Product not found",
+    "back_to_list": "Back to product list",
+    "description": "Product description",
+    "list_title": "Our Products",
+    "list_subtitle": "We offer a wide range of products to meet your needs",
+    "no_products_title": "No products available",
+    "no_products_message": "This category has no products yet. Please select another category."
+  },
+  "about": {
+    "section_title": "About",
+    "section_subtitle": "is a leading enterprise in Vietnam, specializing in providing advanced technology solutions in the field of Robotics and Smart Factories. We operate strongly in key areas such as Automatic Packaging Systems (APS), Factory Automation Solutions (FAS), and Smart Warehouse Solutions (SWS)",
+    "stats": {
+      "experience": "Years of experience",
+      "projects": "Successful projects",
+      "clients": "Trusted clients",
+      "satisfaction": "Satisfaction rate"
+    },
+    "values": {
+      "mission": {
+        "title": "Mission",
+        "description": "Create and develop technology to bring a better, prosperous and happier future for society."
+      },
+      "vision": {
+        "title": "Vision",
+        "description": "Become the leading company in Southeast Asia in the field of Robotics and Smart Factories."
+      },
+      "core": {
+        "title": "Core Values",
+        "description": "Innovation, sustainable development to serve people and society."
+      }
+    },
+    "timeline_title": "Development Journey",
+    "timeline": {
+      "2020": {
+        "title": "Company Founded",
+        "description": "Thadorobot was founded with the mission to bring robot technology to Vietnam"
+      },
+      "2021": {
+        "title": "First Project",
+        "description": "Successfully deployed the first AGV system for manufacturing plant"
+      },
+      "2022": {
+        "title": "Market Expansion",
+        "description": "Expanded operations to provinces and began exporting"
+      },
+      "2023": {
+        "title": "AI Technology",
+        "description": "Integrated AI and Machine Learning into robot products"
+      },
+      "2024": {
+        "title": "Industry 4.0",
+        "description": "Became a strategic partner in the Industrial Revolution 4.0"
+      },
+      "2025": {
+        "title": "Future",
+        "description": "Continue to innovate and lead in the field of automation"
+      }
+    },
+    "team_title": "Leadership Team",
+    "team": {
+      "ceo": {
+        "position": "CEO & Founder",
+        "description": "Robot expert with 20+ years of experience in automation field"
+      },
+      "cco": {
+        "position": "CCO",
+        "description": "Expert in business"
+      },
+      "rd": {
+        "position": "Head of R&D",
+        "description": "Expert in research and development of industrial robot products"
+      }
+    },
+    "cta": {
+      "title": "Ready to collaborate?",
+      "description": "Contact us for the best consultation and support",
+      "contact_btn": "Contact now",
+      "solutions_btn": "View solutions"
+    }
+  },
+  "timeline": {
+    "default": {
+      "2018": {
+        "title": "The Beginning",
+        "description": "Founded with a vision to transform digital experiences and create meaningful connections."
+      },
+      "2019": {
+        "title": "Growth & Innovation",
+        "description": "Expanded our team and launched groundbreaking products that redefined industry standards."
+      },
+      "2020": {
+        "title": "Global Expansion",
+        "description": "Despite challenges, we grew internationally and adapted to serve clients worldwide."
+      },
+      "2021": {
+        "title": "Digital Transformation",
+        "description": "Led the digital revolution with cutting-edge solutions and innovative approaches."
+      },
+      "2022": {
+        "title": "Industry Leadership",
+        "description": "Became recognized industry leaders, setting new benchmarks for excellence."
+      },
+      "2023": {
+        "title": "Future Vision",
+        "description": "Continuing to innovate and shape the future of technology and human connection."
+      }
+    }
+  },
+  "contact": {
+    "section_title": "Contact",
+    "section_subtitle": "Contact us for the best consultation and support",
+    "phone": {
+      "title": "Phone",
+      "number": "+84 986 249 212"
+    },
+    "email": {
+      "title": "Email",
+      "address": "info@thadosoft.vn"
+    },
+    "address": {
+      "title": "Address",
+      "line1": "C25-C26, 28/5 Dương Khuê, P. Từ Liêm",
+      "line2": "TP. Hà Nội, Việt Nam"
+    },
+    "hours": {
+      "title": "Working Hours",
+      "weekdays": "Monday - Friday: 8:00 - 17:00",
+      "saturday": "Saturday: 8:00 - 12:00"
+    },
+    "form": {
+      "title": "Send us a message",
+      "name_placeholder": "Full name",
+      "email_placeholder": "Email",
+      "phone_placeholder": "Phone number",
+      "message_placeholder": "Message content",
+      "submit_btn": "Send message"
+    },
+    "stats": {
+      "support": "Customer support",
+      "projects": "Successful projects",
+      "clients": "Trusted clients"
+    }
+  }
+  ,
+  "logo_carousel": {
+    "partners": "Partners",
+    "certificates": "Certificates",
+    "customers": "Customers"
+  }
+}
+

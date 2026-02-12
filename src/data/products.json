@@ -1,0 +1,2215 @@
+{
+  "brands": [
+    {
+      "id": "thadorobot",
+      "name": "ThadoRobot",
+      "categories": [
+        {
+          "id": "collaborative-robotics",
+          "name": "Collaborative Robotics",
+          "products": [
+            {
+              "id": "thadorobot-tds20",
+              "name": "TDS20",
+              "image": "/assets/thado_robot/TDS20.jpg",
+              "description": {
+                "line1": "Payload: 20kg",
+                "line2": "Reach: 1854mm"
+              },
+              "detail": "TDS20 cobot is a platform product with powerful, scalable and sustainable capabilities, empowering integrators and end-users to solve pain points. Leveraging THADOROBOT's intelligence and flexibility advantages and self-developed core components, TDS20 breaks through the limits of intelligent and flexible applications across scenarios and deeply integrates with scenario applications.",
+              "mainCategories": [
+                {
+                  "id": "specification",
+                  "name": "Specification",
+                  "specs": [
+                    { "name": "Payload", "value": "20", "unit": "kg" },
+                    { "name": "Reach", "value": "1854", "unit": "mm" },
+                    { "name": "Degrees of freedom", "value": "6 rotating joints" },
+                    { "name": "HMI", "value": "10.1 inch teach pendant or mobile terminal Web APP" }
+                  ]
+                },
+                {
+                  "id": "movement",
+                  "name": "Movement",
+                  "specs": [
+                    { "name": "Repeatability", "value": "±0.1", "unit": "mm" },
+                    { "name": "Pose repeatability per ISO 9283", "value": "±0.03", "unit": "mm" },
+                    { "name": "Typical TCP speed", "value": "2", "unit": "m/s" },
+                    { "name": "Axis 1 Working range", "value": "±175", "unit": "°" },
+                    { "name": "Axis 1 Max speed", "value": "±120", "unit": "°/s" },
+                    { "name": "Axis 2 Working range", "value": "+85/−265", "unit": "°" },
+                    { "name": "Axis 2 Max speed", "value": "±120", "unit": "°/s" },
+                    { "name": "Axis 3 Working range", "value": "±160", "unit": "°" },
+                    { "name": "Axis 3 Max speed", "value": "±120", "unit": "°/s" },
+                    { "name": "Axis 4 Working range", "value": "+85/−265", "unit": "°" },
+                    { "name": "Axis 4 Max speed", "value": "±180", "unit": "°/s" },
+                    { "name": "Axis 5 Working range", "value": "±175", "unit": "°" },
+                    { "name": "Axis 5 Max speed", "value": "±180", "unit": "°/s" },
+                    { "name": "Axis 6 Working range", "value": "±175", "unit": "°" },
+                    { "name": "Axis 6 Max speed", "value": "±180", "unit": "°/s" }
+                  ]
+                },
+                {
+                  "id": "features",
+                  "name": "Features",
+                  "specs": [
+                    { "name": "IP classification", "value": "IP54 (IP65 Optional)" },
+                    { "name": "Noise", "value": "<70", "unit": "dB" },
+                    { "name": "Robot mounting", "value": "Any orientation" },
+                    { "name": "I/O Ports", "value": "DI 2, DO 2, AI 2, AO 2, high speed pulse input 2" },
+                    { "name": "Tool I/O power supply", "value": "24", "unit": "V/1.5A" }
+                  ]
+                },
+                {
+                  "id": "physical",
+                  "name": "Physical",
+                  "specs": [
+                    { "name": "Footprint", "value": "240", "unit": "mm" },
+                    { "name": "Weight", "value": "≈75", "unit": "kg" },
+                    { "name": "Operating temperature", "value": "0-45", "unit": "℃" },
+                    { "name": "Operating humidity", "value": "90%RH (non-condensing)" },
+                    { "name": "Materials", "value": "Aluminium, Steel" }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "thadorobot-tds16",
+              "name": "TDS16",
+              "image": "/assets/thado_robot/TDS16.jpg",
+              "description": {
+                "line1": "Payload: 16kg",
+                "line2": "Reach: 1034mm"
+              },
+              "detail": "A cobot that can efficiently and reliably handle the demands of heavy-duty tasks, suitable for automated tasks with high payload. The TDS16 balances speed, load, and safety with the dedication, safety, and reliability qualities of THADOROBOT cobot.",
+              "mainCategories": [
+                {
+                  "id": "specification",
+                  "name": "Specification",
+                  "specs": [
+                    { "name": "Payload", "value": "16", "unit": "kg" },
+                    { "name": "Reach", "value": "1034", "unit": "mm" },
+                    { "name": "Degrees of freedom", "value": "6 rotating joints" },
+                    { "name": "HMI", "value": "10.1 inch teach pendant or mobile terminal Web APP" }
+                  ]
+                },
+                {
+                  "id": "movement",
+                  "name": "Movement",
+                  "specs": [
+                    { "name": "Repeatability", "value": "±0.03", "unit": "mm" },
+                    { "name": "Pose repeatability per ISO 9283", "value": "±0.03", "unit": "mm" },
+                    { "name": "Typical TCP speed", "value": "1", "unit": "m/s" },
+                    { "name": "Axis 1 Working range", "value": "±175", "unit": "°" },
+                    { "name": "Axis 1 Max speed", "value": "±120", "unit": "°/s" },
+                    { "name": "Axis 2 Working range", "value": "+85/−265", "unit": "°" },
+                    { "name": "Axis 2 Max speed", "value": "±120", "unit": "°/s" },
+                    { "name": "Axis 3 Working range", "value": "±160", "unit": "°" },
+                    { "name": "Axis 3 Max speed", "value": "±180", "unit": "°/s" },
+                    { "name": "Axis 4 Working range", "value": "+85/−265", "unit": "°" },
+                    { "name": "Axis 4 Max speed", "value": "±180", "unit": "°/s" },
+                    { "name": "Axis 5 Working range", "value": "±175", "unit": "°" },
+                    { "name": "Axis 5 Max speed", "value": "±180", "unit": "°/s" },
+                    { "name": "Axis 6 Working range", "value": "±175", "unit": "°" },
+                    { "name": "Axis 6 Max speed", "value": "±180", "unit": "°/s" }
+                  ]
+                },
+                {
+                  "id": "features",
+                  "name": "Features",
+                  "specs": [
+                    { "name": "IP classification", "value": "IP54 (IP65 Optional)" },
+                    { "name": "Noise", "value": "<65", "unit": "dB" },
+                    { "name": "Robot mounting", "value": "Any orientation" },
+                    { "name": "I/O Ports", "value": "DI 2, DO 2, AI 2, AO 2, high speed pulse input 2" },
+                    { "name": "Tool I/O power supply", "value": "24", "unit": "V/1.5A" }
+                  ]
+                },
+                {
+                  "id": "physical",
+                  "name": "Physical",
+                  "specs": [
+                    { "name": "Footprint", "value": "190", "unit": "mm" },
+                    { "name": "Weight", "value": "≈40", "unit": "kg" },
+                    { "name": "Operating temperature", "value": "0-45", "unit": "℃" },
+                    { "name": "Operating humidity", "value": "90%RH (non-condensing)" },
+                    { "name": "Materials", "value": "Aluminium, Steel" }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "thadorobot-tds10",
+              "name": "TDS10",
+              "image": "/assets/thado_robot/TDS10.jpg",
+              "description": {
+                "line1": "Payload: 10kg",
+                "line2": "Reach: 1400mm"
+              },
+              "detail": "TDS10 cobot not only upgrades flexibility, safety, ease of use, and flexibility, but also possesses excellent industrial-grade precision, stability. With the features of combined firmness and gentleness and advanced technology, FR10 wil be an ideal solution for flexible intellectual manufacturing applications",
+              "mainCategories": [
+                {
+                  "id": "specification",
+                  "name": "Specification",
+                  "specs": [
+                    { "name": "Payload", "value": "10", "unit": "kg" },
+                    { "name": "Reach", "value": "1400", "unit": "mm" },
+                    { "name": "Degrees of freedom", "value": "6 rotating joints" },
+                    { "name": "HMI", "value": "10.1 inch teach pendant or mobile terminal Web APP" }
+                  ]
+                },
+                {
+                  "id": "movement",
+                  "name": "Movement",
+                  "specs": [
+                    { "name": "Repeatability", "value": "±0.05", "unit": "mm" },
+                    { "name": "Pose repeatability per ISO 9283", "value": "±0.03", "unit": "mm" },
+                    { "name": "Typical TCP speed", "value": "1.5", "unit": "m/s" },
+                    { "name": "Axis 1 Working range", "value": "±175", "unit": "°" },
+                    { "name": "Axis 1 Max speed", "value": "±180", "unit": "°/s" },
+                    { "name": "Axis 2 Working range", "value": "+85/−265", "unit": "°" },
+                    { "name": "Axis 2 Max speed", "value": "±180", "unit": "°/s" },
+                    { "name": "Axis 3 Working range", "value": "±150", "unit": "°" },
+                    { "name": "Axis 3 Max speed", "value": "±180", "unit": "°/s" },
+                    { "name": "Axis 4 Working range", "value": "+85/−265", "unit": "°" },
+                    { "name": "Axis 4 Max speed", "value": "±180", "unit": "°/s" },
+                    { "name": "Axis 5 Working range", "value": "±175", "unit": "°" },
+                    { "name": "Axis 5 Max speed", "value": "±180", "unit": "°/s" },
+                    { "name": "Axis 6 Working range", "value": "±175", "unit": "°" },
+                    { "name": "Axis 6 Max speed", "value": "±180", "unit": "°/s" }
+                  ]
+                },
+                {
+                  "id": "features",
+                  "name": "Features",
+                  "specs": [
+                    { "name": "IP classification", "value": "IP54 (IP65 Optional)" },
+                    { "name": "Noise", "value": "<65", "unit": "dB" },
+                    { "name": "Robot mounting", "value": "Any orientation" },
+                    { "name": "I/O Ports", "value": "DI 2, DO 2, AI 2, AO 2, high speed pulse input 2" },
+                    { "name": "Tool I/O power supply", "value": "24", "unit": "V/1.5A" }
+                  ]
+                },
+                {
+                  "id": "physical",
+                  "name": "Physical",
+                  "specs": [
+                    { "name": "Footprint", "value": "190", "unit": "mm" },
+                    { "name": "Weight", "value": "≈40", "unit": "kg" },
+                    { "name": "Operating temperature", "value": "0-45", "unit": "℃" },
+                    { "name": "Operating humidity", "value": "90%RH (non-condensing)" },
+                    { "name": "Materials", "value": "Aluminium, Steel" }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "thadorobot-tds5",
+              "name": "TDS5",
+              "image": "/assets/thado_robot/TDS5.jpg",
+              "description": {
+                "line1": "Payload: 5kg",
+                "line2": "Reach: 922mm"
+              },
+              "detail": "TDS5 took the lead in obtaining the first CR certification in the field of cobots. It adopts a self-developed real-time control system, integrating fully upgraded features such as flexibility, safety, ease of operation, and excellent industrial-grade precision and stability.",
+              "mainCategories": [
+                {
+                  "id": "specification",
+                  "name": "Specification",
+                  "specs": [
+                    { "name": "Payload", "value": "5", "unit": "kg" },
+                    { "name": "Reach", "value": "922", "unit": "mm" },
+                    { "name": "Degrees of freedom", "value": "6 rotating joints" },
+                    { "name": "HMI", "value": "10.1 inch teach pendant or mobile terminal Web APP" }
+                  ]
+                },
+                {
+                  "id": "movement",
+                  "name": "Movement",
+                  "specs": [
+                    { "name": "Repeatability", "value": "±0.02", "unit": "mm" },
+                    { "name": "Pose repeatability per ISO 9283", "value": "±0.03", "unit": "mm" },
+                    { "name": "Typical TCP speed", "value": "1", "unit": "m/s" },
+                    { "name": "Axis 1 Working range", "value": "±175", "unit": "°" },
+                    { "name": "Axis 1 Max speed", "value": "±180", "unit": "°/s" },
+                    { "name": "Axis 2 Working range", "value": "+85/−265", "unit": "°" },
+                    { "name": "Axis 2 Max speed", "value": "±180", "unit": "°/s" },
+                    { "name": "Axis 3 Working range", "value": "±150", "unit": "°" },
+                    { "name": "Axis 3 Max speed", "value": "±180", "unit": "°/s" },
+                    { "name": "Axis 4 Working range", "value": "+85/−265", "unit": "°" },
+                    { "name": "Axis 4 Max speed", "value": "±180", "unit": "°/s" },
+                    { "name": "Axis 5 Working range", "value": "±175", "unit": "°" },
+                    { "name": "Axis 5 Max speed", "value": "±180", "unit": "°/s" },
+                    { "name": "Axis 6 Working range", "value": "±175", "unit": "°" },
+                    { "name": "Axis 6 Max speed", "value": "±180", "unit": "°/s" }
+                  ]
+                },
+                {
+                  "id": "features",
+                  "name": "Features",
+                  "specs": [
+                    { "name": "IP classification", "value": "IP54 (IP65 Optional)" },
+                    { "name": "Noise", "value": "<65", "unit": "dB" },
+                    { "name": "Robot mounting", "value": "Any orientation" },
+                    { "name": "I/O Ports", "value": "DI 2, DO 2, AI 2, AO 2, high speed pulse input 2" },
+                    { "name": "Tool I/O power supply", "value": "24", "unit": "V/1.5A" }
+                  ]
+                },
+                {
+                  "id": "physical",
+                  "name": "Physical",
+                  "specs": [
+                    { "name": "Footprint", "value": "149", "unit": "mm" },
+                    { "name": "Weight", "value": "≈22", "unit": "kg" },
+                    { "name": "Operating temperature", "value": "0-45", "unit": "℃" },
+                    { "name": "Operating humidity", "value": "90%RH (non-condensing)" },
+                    { "name": "Materials", "value": "Aluminium, Steel" }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "thadorobot-tds3",
+              "name": "TDS3",
+              "image": "/assets/thado_robot/TDS3.jpg",
+              "description": {
+                "line1": "Payload: 3kg",
+                "line2": "Reach: 622mm"
+              },
+              "detail": "TDS3 is a new generation of six-axis cobot product based on the definition of human-robot collaboration technology. Its scenarios cover 3C, semiconductor, metal processing, industrial gluing, new retail and other industries, creating the optimal solution for flexible intellectual manufacturing applications",
+              "mainCategories": [
+                {
+                  "id": "specification",
+                  "name": "Specification",
+                  "specs": [
+                    { "name": "Payload", "value": "3", "unit": "kg" },
+                    { "name": "Reach", "value": "622", "unit": "mm" },
+                    { "name": "Degrees of freedom", "value": "6 rotating joints" },
+                    { "name": "HMI", "value": "10.1 inch teach pendant or mobile terminal Web APP" }
+                  ]
+                },
+                {
+                  "id": "movement",
+                  "name": "Movement",
+                  "specs": [
+                    { "name": "Repeatability", "value": "±0.02", "unit": "mm" },
+                    { "name": "Pose repeatability per ISO 9283", "value": "±0.03", "unit": "mm" },
+                    { "name": "Typical TCP speed", "value": "1", "unit": "m/s" },
+                    { "name": "Axis 1 Working range", "value": "±175", "unit": "°" },
+                    { "name": "Axis 1 Max speed", "value": "±180", "unit": "°/s" },
+                    { "name": "Axis 2 Working range", "value": "+85/−265", "unit": "°" },
+                    { "name": "Axis 2 Max speed", "value": "±180", "unit": "°/s" },
+                    { "name": "Axis 3 Working range", "value": "±150", "unit": "°" },
+                    { "name": "Axis 3 Max speed", "value": "±180", "unit": "°/s" },
+                    { "name": "Axis 4 Working range", "value": "+85/−265", "unit": "°" },
+                    { "name": "Axis 4 Max speed", "value": "±180", "unit": "°/s" },
+                    { "name": "Axis 5 Working range", "value": "±175", "unit": "°" },
+                    { "name": "Axis 5 Max speed", "value": "±180", "unit": "°/s" },
+                    { "name": "Axis 6 Working range", "value": "±175", "unit": "°" },
+                    { "name": "Axis 6 Max speed", "value": "±180", "unit": "°/s" }
+                  ]
+                },
+                {
+                  "id": "features",
+                  "name": "Features",
+                  "specs": [
+                    { "name": "IP classification", "value": "IP54 (IP65 Optional)" },
+                    { "name": "Noise", "value": "<65", "unit": "dB" },
+                    { "name": "Robot mounting", "value": "Any orientation" },
+                    { "name": "I/O Ports", "value": "DI 2, DO 2, AI 2, AO 2, high speed pulse input 2" },
+                    { "name": "Tool I/O power supply", "value": "24", "unit": "V/1.5A" }
+                  ]
+                },
+                {
+                  "id": "physical",
+                  "name": "Physical",
+                  "specs": [
+                    { "name": "Footprint", "value": "128", "unit": "mm" },
+                    { "name": "Weight", "value": "≈15", "unit": "kg" },
+                    { "name": "Operating temperature", "value": "0-45", "unit": "℃" },
+                    { "name": "Operating humidity", "value": "90%RH (non-condensing)" },
+                    { "name": "Materials", "value": "Aluminium, Steel" }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "thadorobot-tds3mt",
+              "name": "TDS3MT",
+              "image": "/assets/thado_robot/TDS3MT.jpg",
+              "description": {
+                "line1": "Payload: 3kg (Instantaneous 5kg)",
+                "line2": "Reach: 622mm"
+              },
+              "detail": "TDS3MT is a new generation of 6-axis collaborative robots based on human-robot collaboration technology. It can be easily and flexibly mounted on all kinds of mobile devices or desktop application scenarios, which makes it easier for users to break through the space limitation and enter into more brand-new fields",
+              "mainCategories": [
+                {
+                  "id": "specification",
+                  "name": "Specification",
+                  "specs": [
+                    { "name": "Payload", "value": "3 (Instantaneous 5)", "unit": "kg" },
+                    { "name": "Reach", "value": "622", "unit": "mm" },
+                    { "name": "Degrees of freedom", "value": "6 rotating joints" },
+                    { "name": "HMI", "value": "10.1 inch teach pendant or mobile terminal Web APP" }
+                  ]
+                },
+                {
+                  "id": "movement",
+                  "name": "Movement",
+                  "specs": [
+                    { "name": "Repeatability", "value": "±0.05", "unit": "mm" },
+                    { "name": "Pose repeatability per ISO 9283", "value": "±0.05", "unit": "mm" },
+                    { "name": "Typical TCP speed", "value": "1", "unit": "m/s" },
+                    { "name": "Axis 1 Working range", "value": "±175", "unit": "°" },
+                    { "name": "Axis 1 Max speed", "value": "±150", "unit": "°/s" },
+                    { "name": "Axis 2 Working range", "value": "+85/−265", "unit": "°" },
+                    { "name": "Axis 2 Max speed", "value": "±150", "unit": "°/s" },
+                    { "name": "Axis 3 Working range", "value": "±150", "unit": "°" },
+                    { "name": "Axis 3 Max speed", "value": "±150", "unit": "°/s" },
+                    { "name": "Axis 4 Working range", "value": "+85/−265", "unit": "°" },
+                    { "name": "Axis 4 Max speed", "value": "±180", "unit": "°/s" },
+                    { "name": "Axis 5 Working range", "value": "±350", "unit": "°" },
+                    { "name": "Axis 5 Max speed", "value": "±180", "unit": "°/s" },
+                    { "name": "Axis 6 Working range", "value": "±175", "unit": "°" },
+                    { "name": "Axis 6 Max speed", "value": "±180", "unit": "°/s" }
+                  ]
+                },
+                {
+                  "id": "features",
+                  "name": "Features",
+                  "specs": [
+                    { "name": "IP classification", "value": "IP54 (IP65 Optional)" },
+                    { "name": "Noise", "value": "<65", "unit": "dB" },
+                    { "name": "Robot mounting", "value": "Any orientation" },
+                    { "name": "I/O Ports", "value": "DI 2, DO 2, AI 1, AO 1" },
+                    { "name": "Tool I/O power supply", "value": "24", "unit": "V/1.5A" }
+                  ]
+                },
+                {
+                  "id": "physical",
+                  "name": "Physical",
+                  "specs": [
+                    { "name": "Footprint", "value": "125", "unit": "mm" },
+                    { "name": "Weight", "value": "≈10", "unit": "kg" },
+                    { "name": "Operating temperature", "value": "-20—60", "unit": "℃" },
+                    { "name": "Operating humidity", "value": "90%RH (non-condensing)" },
+                    { "name": "Materials", "value": "Aluminium, Steel" }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "irayple",
+      "name": "Irayple",
+      "categories": [
+        {
+          "id": "lifting-amr",
+          "name": "Lifting AMR",
+          "products": [
+            {
+              "id": "irayple-rta-c060-lq",
+              "name": "RTA-C060-LQ",
+              "image": "/assets/irayple_robot/latent lifting amr/RTA-C060-LQ/cover.png",
+              "description": {
+                "line1": "Load capacity: 600kg",
+                "line2": "Navigation: QR code/texture/laser SLAM"
+              },
+              "detail": "Robot tự động di chuyển với khả năng nâng hạ tải trọng 600kg, sử dụng công nghệ định vị tiên tiến",
+              "mainCategories": [
+                {
+                  "id": "basic",
+                  "name": "Basic",
+                  "specs": [
+                    { "name": "Product Dimensions", "value": "950×650×300", "unit": "mm" },
+                    { "name": "Rotation Diameter", "value": "1000", "unit": "mm" },
+                    { "name": "Lifting Process Distance", "value": "60", "unit": "mm" },
+                    { "name": "Ground Clearance", "value": "20", "unit": "mm" },
+                    { "name": "Lifting Pallet Dimensions", "value": "900×560", "unit": "mm" },
+                    { "name": "Lifting Method", "value": "Motor", "unit": "" },
+                    { "name": "Machine Weight", "value": "172", "unit": "kg" },
+                    { "name": "Rated Load", "value": "600", "unit": "kg" },
+                    { "name": "LCD Display", "value": "Support", "unit": "" },
+                    { "name": "Touch Screen", "value": "Support", "unit": "" },
+                    { "name": "Navigation", "value": "QR code/texture/laser SLAM", "unit": "" },
+                    { "name": "Communication Mode", "value": "Wi-Fi", "unit": "" },
+                    { "name": "Drive", "value": "Two-wheel speed difference", "unit": "" }
+                  ]
+                },
+                  {
+                    "id": "performance",
+                    "name": "Performance",
+                    "specs": [
+                      { "name": "Max. Operating Speed", "value": "1.6", "unit": "m/s" },
+                      { "name": "Maximum Operating Acceleration under No Load", "value": "1.0", "unit": "m/s²" },
+                      { "name": "No Load Stopping Position Accuracy", "value": "±10", "unit": "mm" },
+                      { "name": "No Load Stopping Angle Accuracy", "value": "±1", "unit": "°" },
+                      { "name": "Climbing Ability", "value": "3°/5%", "unit": "" },
+                      { "name": "Obstacle Crossing Height", "value": "10", "unit": "mm" }
+                    ]
+                  },
+                  {
+                    "id": "obstacle-avoidance",
+                    "name": "Obstacle Avoidance",
+                    "specs": [
+                      { "name": "Obstacle Avoidance Method", "value": "Laser，TOF", "unit": "" },
+                      { "name": "Collision Bar Detection", "value": "Front，rear", "unit": "" },
+                      { "name": "Emergency Stop Button", "value": "Front，rear，left，right", "unit": "" },
+                      { "name": "Acoustic and Optical Alarm", "value": "Support", "unit": "" }
+                    ]
+                  },
+                  {
+                    "id": "battery",
+                    "name": "Battery",
+                    "specs": [
+                      { "name": "Operating Time", "value": "7.5", "unit": "h" },
+                      { "name": "Charging Time", "value": "1.5", "unit": "h" },
+                      { "name": "Charging Mode", "value": "Manual/automatic, manually change battery", "unit": "" },
+                      { "name": "Charge-discharge Cycle Life", "value": "1500", "unit": "times" }
+                    ]
+                  },
+                  {
+                    "id": "operating-environment",
+                    "name": "Operating Environment",
+                    "specs": [
+                      { "name": "Operating Temperature", "value": "0℃ to 40℃", "unit": "" },
+                      { "name": "Charging Temperature", "value": "0℃ to 40℃", "unit": "" },
+                      { "name": "Operating Humidity", "value": "5%～90% without condensation", "unit": "" }
+                    ]
+                  }
+              ]
+            },
+            {
+              "id": "irayple-rta-c060-lq-2l-e-410",
+              "name": "RTA-C060-LQ-2L-E-410",
+              "image": "/assets/irayple_robot/latent lifting amr/RTA-C060-LQ-2L-E-410/cover.png",
+              "description": {
+                "line1": "Load capacity: 600kg",
+                "line2": "Navigation: QR code/texture/laser SLAM"
+              },
+              "detail": "Robot tự động di chuyển với khả năng nâng hạ tải trọng 600kg, phiên bản 2L-E-410",
+              "mainCategories": [
+                {
+                  "id": "basic",
+                  "name": "Basic",
+                  "specs": [
+                    { "name": "Product Dimensions", "value": "950 mm×650 mm×250 mm", "unit": "" },
+                    { "name": "Rotation Diameter", "value": "1000", "unit": "mm" },
+                    { "name": "Lifting Process Distance", "value": "60", "unit": "mm" },
+                    { "name": "Ground Clearance", "value": "20", "unit": "mm" },
+                    { "name": "Lifting Pallet Dimensions", "value": "900 mm×560 mm", "unit": "" },
+                    { "name": "Lifting Method", "value": "Motor", "unit": "" },
+                    { "name": "Machine Weight", "value": "150", "unit": "kg" },
+                    { "name": "Rated Load", "value": "600", "unit": "kg" },
+                    { "name": "LCD Display", "value": "Support", "unit": "" },
+                    { "name": "Touch Screen", "value": "Support", "unit": "" },
+                    { "name": "Navigation", "value": "QR code/texture/laser SLAM", "unit": "" },
+                    { "name": "Communication Mode", "value": "Wi-Fi", "unit": "" },
+                    { "name": "Drive", "value": "Two-wheel speed difference", "unit": "" }
+                  ]
+                },
+                {
+                  "id": "performance",
+                  "name": "Performance",
+                  "specs": [
+                    { "name": "Max. Operating Speed", "value": "2.0", "unit": "m/s" },
+                    { "name": "Maximum Operating Acceleration under No Load", "value": "1.0", "unit": "m/s²" },
+                    { "name": "No Load Stopping Position Accuracy", "value": "±10", "unit": "mm" },
+                    { "name": "No Load Stopping Angle Accuracy", "value": "±1", "unit": "°" },
+                    { "name": "Climbing Ability", "value": "3°/5%", "unit": "" },
+                    { "name": "Obstacle Crossing Height", "value": "10", "unit": "mm" }
+                  ]
+                },
+                {
+                  "id": "obstacle-avoidance",
+                  "name": "Obstacle Avoidance",
+                  "specs": [
+                    { "name": "Obstacle Avoidance Method", "value": "Laser", "unit": "" },
+                    { "name": "Collision Bar Detection", "value": "Front，rear", "unit": "" },
+                    { "name": "Emergency Stop Button", "value": "Front，rear", "unit": "" },
+                    { "name": "Acoustic and Optical Alarm", "value": "Support", "unit": "" }
+                  ]
+                },
+                {
+                  "id": "battery",
+                  "name": "Battery",
+                  "specs": [
+                    { "name": "Operating Time", "value": "8.0", "unit": "h" },
+                    { "name": "Charging Time", "value": "1.5", "unit": "h" },
+                    { "name": "Charging Mode", "value": "Manual/automatic, manually change battery", "unit": "" },
+                    { "name": "Charge-discharge Cycle Life", "value": "1500", "unit": "times" }
+                  ]
+                },
+                {
+                  "id": "operating-environment",
+                  "name": "Operating Environment",
+                  "specs": [
+                    { "name": "Operating Temperature", "value": "0℃ to 40℃", "unit": "" },
+                    { "name": "Charging Temperature", "value": "0℃ to 40℃", "unit": "" },
+                    { "name": "Operating Humidity", "value": "5%～90% without condensation", "unit": "" }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "irayple-rta-c060-lq-2l-e-421",
+              "name": "RTA-C060-LQ-2L-E-421",
+              "image": "/assets/irayple_robot/latent lifting amr/RTA-C060-LQ-2L-E-421/cover.png",
+              "description": {
+                "line1": "Load capacity: 600kg",
+                "line2": "Navigation: QR code/texture/laser SLAM"
+              },
+              "detail": "Robot tự động di chuyển với khả năng nâng hạ tải trọng 600kg, phiên bản 2L-E-421",
+              "mainCategories": [
+                {
+                  "id": "basic",
+                  "name": "Basic",
+                  "specs": [
+                    { "name": "Product Dimensions", "value": "950×650×300", "unit": "mm" },
+                    { "name": "Rotation Diameter", "value": "1000", "unit": "mm" },
+                    { "name": "Lifting Process Distance", "value": "60", "unit": "mm" },
+                    { "name": "Ground Clearance", "value": "20", "unit": "mm" },
+                    { "name": "Lifting Pallet Dimensions", "value": "900×560", "unit": "mm" },
+                    { "name": "Lifting Method", "value": "Motor", "unit": "" },
+                    { "name": "Machine Weight", "value": "170", "unit": "kg" },
+                    { "name": "Rated Load", "value": "600", "unit": "kg" },
+                    { "name": "LCD Display", "value": "Support", "unit": "" },
+                    { "name": "Touch Screen", "value": "Support", "unit": "" },
+                    { "name": "Navigation", "value": "QR code/texture/laser SLAM", "unit": "" },
+                    { "name": "Communication Mode", "value": "Wi-Fi", "unit": "" },
+                    { "name": "Drive", "value": "Two-wheel speed difference", "unit": "" }
+                  ]
+                },
+                {
+                  "id": "performance",
+                  "name": "Performance",
+                  "specs": [
+                    { "name": "Max. Operating Speed", "value": "2.0", "unit": "m/s" },
+                    { "name": "Maximum Operating Acceleration under No Load", "value": "1.0", "unit": "m/s²" },
+                    { "name": "No Load Stopping Position Accuracy", "value": "±10", "unit": "mm" },
+                    { "name": "No Load Stopping Angle Accuracy", "value": "±1", "unit": "°" },
+                    { "name": "Climbing Ability", "value": "3°/5%", "unit": "" },
+                    { "name": "Obstacle Crossing Height", "value": "10", "unit": "mm" }
+                  ]
+                },
+                {
+                  "id": "obstacle-avoidance",
+                  "name": "Obstacle Avoidance",
+                  "specs": [
+                    { "name": "Obstacle Avoidance Method", "value": "Laser", "unit": "" },
+                    { "name": "Collision Bar Detection", "value": "Front，rear", "unit": "" },
+                    { "name": "Emergency Stop Button", "value": "Front，rear", "unit": "" },
+                    { "name": "Acoustic and Optical Alarm", "value": "Support", "unit": "" }
+                  ]
+                },
+                {
+                  "id": "battery",
+                  "name": "Battery",
+                  "specs": [
+                    { "name": "Operating Time", "value": "8.0", "unit": "h" },
+                    { "name": "Charging Time", "value": "1.5", "unit": "h" },
+                    { "name": "Charging Mode", "value": "Manual/automatic, manually change battery", "unit": "" },
+                    { "name": "Charge-discharge Cycle Life", "value": "1500", "unit": "times" }
+                  ]
+                },
+                {
+                  "id": "operating-environment",
+                  "name": "Operating Environment",
+                  "specs": [
+                    { "name": "Operating Temperature", "value": "0℃ to 40℃", "unit": "" },
+                    { "name": "Charging Temperature", "value": "0℃ to 40℃", "unit": "" },
+                    { "name": "Operating Humidity", "value": "5%～90% without condensation", "unit": "" }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "irayple-rta-c060-lq-2l1t-e-410",
+              "name": "RTA-C060-LQ-2L1T-E-410",
+              "image": "/assets/irayple_robot/latent lifting amr/RTA-C060-LQ-2L1T-E-410/cover.png",
+              "description": {
+                "line1": "Load capacity: 600kg",
+                "line2": "Navigation: QR code/texture/laser SLAM"
+              },
+              "detail": "Robot tự động di chuyển với khả năng nâng hạ tải trọng 600kg, phiên bản 2L1T-E-410",
+              "mainCategories": [
+                {
+                  "id": "basic",
+                  "name": "Basic",
+                  "specs": [
+                    { "name": "Product Dimensions", "value": "950×650×250", "unit": "mm" },
+                    { "name": "Rotation Diameter", "value": "1000", "unit": "mm" },
+                    { "name": "Lifting Process Distance", "value": "60", "unit": "mm" },
+                    { "name": "Ground Clearance", "value": "20", "unit": "mm" },
+                    { "name": "Lifting Pallet Dimensions", "value": "900×560", "unit": "mm" },
+                    { "name": "Lifting Method", "value": "Motor", "unit": "" },
+                    { "name": "Machine Weight", "value": "150", "unit": "kg" },
+                    { "name": "Rated Load", "value": "600", "unit": "kg" },
+                    { "name": "LCD Display", "value": "Support", "unit": "" },
+                    { "name": "Touch Screen", "value": "Support", "unit": "" },
+                    { "name": "Navigation", "value": "QR code/texture/laser SLAM", "unit": "" },
+                    { "name": "Communication Mode", "value": "Wi-Fi", "unit": "" },
+                    { "name": "Drive", "value": "Two-wheel speed difference", "unit": "" }
+                  ]
+                },
+                {
+                  "id": "performance",
+                  "name": "Performance",
+                  "specs": [
+                    { "name": "Max. Operating Speed", "value": "2.0", "unit": "m/s" },
+                    { "name": "Maximum Operating Acceleration under No Load", "value": "1.0", "unit": "m/s²" },
+                    { "name": "No Load Stopping Position Accuracy", "value": "±10", "unit": "mm" },
+                    { "name": "No Load Stopping Angle Accuracy", "value": "±1", "unit": "°" },
+                    { "name": "Climbing Ability", "value": "3°/5%", "unit": "" },
+                    { "name": "Obstacle Crossing Height", "value": "10", "unit": "mm" }
+                  ]
+                },
+                {
+                  "id": "obstacle-avoidance",
+                  "name": "Obstacle Avoidance",
+                  "specs": [
+                    { "name": "Obstacle Avoidance Method", "value": "Laser，TOF", "unit": "" },
+                    { "name": "Collision Bar Detection", "value": "Front，rear", "unit": "" },
+                    { "name": "Emergency Stop Button", "value": "Front，rear", "unit": "" },
+                    { "name": "Acoustic and Optical Alarm", "value": "Support", "unit": "" }
+                  ]
+                },
+                {
+                  "id": "battery",
+                  "name": "Battery",
+                  "specs": [
+                    { "name": "Operating Time", "value": "8.0", "unit": "h" },
+                    { "name": "Charging Time", "value": "1.5", "unit": "h" },
+                    { "name": "Charging Mode", "value": "Manual/automatic, manually change battery", "unit": "" },
+                    { "name": "Charge-discharge Cycle Life", "value": "1500", "unit": "times" }
+                  ]
+                },
+                {
+                  "id": "operating-environment",
+                  "name": "Operating Environment",
+                  "specs": [
+                    { "name": "Operating Temperature", "value": "0℃ to 40℃", "unit": "" },
+                    { "name": "Charging Temperature", "value": "0℃ to 40℃", "unit": "" },
+                    { "name": "Operating Humidity", "value": "5%～90% without condensation", "unit": "" }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "irayple-rta-c060-lq-2l1t-e-421",
+              "name": "RTA-C060-LQ-2L1T-E-421",
+              "image": "/assets/irayple_robot/latent lifting amr/RTA-C060-LQ-2L1T-E-421/cover.png",
+              "description": {
+                "line1": "Load capacity: 600kg",
+                "line2": "Navigation: QR code/texture/laser SLAM"
+              },
+              "detail": "Robot tự động di chuyển với khả năng nâng hạ tải trọng 600kg, phiên bản 2L1T-E-421",
+              "mainCategories": [
+                {
+                  "id": "basic",
+                  "name": "Basic",
+                  "specs": [
+                    { "name": "Product Dimensions", "value": "950×650×300", "unit": "mm" },
+                    { "name": "Rotation Diameter", "value": "1000", "unit": "mm" },
+                    { "name": "Lifting Process Distance", "value": "60", "unit": "mm" },
+                    { "name": "Ground Clearance", "value": "20", "unit": "mm" },
+                    { "name": "Lifting Pallet Dimensions", "value": "900×560", "unit": "mm" },
+                    { "name": "Lifting Method", "value": "Motor", "unit": "" },
+                    { "name": "Machine Weight", "value": "170", "unit": "kg" },
+                    { "name": "Rated Load", "value": "600", "unit": "kg" },
+                    { "name": "LCD Display", "value": "Support", "unit": "" },
+                    { "name": "Touch Screen", "value": "Support", "unit": "" },
+                    { "name": "Navigation", "value": "QR code/texture/laser SLAM", "unit": "" },
+                    { "name": "Communication Mode", "value": "Wi-Fi", "unit": "" },
+                    { "name": "Drive", "value": "Two-wheel speed difference", "unit": "" }
+                  ]
+                },
+                {
+                  "id": "performance",
+                  "name": "Performance",
+                  "specs": [
+                    { "name": "Max. Operating Speed", "value": "2.0", "unit": "m/s" },
+                    { "name": "Maximum Operating Acceleration under No Load", "value": "1.0", "unit": "m/s²" },
+                    { "name": "No Load Stopping Position Accuracy", "value": "±10", "unit": "mm" },
+                    { "name": "No Load Stopping Angle Accuracy", "value": "±1", "unit": "°" },
+                    { "name": "Climbing Ability", "value": "3°/5%", "unit": "" },
+                    { "name": "Obstacle Crossing Height", "value": "10", "unit": "mm" }
+                  ]
+                },
+                {
+                  "id": "obstacle-avoidance",
+                  "name": "Obstacle Avoidance",
+                  "specs": [
+                    { "name": "Obstacle Avoidance Method", "value": "Laser，TOF", "unit": "" },
+                    { "name": "Collision Bar Detection", "value": "Front，rear", "unit": "" },
+                    { "name": "Emergency Stop Button", "value": "Front，rear", "unit": "" },
+                    { "name": "Acoustic and Optical Alarm", "value": "Support", "unit": "" }
+                  ]
+                },
+                {
+                  "id": "battery",
+                  "name": "Battery",
+                  "specs": [
+                    { "name": "Operating Time", "value": "8.0", "unit": "h" },
+                    { "name": "Charging Time", "value": "1.5", "unit": "h" },
+                    { "name": "Charging Mode", "value": "Manual/automatic, manually change battery", "unit": "" },
+                    { "name": "Charge-discharge Cycle Life", "value": "1500", "unit": "times" }
+                  ]
+                },
+                {
+                  "id": "operating-environment",
+                  "name": "Operating Environment",
+                  "specs": [
+                    { "name": "Operating Temperature", "value": "0℃ to 40℃", "unit": "" },
+                    { "name": "Charging Temperature", "value": "0℃ to 40℃", "unit": "" },
+                    { "name": "Operating Humidity", "value": "5%～90% without condensation", "unit": "" }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "irayple-rta-c060-lq-2l2t-e-410",
+              "name": "RTA-C060-LQ-2L2T-E-410",
+              "image": "/assets/irayple_robot/latent lifting amr/RTA-C060-LQ-2L2T-E-410/cover.png",
+              "description": {
+                "line1": "Load capacity: 600kg",
+                "line2": "Navigation: QR code/texture/laser SLAM"
+              },
+              "detail": "Robot tự động di chuyển với khả năng nâng hạ tải trọng 600kg, phiên bản 2L2T-E-410",
+              "mainCategories": [
+                {
+                  "id": "basic",
+                  "name": "Basic",
+                  "specs": [
+                    { "name": "Product Dimensions", "value": "950×650×250", "unit": "mm" },
+                    { "name": "Rotation Diameter", "value": "1000", "unit": "mm" },
+                    { "name": "Lifting Process Distance", "value": "60", "unit": "mm" },
+                    { "name": "Ground Clearance", "value": "20", "unit": "mm" },
+                    { "name": "Lifting Pallet Dimensions", "value": "900×560", "unit": "mm" },
+                    { "name": "Lifting Method", "value": "Motor", "unit": "" },
+                    { "name": "Machine Weight", "value": "150", "unit": "kg" },
+                    { "name": "Rated Load", "value": "600", "unit": "kg" },
+                    { "name": "LCD Display", "value": "Support", "unit": "" },
+                    { "name": "Touch Screen", "value": "Support", "unit": "" },
+                    { "name": "Navigation", "value": "QR code/texture/laser SLAM", "unit": "" },
+                    { "name": "Communication Mode", "value": "Wi-Fi", "unit": "" },
+                    { "name": "Drive", "value": "Two-wheel speed difference", "unit": "" }
+                  ]
+                },
+                {
+                  "id": "performance",
+                  "name": "Performance",
+                  "specs": [
+                    { "name": "Max. Operating Speed", "value": "2.0", "unit": "m/s" },
+                    { "name": "Maximum Operating Acceleration under No Load", "value": "1.0", "unit": "m/s²" },
+                    { "name": "No Load Stopping Position Accuracy", "value": "±10", "unit": "mm" },
+                    { "name": "No Load Stopping Angle Accuracy", "value": "±1", "unit": "°" },
+                    { "name": "Climbing Ability", "value": "3°/5%", "unit": "" },
+                    { "name": "Obstacle Crossing Height", "value": "10", "unit": "mm" }
+                  ]
+                },
+                {
+                  "id": "obstacle-avoidance",
+                  "name": "Obstacle Avoidance",
+                  "specs": [
+                    { "name": "Obstacle Avoidance Method", "value": "Laser，TOF", "unit": "" },
+                    { "name": "Collision Bar Detection", "value": "Front，rear", "unit": "" },
+                    { "name": "Emergency Stop Button", "value": "Front，rear", "unit": "" },
+                    { "name": "Acoustic and Optical Alarm", "value": "Support", "unit": "" }
+                  ]
+                },
+                {
+                  "id": "battery",
+                  "name": "Battery",
+                  "specs": [
+                    { "name": "Operating Time", "value": "8.0", "unit": "h" },
+                    { "name": "Charging Time", "value": "1.5", "unit": "h" },
+                    { "name": "Charging Mode", "value": "Manual/automatic, manually change battery", "unit": "" },
+                    { "name": "Charge-discharge Cycle Life", "value": "1500", "unit": "times" }
+                  ]
+                },
+                {
+                  "id": "operating-environment",
+                  "name": "Operating Environment",
+                  "specs": [
+                    { "name": "Operating Temperature", "value": "0℃ to 40℃", "unit": "" },
+                    { "name": "Charging Temperature", "value": "0℃ to 40℃", "unit": "" },
+                    { "name": "Operating Humidity", "value": "5%～90% without condensation", "unit": "" }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "irayple-rta-c060-lq-2l2t-e-421",
+              "name": "RTA-C060-LQ-2L2T-E-421",
+              "image": "/assets/irayple_robot/latent lifting amr/RTA-C060-LQ-2L2T-E-421/cover.png",
+              "description": {
+                "line1": "Load capacity: 600kg",
+                "line2": "Navigation: QR code/texture/laser SLAM"
+              },
+              "detail": "Robot tự động di chuyển với khả năng nâng hạ tải trọng 600kg, phiên bản 2L2T-E-421",
+              "mainCategories": [
+                {
+                  "id": "basic",
+                  "name": "Basic",
+                  "specs": [
+                    { "name": "Product Dimensions", "value": "950×650×300", "unit": "mm" },
+                    { "name": "Rotation Diameter", "value": "1000", "unit": "mm" },
+                    { "name": "Lifting Process Distance", "value": "60", "unit": "mm" },
+                    { "name": "Ground Clearance", "value": "20", "unit": "mm" },
+                    { "name": "Lifting Pallet Dimensions", "value": "900×560", "unit": "mm" },
+                    { "name": "Lifting Method", "value": "Motor", "unit": "" },
+                    { "name": "Machine Weight", "value": "170", "unit": "kg" },
+                    { "name": "Rated Load", "value": "600", "unit": "kg" },
+                    { "name": "LCD Display", "value": "Support", "unit": "" },
+                    { "name": "Touch Screen", "value": "Support", "unit": "" },
+                    { "name": "Navigation", "value": "QR code/texture/laser SLAM", "unit": "" },
+                    { "name": "Communication Mode", "value": "Wi-Fi", "unit": "" },
+                    { "name": "Drive", "value": "Two-wheel speed difference", "unit": "" }
+                  ]
+                },
+                {
+                  "id": "performance",
+                  "name": "Performance",
+                  "specs": [
+                    { "name": "Max. Operating Speed", "value": "2.0", "unit": "m/s" },
+                    { "name": "Maximum Operating Acceleration under No Load", "value": "1.0", "unit": "m/s²" },
+                    { "name": "No Load Stopping Position Accuracy", "value": "±10", "unit": "mm" },
+                    { "name": "No Load Stopping Angle Accuracy", "value": "±1", "unit": "°" },
+                    { "name": "Climbing Ability", "value": "3°/5%", "unit": "" },
+                    { "name": "Obstacle Crossing Height", "value": "10", "unit": "mm" }
+                  ]
+                },
+                {
+                  "id": "obstacle-avoidance",
+                  "name": "Obstacle Avoidance",
+                  "specs": [
+                    { "name": "Obstacle Avoidance Method", "value": "Laser，TOF", "unit": "" },
+                    { "name": "Collision Bar Detection", "value": "Front，rear", "unit": "" },
+                    { "name": "Emergency Stop Button", "value": "Front，rear", "unit": "" },
+                    { "name": "Acoustic and Optical Alarm", "value": "Support", "unit": "" }
+                  ]
+                },
+                {
+                  "id": "battery",
+                  "name": "Battery",
+                  "specs": [
+                    { "name": "Operating Time", "value": "8.0", "unit": "h" },
+                    { "name": "Charging Time", "value": "1.5", "unit": "h" },
+                    { "name": "Charging Mode", "value": "Manual/automatic, manually change battery", "unit": "" },
+                    { "name": "Charge-discharge Cycle Life", "value": "1500", "unit": "times" }
+                  ]
+                },
+                {
+                  "id": "operating-environment",
+                  "name": "Operating Environment",
+                  "specs": [
+                    { "name": "Operating Temperature", "value": "0℃ to 40℃", "unit": "" },
+                    { "name": "Charging Temperature", "value": "0℃ to 40℃", "unit": "" },
+                    { "name": "Operating Humidity", "value": "5%～90% without condensation", "unit": "" }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "irayple-rta-c100-lq",
+              "name": "RTA-C100-LQ",
+              "image": "/assets/irayple_robot/latent lifting amr/RTA-C100-LQ/cover.png",
+              "description": {
+                "line1": "Load capacity: 1000kg",
+                "line2": "Navigation: QR code/texture/laser SLAM"
+              },
+              "detail": "Robot tự động di chuyển với khả năng nâng hạ tải trọng 1000kg, thiết kế mạnh mẽ cho môi trường công nghiệp",
+              "mainCategories": [
+                {
+                  "id": "basic",
+                  "name": "Basic",
+                  "specs": [
+                    { "name": "Product Dimensions", "value": "950×650×300", "unit": "mm" },
+                    { "name": "Rotation Diameter", "value": "1000", "unit": "mm" },
+                    { "name": "Lifting Process Distance", "value": "60", "unit": "mm" },
+                    { "name": "Ground Clearance", "value": "20", "unit": "mm" },
+                    { "name": "Lifting Pallet Dimensions", "value": "900×560", "unit": "mm" },
+                    { "name": "Lifting Method", "value": "Motor", "unit": "" },
+                    { "name": "Machine Weight", "value": "172", "unit": "kg" },
+                    { "name": "Rated Load", "value": "1000", "unit": "kg" },
+                    { "name": "LCD Display", "value": "Support", "unit": "" },
+                    { "name": "Touch Screen", "value": "Support", "unit": "" },
+                    { "name": "Navigation", "value": "QR code/texture/laser SLAM", "unit": "" },
+                    { "name": "Communication Mode", "value": "Wi-Fi", "unit": "" },
+                    { "name": "Drive", "value": "Two-wheel speed difference", "unit": "" }
+                  ]
+                },
+                {
+                  "id": "performance",
+                  "name": "Performance",
+                  "specs": [
+                    { "name": "Max. Operating Speed", "value": "1.5", "unit": "m/s" },
+                    { "name": "Maximum Operating Acceleration under No Load", "value": "1.0", "unit": "m/s²" },
+                    { "name": "No Load Stopping Position Accuracy", "value": "±10", "unit": "mm" },
+                    { "name": "No Load Stopping Angle Accuracy", "value": "±1", "unit": "°" },
+                    { "name": "Climbing Ability", "value": "3°/5%", "unit": "" },
+                    { "name": "Obstacle Crossing Height", "value": "10", "unit": "mm" }
+                  ]
+                },
+                {
+                  "id": "obstacle-avoidance",
+                  "name": "Obstacle Avoidance",
+                  "specs": [
+                    { "name": "Obstacle Avoidance Method", "value": "Laser，TOF", "unit": "" },
+                    { "name": "Collision Bar Detection", "value": "Front，rear", "unit": "" },
+                    { "name": "Emergency Stop Button", "value": "Front，rear，left，right", "unit": "" },
+                    { "name": "Acoustic and Optical Alarm", "value": "Support", "unit": "" }
+                  ]
+                },
+                {
+                  "id": "battery",
+                  "name": "Battery",
+                  "specs": [
+                    { "name": "Operating Time", "value": "6.0", "unit": "h" },
+                    { "name": "Charging Time", "value": "1.5", "unit": "h" },
+                    { "name": "Charging Mode", "value": "Manual/automatic, manually change battery", "unit": "" },
+                    { "name": "Charge-discharge Cycle Life", "value": "1500", "unit": "times" }
+                  ]
+                },
+                {
+                  "id": "operating-environment",
+                  "name": "Operating Environment",
+                  "specs": [
+                    { "name": "Operating Temperature", "value": "0℃ to 40℃", "unit": "" },
+                    { "name": "Charging Temperature", "value": "0℃ to 40℃", "unit": "" },
+                    { "name": "Operating Humidity", "value": "5%～90% without condensation", "unit": "" }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "irayple-rta-c100-lq-2l-e-410",
+              "name": "RTA-C100-LQ-2L-E-410",
+              "image": "/assets/irayple_robot/latent lifting amr/RTA-C100-LQ-2L-E-410/cover.png",
+              "description": {
+                "line1": "Load capacity: 1000kg",
+                "line2": "Navigation: QR code/texture/laser SLAM"
+              },
+              "detail": "Robot tự động di chuyển với khả năng nâng hạ tải trọng 1000kg, phiên bản 2L-E-410",
+              "mainCategories": [
+                {
+                  "id": "basic",
+                  "name": "Basic",
+                  "specs": [
+                    { "name": "Product Dimensions", "value": "950×650×250", "unit": "mm" },
+                    { "name": "Rotation Diameter", "value": "1000", "unit": "mm" },
+                    { "name": "Lifting Process Distance", "value": "60", "unit": "mm" },
+                    { "name": "Ground Clearance", "value": "20", "unit": "mm" },
+                    { "name": "Lifting Pallet Dimensions", "value": "900×560", "unit": "mm" },
+                    { "name": "Lifting Method", "value": "Motor", "unit": "" },
+                    { "name": "Machine Weight", "value": "150", "unit": "kg" },
+                    { "name": "Rated Load", "value": "1000", "unit": "kg" },
+                    { "name": "LCD Display", "value": "Support", "unit": "" },
+                    { "name": "Touch Screen", "value": "Support", "unit": "" },
+                    { "name": "Navigation", "value": "QR code/texture/laser SLAM", "unit": "" },
+                    { "name": "Communication Mode", "value": "Wi-Fi", "unit": "" },
+                    { "name": "Drive", "value": "Two-wheel speed difference", "unit": "" }
+                  ]
+                },
+                {
+                  "id": "performance",
+                  "name": "Performance",
+                  "specs": [
+                    { "name": "Max. Operating Speed", "value": "1.5", "unit": "m/s" },
+                    { "name": "Maximum Operating Acceleration under No Load", "value": "1.0", "unit": "m/s²" },
+                    { "name": "No Load Stopping Position Accuracy", "value": "±10", "unit": "mm" },
+                    { "name": "No Load Stopping Angle Accuracy", "value": "±1", "unit": "°" },
+                    { "name": "Climbing Ability", "value": "3°/5%", "unit": "" },
+                    { "name": "Obstacle Crossing Height", "value": "10", "unit": "mm" }
+                  ]
+                },
+                {
+                  "id": "obstacle-avoidance",
+                  "name": "Obstacle Avoidance",
+                  "specs": [
+                    { "name": "Obstacle Avoidance Method", "value": "Laser", "unit": "" },
+                    { "name": "Collision Bar Detection", "value": "Front，rear", "unit": "" },
+                    { "name": "Emergency Stop Button", "value": "Front，rear", "unit": "" },
+                    { "name": "Acoustic and Optical Alarm", "value": "Support", "unit": "" }
+                  ]
+                },
+                {
+                  "id": "battery",
+                  "name": "Battery",
+                  "specs": [
+                    { "name": "Operating Time", "value": "8.0", "unit": "h" },
+                    { "name": "Charging Time", "value": "2.0", "unit": "h" },
+                    { "name": "Charging Mode", "value": "Manual/automatic, manually change battery", "unit": "" },
+                    { "name": "Charge-discharge Cycle Life", "value": "800", "unit": "times" }
+                  ]
+                },
+                {
+                  "id": "operating-environment",
+                  "name": "Operating Environment",
+                  "specs": [
+                    { "name": "Operating Temperature", "value": "0℃ to 40℃", "unit": "" },
+                    { "name": "Charging Temperature", "value": "0℃ to 40℃", "unit": "" },
+                    { "name": "Operating Humidity", "value": "5%～90% without condensation", "unit": "" }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "irayple-rta-c100-lq-2l1t-e-410",
+              "name": "RTA-C100-LQ-2L1T-E-410",
+              "image": "/assets/irayple_robot/latent lifting amr/RTA-C100-LQ-2L1T-E-410/cover.png",
+              "description": {
+                "line1": "Load capacity: 1000kg",
+                "line2": "Navigation: QR code/texture/laser SLAM"
+              },
+              "detail": "Robot tự động di chuyển với khả năng nâng hạ tải trọng 1000kg, phiên bản 2L1T-E-410",
+              "mainCategories": [
+                {
+                  "id": "basic",
+                  "name": "Basic",
+                  "specs": [
+                    { "name": "Product Dimensions", "value": "950×650×250", "unit": "mm" },
+                    { "name": "Rotation Diameter", "value": "1000", "unit": "mm" },
+                    { "name": "Lifting Process Distance", "value": "60", "unit": "mm" },
+                    { "name": "Ground Clearance", "value": "20", "unit": "mm" },
+                    { "name": "Lifting Pallet Dimensions", "value": "900×560", "unit": "mm" },
+                    { "name": "Lifting Method", "value": "Motor", "unit": "" },
+                    { "name": "Machine Weight", "value": "150", "unit": "kg" },
+                    { "name": "Rated Load", "value": "1000", "unit": "kg" },
+                    { "name": "LCD Display", "value": "Support", "unit": "" },
+                    { "name": "Touch Screen", "value": "Support", "unit": "" },
+                    { "name": "Navigation", "value": "QR code/texture/laser SLAM", "unit": "" },
+                    { "name": "Communication Mode", "value": "Wi-Fi", "unit": "" },
+                    { "name": "Drive", "value": "Two-wheel speed difference", "unit": "" }
+                  ]
+                },
+                {
+                  "id": "performance",
+                  "name": "Performance",
+                  "specs": [
+                    { "name": "Max. Operating Speed", "value": "1.5", "unit": "m/s" },
+                    { "name": "Maximum Operating Acceleration under No Load", "value": "1.0", "unit": "m/s²" },
+                    { "name": "No Load Stopping Position Accuracy", "value": "±10", "unit": "mm" },
+                    { "name": "No Load Stopping Angle Accuracy", "value": "±1", "unit": "°" },
+                    { "name": "Climbing Ability", "value": "3°/5%", "unit": "" },
+                    { "name": "Obstacle Crossing Height", "value": "10", "unit": "mm" }
+                  ]
+                },
+                {
+                  "id": "obstacle-avoidance",
+                  "name": "Obstacle Avoidance",
+                  "specs": [
+                    { "name": "Obstacle Avoidance Method", "value": "Laser，TOF", "unit": "" },
+                    { "name": "Collision Bar Detection", "value": "Front，rear", "unit": "" },
+                    { "name": "Emergency Stop Button", "value": "Front，rear", "unit": "" },
+                    { "name": "Acoustic and Optical Alarm", "value": "Support", "unit": "" }
+                  ]
+                },
+                {
+                  "id": "battery",
+                  "name": "Battery",
+                  "specs": [
+                    { "name": "Operating Time", "value": "8.0", "unit": "h" },
+                    { "name": "Charging Time", "value": "2.0", "unit": "h" },
+                    { "name": "Charging Mode", "value": "Manual/automatic, manually change battery", "unit": "" },
+                    { "name": "Charge-discharge Cycle Life", "value": "800", "unit": "times" }
+                  ]
+                },
+                {
+                  "id": "operating-environment",
+                  "name": "Operating Environment",
+                  "specs": [
+                    { "name": "Operating Temperature", "value": "0℃ to 40℃", "unit": "" },
+                    { "name": "Charging Temperature", "value": "0℃ to 40℃", "unit": "" },
+                    { "name": "Operating Humidity", "value": "5%～90% without condensation", "unit": "" }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "irayple-rta-c100-lq-2l1t-e-421",
+              "name": "RTA-C100-LQ-2L1T-E-421",
+              "image": "/assets/irayple_robot/latent lifting amr/RTA-C100-LQ-2L1T-E-421/cover.png",
+              "description": {
+                "line1": "Navigation: QR code/texture/laser SLAM"
+              },
+              "detail": "Robot tự động di chuyển với khả năng nâng hạ tải trọng 1000kg, phiên bản 2L1T-E-421",
+              "mainCategories": [
+                {
+                  "id": "basic",
+                  "name": "Basic",
+                  "specs": [
+                    { "name": "Product Dimensions", "value": "950×650×300", "unit": "mm" },
+                    { "name": "Rotation Diameter", "value": "1000", "unit": "mm" },
+                    { "name": "Lifting Process Distance", "value": "60", "unit": "mm" },
+                    { "name": "Ground Clearance", "value": "20", "unit": "mm" },
+                    { "name": "Lifting Pallet Dimensions", "value": "900×560", "unit": "mm" },
+                    { "name": "Lifting Method", "value": "Motor", "unit": "" },
+                    { "name": "Machine Weight", "value": "170", "unit": "kg" },
+                    { "name": "Rated Load", "value": "1000", "unit": "kg" },
+                    { "name": "LCD Display", "value": "Support", "unit": "" },
+                    { "name": "Touch Screen", "value": "Support", "unit": "" },
+                    { "name": "Navigation", "value": "QR code/texture/laser SLAM", "unit": "" },
+                    { "name": "Communication Mode", "value": "Wi-Fi", "unit": "" },
+                    { "name": "Drive", "value": "Two-wheel speed difference", "unit": "" }
+                  ]
+                },
+                {
+                  "id": "performance",
+                  "name": "Performance",
+                  "specs": [
+                    { "name": "Max. Operating Speed", "value": "1.5", "unit": "m/s" },
+                    { "name": "Maximum Operating Acceleration under No Load", "value": "1.0", "unit": "m/s²" },
+                    { "name": "No Load Stopping Position Accuracy", "value": "±10", "unit": "mm" },
+                    { "name": "No Load Stopping Angle Accuracy", "value": "±1", "unit": "°" },
+                    { "name": "Climbing Ability", "value": "3°/5%", "unit": "" },
+                    { "name": "Obstacle Crossing Height", "value": "10", "unit": "mm" }
+                  ]
+                },
+                {
+                  "id": "obstacle-avoidance",
+                  "name": "Obstacle Avoidance",
+                  "specs": [
+                    { "name": "Obstacle Avoidance Method", "value": "Laser，TOF", "unit": "" },
+                    { "name": "Collision Bar Detection", "value": "Front，rear", "unit": "" },
+                    { "name": "Emergency Stop Button", "value": "Front，rear", "unit": "" },
+                    { "name": "Acoustic and Optical Alarm", "value": "Support", "unit": "" }
+                  ]
+                },
+                {
+                  "id": "battery",
+                  "name": "Battery",
+                  "specs": [
+                    { "name": "Operating Time", "value": "8.0", "unit": "h" },
+                    { "name": "Charging Time", "value": "2.0", "unit": "h" },
+                    { "name": "Charging Mode", "value": "Manual/automatic, manually change battery", "unit": "" },
+                    { "name": "Charge-discharge Cycle Life", "value": "800", "unit": "times" }
+                  ]
+                },
+                {
+                  "id": "operating-environment",
+                  "name": "Operating Environment",
+                  "specs": [
+                    { "name": "Operating Temperature", "value": "0℃ to 40℃", "unit": "" },
+                    { "name": "Charging Temperature", "value": "0℃ to 40℃", "unit": "" },
+                    { "name": "Operating Humidity", "value": "5%～90% without condensation", "unit": "" }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "irayple-rta-c100-lq-2l2t-e-410",
+              "name": "RTA-C100-LQ-2L2T-E-410",
+              "image": "/assets/irayple_robot/latent lifting amr/RTA-C100-LQ-2L2T-E-410/cover.png",
+              "description": {
+                "line1": "Load capacity: 1000kg",
+                "line2": "Navigation: QR code/texture/laser SLAM"
+              },
+              "detail": "Robot tự động di chuyển với khả năng nâng hạ tải trọng 1000kg, phiên bản 2L2T-E-410",
+              "mainCategories": [
+                {
+                  "id": "basic",
+                  "name": "Basic",
+                  "specs": [
+                    { "name": "Product Dimensions", "value": "950×650×250", "unit": "mm" },
+                    { "name": "Rotation Diameter", "value": "1000", "unit": "mm" },
+                    { "name": "Lifting Process Distance", "value": "60", "unit": "mm" },
+                    { "name": "Ground Clearance", "value": "20", "unit": "mm" },
+                    { "name": "Lifting Pallet Dimensions", "value": "900×560", "unit": "mm" },
+                    { "name": "Lifting Method", "value": "Motor", "unit": "" },
+                    { "name": "Machine Weight", "value": "150", "unit": "kg" },
+                    { "name": "Rated Load", "value": "1000", "unit": "kg" },
+                    { "name": "LCD Display", "value": "Support", "unit": "" },
+                    { "name": "Touch Screen", "value": "Support", "unit": "" },
+                    { "name": "Navigation", "value": "QR code/texture/laser SLAM", "unit": "" },
+                    { "name": "Communication Mode", "value": "Wi-Fi", "unit": "" },
+                    { "name": "Drive", "value": "Two-wheel speed difference", "unit": "" }
+                  ]
+                },
+                {
+                  "id": "performance",
+                  "name": "Performance",
+                  "specs": [
+                    { "name": "Max. Operating Speed", "value": "1.5", "unit": "m/s" },
+                    { "name": "Maximum Operating Acceleration under No Load", "value": "1.0", "unit": "m/s²" },
+                    { "name": "No Load Stopping Position Accuracy", "value": "±10", "unit": "mm" },
+                    { "name": "No Load Stopping Angle Accuracy", "value": "±1", "unit": "°" },
+                    { "name": "Climbing Ability", "value": "3°/5%", "unit": "" },
+                    { "name": "Obstacle Crossing Height", "value": "10", "unit": "mm" }
+                  ]
+                },
+                {
+                  "id": "obstacle-avoidance",
+                  "name": "Obstacle Avoidance",
+                  "specs": [
+                    { "name": "Obstacle Avoidance Method", "value": "Laser，TOF", "unit": "" },
+                    { "name": "Collision Bar Detection", "value": "Front，rear", "unit": "" },
+                    { "name": "Emergency Stop Button", "value": "Front，rear", "unit": "" },
+                    { "name": "Acoustic and Optical Alarm", "value": "Support", "unit": "" }
+                  ]
+                },
+                {
+                  "id": "battery",
+                  "name": "Battery",
+                  "specs": [
+                    { "name": "Operating Time", "value": "8.0", "unit": "h" },
+                    { "name": "Charging Time", "value": "2.0", "unit": "h" },
+                    { "name": "Charging Mode", "value": "Manual/automatic, manually change battery", "unit": "" },
+                    { "name": "Charge-discharge Cycle Life", "value": "800", "unit": "times" }
+                  ]
+                },
+                {
+                  "id": "operating-environment",
+                  "name": "Operating Environment",
+                  "specs": [
+                    { "name": "Operating Temperature", "value": "0℃ to 40℃", "unit": "" },
+                    { "name": "Charging Temperature", "value": "0℃ to 40℃", "unit": "" },
+                    { "name": "Operating Humidity", "value": "5%～90% without condensation", "unit": "" }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "irayple-rta-c100-lq-2l2t-e-421",
+              "name": "RTA-C100-LQ-2L2T-E-421",
+              "image": "/assets/irayple_robot/latent lifting amr/RTA-C100-LQ-2L2T-E-421/cover.png",
+              "description": {
+                "line1": "Navigation: QR code/texture/laser SLAM"
+              },
+              "detail": "Robot tự động di chuyển với khả năng nâng hạ tải trọng 1000kg, phiên bản 2L2T-E-421",
+              "mainCategories": [
+                {
+                  "id": "basic",
+                  "name": "Basic",
+                  "specs": [
+                    { "name": "Product Dimensions", "value": "950×650×300", "unit": "mm" },
+                    { "name": "Rotation Diameter", "value": "1000", "unit": "mm" },
+                    { "name": "Lifting Process Distance", "value": "60", "unit": "mm" },
+                    { "name": "Ground Clearance", "value": "20", "unit": "mm" },
+                    { "name": "Lifting Pallet Dimensions", "value": "900×560", "unit": "mm" },
+                    { "name": "Lifting Method", "value": "Motor", "unit": "" },
+                    { "name": "Machine Weight", "value": "170", "unit": "kg" },
+                    { "name": "Rated Load", "value": "1000", "unit": "kg" },
+                    { "name": "LCD Display", "value": "Support", "unit": "" },
+                    { "name": "Touch Screen", "value": "Support", "unit": "" },
+                    { "name": "Navigation", "value": "QR code/texture/laser SLAM", "unit": "" },
+                    { "name": "Communication Mode", "value": "Wi-Fi", "unit": "" },
+                    { "name": "Drive", "value": "Two-wheel speed difference", "unit": "" }
+                  ]
+                },
+                {
+                  "id": "performance",
+                  "name": "Performance",
+                  "specs": [
+                    { "name": "Max. Operating Speed", "value": "1.5", "unit": "m/s" },
+                    { "name": "Maximum Operating Acceleration under No Load", "value": "1.0", "unit": "m/s²" },
+                    { "name": "No Load Stopping Position Accuracy", "value": "±10", "unit": "mm" },
+                    { "name": "No Load Stopping Angle Accuracy", "value": "±1", "unit": "°" },
+                    { "name": "Climbing Ability", "value": "3°/5%", "unit": "" },
+                    { "name": "Obstacle Crossing Height", "value": "10", "unit": "mm" }
+                  ]
+                },
+                {
+                  "id": "obstacle-avoidance",
+                  "name": "Obstacle Avoidance",
+                  "specs": [
+                    { "name": "Obstacle Avoidance Method", "value": "Laser，TOF", "unit": "" },
+                    { "name": "Collision Bar Detection", "value": "Front，rear", "unit": "" },
+                    { "name": "Emergency Stop Button", "value": "Front，rear", "unit": "" },
+                    { "name": "Acoustic and Optical Alarm", "value": "Support", "unit": "" }
+                  ]
+                },
+                {
+                  "id": "battery",
+                  "name": "Battery",
+                  "specs": [
+                    { "name": "Operating Time", "value": "8.0", "unit": "h" },
+                    { "name": "Charging Time", "value": "2.0", "unit": "h" },
+                    { "name": "Charging Mode", "value": "Manual/automatic, manually change battery", "unit": "" },
+                    { "name": "Charge-discharge Cycle Life", "value": "800", "unit": "times" }
+                  ]
+                },
+                {
+                  "id": "operating-environment",
+                  "name": "Operating Environment",
+                  "specs": [
+                    { "name": "Operating Temperature", "value": "0℃ to 40℃", "unit": "" },
+                    { "name": "Charging Temperature", "value": "0℃ to 40℃", "unit": "" },
+                    { "name": "Operating Humidity", "value": "5%～90% without condensation", "unit": "" }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "Forklift",
+          "name": "Forklift",
+          "products": [
+            {
+              "id": "irayple-RTA-F140-L-H200-620CE",
+              "name": "RTA-F140-L-H200-620CE",
+              "image": "/assets/irayple_robot/forklit amr/RTA-F140-L-H200-620CE/cover.png",
+              "description": {
+                "line1": "Load capacity: 1500kg",
+                "line2": "Navigation: Laser SLAM"
+              },
+              "detail": "Robot vận chuyển tải trọng lớn với tốc độ cao, phù hợp cho môi trường logistics",
+              "mainCategories": [
+                {
+                  "id": "basic",
+                  "name": "Basic",
+                  "specs": [
+                    { "name": "Product Dimensions", "value": "1751×1067×2210", "unit": "mm" },
+                    { "name": "Load Center Distance", "value": "600", "unit": "mm" },
+                    { "name": "Height of Rear Fork above Ground after Lifting", "value": "1000/2000", "unit": "mm" },
+                    { "name": "Minimum Pickup Channel", "value": "2200", "unit": "mm" },
+                    { "name": "Machine Weight", "value": "850", "unit": "kg" },
+                    { "name": "Rated Load", "value": "1500", "unit": "kg" },
+                    { "name": "LCD Display", "value": "Support", "unit": "" },
+                    { "name": "Minimum Fork Height from Ground", "value": "87±3", "unit": "mm" },
+                    { "name": "Navigation", "value": "Laser SLAM", "unit": "" },
+                    { "name": "Communication Mode", "value": "Wi-Fi", "unit": "" },
+                    { "name": "Drive", "value": "Single rudder wheel drive", "unit": "" }
+                  ]
+                },
+                {
+                  "id": "performance",
+                  "name": "Performance",
+                  "specs": [
+                    { "name": "Maximum Operating Speed under No Load", "value": "1.3", "unit": "m/s" },
+                    { "name": "No Load Stopping Position Accuracy", "value": "±10", "unit": "mm" },
+                    { "name": "Climbing Ability", "value": "3°/5%", "unit": "" }
+                  ]
+                },
+                {
+                  "id": "obstacle-avoidance",
+                  "name": "Obstacle Avoidance",
+                  "specs": [
+                    { "name": "Obstacle Avoidance Method", "value": "Laser, visual, photoelectric, safety contact edge", "unit": "" },
+                    { "name": "Collision Bar Detection", "value": "Support", "unit": "" },
+                    { "name": "Emergency Stop Button", "value": "Support", "unit": "" },
+                    { "name": "Acoustic and Optical Alarm", "value": "Support", "unit": "" }
+                  ]
+                },
+                {
+                  "id": "battery",
+                  "name": "Battery",
+                  "specs": [
+                    { "name": "Operating Time", "value": "8.0", "unit": "h" },
+                    { "name": "Charging Mode", "value": "Auto/Manual", "unit": "" },
+                    { "name": "Charge-discharge Cycle Life", "value": "2000", "unit": "times" }
+                  ]
+                },
+                {
+                  "id": "environment",
+                  "name": "Environment",
+                  "specs": [
+                    { "name": "Operating Temperature", "value": "0℃ to 40℃", "unit": "" },
+                    { "name": "Operating Humidity", "value": "5%～90% without condensation", "unit": "" }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "irayple-RTA-D150-L-3LA-200-E",
+              "name": "RTA-D150-L-3LA-200-E",
+              "image": "/assets/irayple_robot/forklit amr/RTA-D150-L-3LA-200-E/cover.png",
+              "description": {
+                "line1": "Load capacity: 1500kg",
+                "line2": "Navigation: Laser SLAM"
+              },
+              "detail": "Robot vận chuyển tải trọng lớn với tốc độ cao, phù hợp cho môi trường logistics",
+              "mainCategories": [
+                {
+                  "id": "basic",
+                  "name": "Basic",
+                  "specs": [
+                    { "name": "Product Dimensions", "value": "1608×830×1910", "unit": "mm" },
+                    { "name": "Load Center Distance", "value": "600", "unit": "mm" },
+                    { "name": "Height of Rear Fork above Ground after Lifting", "value": "200", "unit": "mm" },
+                    { "name": "Min. Passage Width", "value": "2000", "unit": "mm" },
+                    { "name": "Net Weight", "value": "420", "unit": "kg" },
+                    { "name": "Load Capacity", "value": "1500", "unit": "kg" },
+                    { "name": "LCD Display", "value": "Support", "unit": "" },
+                    { "name": "Min. Fork Clearance Height", "value": "84±3", "unit": "mm" },
+                    { "name": "Navigation", "value": "Laser SLAM", "unit": "" },
+                    { "name": "Communication Mode", "value": "Wi-Fi", "unit": "" },
+                    { "name": "Drive", "value": "Single rudder wheel drive", "unit": "" }
+                  ]
+                },
+                {
+                  "id": "performance",
+                  "name": "Performance",
+                  "specs": [
+                    { "name": "Maximum Operating Speed under No Load", "value": "1.2", "unit": "m/s" },
+                    { "name": "No Load Stopping Position Accuracy", "value": "±10", "unit": "mm" },
+                    { "name": "Climbing Ability", "value": "3°/5%", "unit": "" }
+                  ]
+                },
+                {
+                  "id": "obstacle-avoidance",
+                  "name": "Obstacle Avoidance",
+                  "specs": [
+                    { "name": "Obstacle Avoidance Method", "value": "Laser, visual, photoelectric, safety contact edge", "unit": "" },
+                    { "name": "Collision Detection", "value": "Support", "unit": "" },
+                    { "name": "Stop Button", "value": "Support", "unit": "" },
+                    { "name": "Sound and Light Alarm", "value": "Support", "unit": "" }
+                  ]
+                },
+                {
+                  "id": "battery",
+                  "name": "Battery",
+                  "specs": [
+                    { "name": "Operating Time", "value": "6.0", "unit": "h" },
+                    { "name": "Charging Mode", "value": "Manual/automatic, manually change battery", "unit": "" }
+                  ]
+                },
+                {
+                  "id": "environment",
+                  "name": "Environment",
+                  "specs": [
+                    { "name": "Operating Temperature", "value": "0°C to 40°C", "unit": "" },
+                    { "name": "Operating Humidity", "value": "5%～90% without condensation", "unit": "" }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "transfer",
+          "name": "Transfer AMR",
+          "products": [
+            {
+              "id": "irayple-RTA-M060-LQ",
+              "name": "RTA-M060-LQ",
+              "image": "/assets/irayple_robot/transfer amr/RTA-M060-LQ/cover.png",
+              "description": {
+                "line1": "Load capacity: 1500kg",
+                "line2": "Navigation: Laser SLAM"
+              },
+              "detail": "Robot vận chuyển tải trọng lớn với tốc độ cao, phù hợp cho môi trường logistics",
+              "mainCategories": [
+                {
+                  "id": "basic",
+                  "name": "Basic",
+                  "specs": [
+                    { "name": "Product Dimensions", "value": "950×650×300", "unit": "mm" },
+                    { "name": "Rotation Diameter", "value": "1000", "unit": "mm" },
+                    { "name": "Ground Clearance", "value": "20", "unit": "mm" },
+                    { "name": "Material Handling Method", "value": "Customizable", "unit": "" },
+                    { "name": "Machine Weight", "value": "140", "unit": "kg" },
+                    { "name": "Rated Load", "value": "600", "unit": "kg" },
+                    { "name": "LCD Display", "value": "Support", "unit": "" },
+                    { "name": "Touch Screen", "value": "Support", "unit": "" },
+                    { "name": "Navigation", "value": "QR code/texture/laser SLAM", "unit": "" },
+                    { "name": "Communication Mode", "value": "Wi-Fi", "unit": "" },
+                    { "name": "Drive", "value": "Two-wheel speed difference", "unit": "" }
+                  ]
+                },
+                {
+                  "id": "performance",
+                  "name": "Performance",
+                  "specs": [
+                    { "name": "Max. Operating Speed", "value": "2.0", "unit": "m/s" },
+                    { "name": "Maximum Operating Acceleration under No Load", "value": "1.0", "unit": "m/s²" },
+                    { "name": "No Load Stopping Position Accuracy", "value": "±10", "unit": "mm" },
+                    { "name": "No Load Stopping Angle Accuracy", "value": "±1", "unit": "°" },
+                    { "name": "Climbing Ability", "value": "0.05", "unit": "" },
+                    { "name": "Obstacle Crossing Height", "value": "10", "unit": "mm" }
+                  ]
+                },
+                {
+                  "id": "obstacle-avoidance",
+                  "name": "Obstacle Avoidance",
+                  "specs": [
+                    { "name": "Obstacle Avoidance Method", "value": "Laser，TOF", "unit": "" },
+                    { "name": "Collision Bar Detection", "value": "Front，rear", "unit": "" },
+                    { "name": "Emergency Stop Button", "value": "Front，rear", "unit": "" },
+                    { "name": "Acoustic and Optical Alarm", "value": "Support", "unit": "" }
+                  ]
+                },
+                {
+                  "id": "battery",
+                  "name": "Battery",
+                  "specs": [
+                    { "name": "Battery", "value": "Lithium iron phosphate", "unit": "" },
+                    { "name": "Operating Time", "value": "8.0", "unit": "h" },
+                    { "name": "Charging Time", "value": "1.5", "unit": "h" },
+                    { "name": "Charging Mode", "value": "Manual/automatic, manually change battery", "unit": "" },
+                    { "name": "Charge-discharge Cycle Life", "value": "1500", "unit": "times" }
+                  ]
+                },
+                {
+                  "id": "operating-environment",
+                  "name": "Operating Environment",
+                  "specs": [
+                    { "name": "Operating Temperature", "value": "0℃ to 40℃", "unit": "" },
+                    { "name": "Charging Temperature", "value": "0℃ to 40℃", "unit": "" },
+                    { "name": "Operating Humidity", "value": "5%～90% without condensation", "unit": "" }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "accessories",
+          "name": "Accessories",
+          "products": [
+            {
+              "id": "irayple-RTP-4830-1-300E",
+              "name": "RTP-4830-1-300E",
+              "image": "/assets/irayple_robot/accessories/RTP-4830-1-300E/cover.png",
+              "description": {
+                "line1": "Accessory for AMR",
+                "line2": "Compatible with multiple models"
+              },
+              "detail": "Phụ kiện chuyên dụng cho robot tự động di chuyển",
+              "mainCategories": [
+                {
+                  "id": "basic",
+                  "name": "Basic",
+                  "specs": [
+                    { "name": "Product Dimensions", "value": "440×397×495", "unit": "mm" },
+                    { "name": "Input Voltage", "value": "220", "unit": "VAC" },
+                    { "name": "Output Voltage", "value": "48", "unit": "VDC" },
+                    { "name": "Output Current", "value": "30", "unit": "A" },
+                    { "name": "Net Weight", "value": "25", "unit": "kg" },
+                    { "name": "Charging Mode", "value": "Auto/Manual", "unit": "" }
+                  ]
+                },
+                {
+                  "id": "operating-environment",
+                  "name": "Operating Environment",
+                  "specs": [
+                    { "name": "Operating Temperature", "value": "0℃ to 40℃", "unit": "" },
+                    { "name": "Operating Humidity", "value": "5%～90% without condensation", "unit": "" }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "irayple-RTP-4830-1-500",
+              "name": "RTP-4830-1-500",
+              "image": "/assets/irayple_robot/accessories/RTP-4830-1-500/cover.png",
+              "description": {
+                "line1": "Accessory for AMR",
+                "line2": "Compatible with multiple models"
+              },
+              "detail": "Phụ kiện chuyên dụng cho robot tự động di chuyển",
+              "mainCategories": [
+                {
+                  "id": "basic",
+                  "name": "Basic",
+                  "specs": [
+                    { "name": "Product Dimensions", "value": "545×572×280", "unit": "mm" },
+                    { "name": "Input Voltage", "value": "220", "unit": "VAC" },
+                    { "name": "Output Voltage", "value": "48", "unit": "VDC" },
+                    { "name": "Output Current", "value": "30", "unit": "A" },
+                    { "name": "Net Weight", "value": "24", "unit": "kg" },
+                    { "name": "Charging Mode", "value": "Auto/Manual", "unit": "" }
+                  ]
+                },
+                {
+                  "id": "operating-environment",
+                  "name": "Operating Environment",
+                  "specs": [
+                    { "name": "Operating Temperature", "value": "0°C to 40°C", "unit": "" },
+                    { "name": "Operating Humidity", "value": "5%～90% without condensation", "unit": "" }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "irayple-iACS-E29.2/80-E80-European",
+              "name": "iACS-E29.2/80-E80-European",
+              "image": "/assets/irayple_robot/accessories/RTP-4860-3-100/cover.png",
+              "description": {
+                "line1": "Accessory for AMR",
+                "line2": "Compatible with multiple models"
+              },
+              "detail": "Phụ kiện chuyên dụng cho robot tự động di chuyển",
+              "mainCategories": [
+                {
+                  "id": "basic",
+                  "name": "Basic",
+                  "specs": [
+                    { "name": "Product Dimensions", "value": "632×422×994", "unit": "mm" },
+                    { "name": "Input Voltage", "value": "220", "unit": "VAC" },
+                    { "name": "Output Voltage", "value": "24", "unit": "VDC" },
+                    { "name": "Output Current", "value": "100", "unit": "A" },
+                    { "name": "Net Weight", "value": "64", "unit": "kg" },
+                    { "name": "Charging Mode", "value": "Auto/Manual", "unit": "" }
+                  ]
+                },
+                {
+                  "id": "operating-environment",
+                  "name": "Operating Environment",
+                  "specs": [
+                    { "name": "Operating Temperature", "value": "0℃ to 40℃", "unit": "" },
+                    { "name": "Operating Humidity", "value": "5%～90% without condensation", "unit": "" }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "irayple-iACS-E54.6/50-220",
+              "name": "iACS-E54.6/50-220",
+              "image": "/assets/irayple_robot/accessories/RTP-24100-4-100/cover.png",
+              "description": {
+                "line1": "Accessory for AMR",
+                "line2": "Compatible with multiple models"
+              },
+              "detail": "Phụ kiện chuyên dụng cho robot tự động di chuyển",
+              "mainCategories": [
+                {
+                  "id": "basic",
+                  "name": "Basic",
+                  "specs": [
+                    { "name": "Product Dimensions", "value": "632×400×896", "unit": "mm" },
+                    { "name": "Input Voltage", "value": "220", "unit": "VAC" },
+                    { "name": "Output Voltage", "value": "48", "unit": "VDC" },
+                    { "name": "Output Current", "value": "60", "unit": "A" },
+                    { "name": "Net Weight", "value": "64", "unit": "kg" },
+                    { "name": "Charging Mode", "value": "Auto/Manual", "unit": "" }
+                  ]
+                },
+                {
+                  "id": "operating-environment",
+                  "name": "Operating Environment",
+                  "specs": [
+                    { "name": "Operating Temperature", "value": "0℃ to 40℃", "unit": "" },
+                    { "name": "Operating Humidity", "value": "5%～90% without condensation", "unit": "" }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "3d-camera",
+          "name": "3D Camera",
+          "products": [
+            {
+              "id": "irayple-D7200MG200E",
+              "name": "D7200MG200E",
+              "image": "/assets/irayple_robot/3D camera/D7200MG200E/cover.png",
+              "description": {
+                "line1": "3D Camera System",
+                "line2": "High precision scanning"
+              },
+              "detail": "Hệ thống camera 3D độ chính xác cao cho ứng dụng công nghiệp",
+              "mainCategories": [
+                {
+                  "id": "technical-specs",
+                  "name": "Thông số kỹ thuật",
+                  "specs": [
+                    { "name": "Độ phân giải", "value": "7200x200", "unit": "pixels" },
+                    { "name": "Tốc độ quét", "value": "200", "unit": "fps" },
+                    { "name": "Độ chính xác", "value": "±0.1", "unit": "mm" }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "irayple-DH-MV-D5201MG100E",
+              "name": "DH-MV-D5201MG100E",
+              "image": "/assets/irayple_robot/3D camera/DH-MV-D5201MG100E/cover.png",
+              "description": {
+                "line1": "3D Camera System",
+                "line2": "High precision scanning"
+              },
+              "detail": "Hệ thống camera 3D độ chính xác cao cho ứng dụng công nghiệp",
+              "mainCategories": [
+                {
+                  "id": "technical-specs",
+                  "name": "Thông số kỹ thuật",
+                  "specs": [
+                    { "name": "Độ phân giải", "value": "5201x100", "unit": "pixels" },
+                    { "name": "Tốc độ quét", "value": "100", "unit": "fps" },
+                    { "name": "Độ chính xác", "value": "±0.05", "unit": "mm" }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "area-scan-camera",
+          "name": "Area Scan Camera",
+          "products": [
+            {
+              "id": "irayple-AH7040CG000E",
+              "name": "AH7040CG000E",
+              "image": "/assets/irayple_robot/area scan-camera/AH7040CG000E/cover.png",
+              "description": {
+                "line1": "Area Scan Camera",
+                "line2": "GigE interface"
+              },
+              "detail": "Camera quét vùng với giao diện GigE cho ứng dụng công nghiệp",
+              "mainCategories": [
+                {
+                  "id": "technical-specs",
+                  "name": "Thông số kỹ thuật",
+                  "specs": [
+                    { "name": "Độ phân giải", "value": "7040x7040", "unit": "pixels" },
+                    { "name": "Giao diện", "value": "GigE", "unit": "" },
+                    { "name": "Tốc độ khung hình", "value": "30", "unit": "fps" }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "irayple-AH7040CU000E",
+              "name": "AH7040CU000E",
+              "image": "/assets/irayple_robot/area scan-camera/AH7040CU000E/cover.png",
+              "description": {
+                "line1": "Area Scan Camera",
+                "line2": "USB3.0 interface"
+              },
+              "detail": "Camera quét vùng với giao diện USB3.0 cho ứng dụng công nghiệp",
+              "mainCategories": [
+                {
+                  "id": "technical-specs",
+                  "name": "Thông số kỹ thuật",
+                  "specs": [
+                    { "name": "Độ phân giải", "value": "7040x7040", "unit": "pixels" },
+                    { "name": "Giao diện", "value": "USB3.0", "unit": "" },
+                    { "name": "Tốc độ khung hình", "value": "30", "unit": "fps" }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "irayple-AH7040MG000E",
+              "name": "AH7040MG000E",
+              "image": "/assets/irayple_robot/area scan-camera/AH7040MG000E/cover.png",
+              "description": {
+                "line1": "Area Scan Camera",
+                "line2": "MIPI interface"
+              },
+              "detail": "Camera quét vùng với giao diện MIPI cho ứng dụng công nghiệp",
+              "mainCategories": [
+                {
+                  "id": "technical-specs",
+                  "name": "Thông số kỹ thuật",
+                  "specs": [
+                    { "name": "Độ phân giải", "value": "7040x7040", "unit": "pixels" },
+                    { "name": "Giao diện", "value": "MIPI", "unit": "" },
+                    { "name": "Tốc độ khung hình", "value": "30", "unit": "fps" }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "irayple-AH7040MU000E",
+              "name": "AH7040MU000E",
+              "image": "/assets/irayple_robot/area scan-camera/AH7040MU000E/cover.png",
+              "description": {
+                "line1": "Area Scan Camera",
+                "line2": "USB3.0 interface"
+              },
+              "detail": "Camera quét vùng với giao diện USB3.0 cho ứng dụng công nghiệp",
+              "mainCategories": [
+                {
+                  "id": "technical-specs",
+                  "name": "Thông số kỹ thuật",
+                  "specs": [
+                    { "name": "Độ phân giải", "value": "7040x7040", "unit": "pixels" },
+                    { "name": "Giao diện", "value": "USB3.0", "unit": "" },
+                    { "name": "Tốc độ khung hình", "value": "30", "unit": "fps" }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "irayple-AH7160CG000E",
+              "name": "AH7160CG000E",
+              "image": "/assets/irayple_robot/area scan-camera/AH7160CG000E/cover.png",
+              "description": {
+                "line1": "Area Scan Camera",
+                "line2": "GigE interface"
+              },
+              "detail": "Camera quét vùng với giao diện GigE cho ứng dụng công nghiệp",
+              "mainCategories": [
+                {
+                  "id": "technical-specs",
+                  "name": "Thông số kỹ thuật",
+                  "specs": [
+                    { "name": "Độ phân giải", "value": "7160x7160", "unit": "pixels" },
+                    { "name": "Giao diện", "value": "GigE", "unit": "" },
+                    { "name": "Tốc độ khung hình", "value": "30", "unit": "fps" }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "irayple-AH7160MG000E",
+              "name": "AH7160MG000E",
+              "image": "/assets/irayple_robot/area scan-camera/AH7160MG000E/cover.png",
+              "description": {
+                "line1": "Area Scan Camera",
+                "line2": "MIPI interface"
+              },
+              "detail": "Camera quét vùng với giao diện MIPI cho ứng dụng công nghiệp",
+              "mainCategories": [
+                {
+                  "id": "technical-specs",
+                  "name": "Thông số kỹ thuật",
+                  "specs": [
+                    { "name": "Độ phân giải", "value": "7160x7160", "unit": "pixels" },
+                    { "name": "Giao diện", "value": "MIPI", "unit": "" },
+                    { "name": "Tốc độ khung hình", "value": "30", "unit": "fps" }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "code-reader",
+          "name": "Code Reader",
+          "products": [
+            {
+              "id": "irayple-R3004MG-05-DEE110E",
+              "name": "R3004MG-05-DEE110E",
+              "image": "/assets/irayple_robot/code reader/R3004MG-05-DEE110E/cover.png",
+              "description": {
+                "line1": "Code Reader",
+                "line2": "High speed reading"
+              },
+              "detail": "Máy đọc mã vạch tốc độ cao cho ứng dụng công nghiệp",
+              "mainCategories": [
+                {
+                  "id": "technical-specs",
+                  "name": "Thông số kỹ thuật",
+                  "specs": [
+                    { "name": "Tốc độ đọc", "value": "3000", "unit": "codes/s" },
+                    { "name": "Độ chính xác", "value": "99.9", "unit": "%" },
+                    { "name": "Giao diện", "value": "MIPI", "unit": "" }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "irayple-R3004MG-05H-DEE01E",
+              "name": "R3004MG-05H-DEE01E",
+              "image": "/assets/irayple_robot/code reader/R3004MG-05H-DEE01E/cover.png",
+              "description": {
+                "line1": "Code Reader",
+                "line2": "High speed reading"
+              },
+              "detail": "Máy đọc mã vạch tốc độ cao cho ứng dụng công nghiệp",
+              "mainCategories": [
+                {
+                  "id": "technical-specs",
+                  "name": "Thông số kỹ thuật",
+                  "specs": [
+                    { "name": "Tốc độ đọc", "value": "3000", "unit": "codes/s" },
+                    { "name": "Độ chính xác", "value": "99.9", "unit": "%" },
+                    { "name": "Giao diện", "value": "MIPI", "unit": "" }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "irayple-R3004MG-05H-WEE01E",
+              "name": "R3004MG-05H-WEE01E",
+              "image": "/assets/irayple_robot/code reader/R3004MG-05H-WEE01E/cover.png",
+              "description": {
+                "line1": "Code Reader",
+                "line2": "High speed reading"
+              },
+              "detail": "Máy đọc mã vạch tốc độ cao cho ứng dụng công nghiệp",
+              "mainCategories": [
+                {
+                  "id": "technical-specs",
+                  "name": "Thông số kỹ thuật",
+                  "specs": [
+                    { "name": "Tốc độ đọc", "value": "3000", "unit": "codes/s" },
+                    { "name": "Độ chính xác", "value": "99.9", "unit": "%" },
+                    { "name": "Giao diện", "value": "MIPI", "unit": "" }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "line-scan-camera",
+          "name": "Line Scan Camera",
+          "products": [
+            {
+              "id": "irayple-L5022MG141E",
+              "name": "L5022MG141E",
+              "image": "/assets/irayple_robot/line scan-camera/L5022MG141E/cover.png",
+              "description": {
+                "line1": "Line Scan Camera",
+                "line2": "High speed scanning"
+              },
+              "detail": "Camera quét dòng tốc độ cao cho ứng dụng công nghiệp",
+              "mainCategories": [
+                {
+                  "id": "technical-specs",
+                  "name": "Thông số kỹ thuật",
+                  "specs": [
+                    { "name": "Độ phân giải", "value": "5022", "unit": "pixels" },
+                    { "name": "Tốc độ quét", "value": "141", "unit": "kHz" },
+                    { "name": "Giao diện", "value": "MIPI", "unit": "" }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "irayple-L5027CG140E",
+              "name": "L5027CG140E",
+              "image": "/assets/irayple_robot/line scan-camera/L5027CG140E/cover.png",
+              "description": {
+                "line1": "Line Scan Camera",
+                "line2": "High speed scanning"
+              },
+              "detail": "Camera quét dòng tốc độ cao cho ứng dụng công nghiệp",
+              "mainCategories": [
+                {
+                  "id": "technical-specs",
+                  "name": "Thông số kỹ thuật",
+                  "specs": [
+                    { "name": "Độ phân giải", "value": "5027", "unit": "pixels" },
+                    { "name": "Tốc độ quét", "value": "140", "unit": "kHz" },
+                    { "name": "Giao diện", "value": "GigE", "unit": "" }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "irayple-L5027MG140E",
+              "name": "L5027MG140E",
+              "image": "/assets/irayple_robot/line scan-camera/L5027MG140E/cover.png",
+              "description": {
+                "line1": "Line Scan Camera",
+                "line2": "High speed scanning"
+              },
+              "detail": "Camera quét dòng tốc độ cao cho ứng dụng công nghiệp",
+              "mainCategories": [
+                {
+                  "id": "technical-specs",
+                  "name": "Thông số kỹ thuật",
+                  "specs": [
+                    { "name": "Độ phân giải", "value": "5027", "unit": "pixels" },
+                    { "name": "Tốc độ quét", "value": "140", "unit": "kHz" },
+                    { "name": "Giao diện", "value": "MIPI", "unit": "" }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "smart-camera",
+          "name": "Smart Camera",
+          "products": [
+            {
+              "id": "irayple-SS3016PMG-07H-RGF01E",
+              "name": "SS3016PMG-07H-RGF01E",
+              "image": "/assets/irayple_robot/smart camera/SS3016PMG-07H-RGF01E/cover.png",
+              "description": {
+                "line1": "Smart Camera",
+                "line2": "AI powered vision"
+              },
+              "detail": "Camera thông minh tích hợp AI cho ứng dụng công nghiệp",
+              "mainCategories": [
+                {
+                  "id": "technical-specs",
+                  "name": "Thông số kỹ thuật",
+                  "specs": [
+                    { "name": "Độ phân giải", "value": "3016x3016", "unit": "pixels" },
+                    { "name": "AI Engine", "value": "Có", "unit": "" },
+                    { "name": "Giao diện", "value": "MIPI", "unit": "" }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "irayple-SS3016PMG-07H-WGN01E",
+              "name": "SS3016PMG-07H-WGN01E",
+              "image": "/assets/irayple_robot/smart camera/SS3016PMG-07H-WGN01E/cover.png",
+              "description": {
+                "line1": "Smart Camera",
+                "line2": "AI powered vision"
+              },
+              "detail": "Camera thông minh tích hợp AI cho ứng dụng công nghiệp",
+              "mainCategories": [
+                {
+                  "id": "technical-specs",
+                  "name": "Thông số kỹ thuật",
+                  "specs": [
+                    { "name": "Độ phân giải", "value": "3016x3016", "unit": "pixels" },
+                    { "name": "AI Engine", "value": "Có", "unit": "" },
+                    { "name": "Giao diện", "value": "MIPI", "unit": "" }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hairobotic",
+      "name": "Hairbotic",
+      "categories": [
+        {
+          "id": "acr",
+          "name": "ACR",
+          "products": [
+            {
+              "id": "hairobotic-acr-a3",
+              "name": "Fork-Lifting ACR A3",
+              "image": "/assets/hairobot_robot/ACR/Fork-Lifting ACR A3/cover.jpg",
+              "description": {
+                "line1": "Fork-Lifting ACR System",
+                "line2": "Automated container handling"
+              },
+              "detail": "Hệ thống ACR tự động với khả năng nâng hạ container sử dụng fork-lifting, phù hợp cho môi trường logistics và kho bãi",
+              "mainCategories": [
+                {
+                  "id": "technical-specs",
+                  "name": "Thông số kỹ thuật",
+                  "specs": [
+                    { "name": "Tải trọng tối đa", "value": "1500", "unit": "kg" },
+                    { "name": "Tốc độ di chuyển", "value": "1.8", "unit": "m/s" },
+                    { "name": "Độ cao nâng", "value": "0-400", "unit": "mm" },
+                    { "name": "Kích thước", "value": "1500x1000x450", "unit": "mm" },
+                    { "name": "Trọng lượng", "value": "350", "unit": "kg" }
+                  ]
+                },
+                {
+                  "id": "navigation",
+                  "name": "Hệ thống định vị",
+                  "specs": [
+                    { "name": "Laser SLAM", "value": "Hỗ trợ" },
+                    { "name": "QR Code", "value": "Hỗ trợ" },
+                    { "name": "Độ chính xác", "value": "±15", "unit": "mm" },
+                    { "name": "Tự động mapping", "value": "Có" }
+                  ]
+                },
+                {
+                  "id": "safety",
+                  "name": "Tính năng an toàn",
+                  "specs": [
+                    { "name": "Cảm biến va chạm", "value": "360°" },
+                    { "name": "Cảm biến laser", "value": "3 lớp" },
+                    { "name": "Tín hiệu âm thanh", "value": "Có" },
+                    { "name": "Đèn cảnh báo", "value": "LED RGB" }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "hairobotic-acr-a42",
+              "name": "Multi-Layer ACR A42",
+              "image": "/assets/hairobot_robot/ACR/Multi-Layer ACR A42/cover.png",
+              "description": {
+                "line1": "Multi-Layer ACR System",
+                "line2": "High-density storage solution"
+              },
+              "detail": "Hệ thống ACR đa tầng cho giải pháp lưu trữ mật độ cao, tối ưu hóa không gian kho bãi",
+              "mainCategories": [
+                {
+                  "id": "technical-specs",
+                  "name": "Thông số kỹ thuật",
+                  "specs": [
+                    { "name": "Tải trọng tối đa", "value": "2000", "unit": "kg" },
+                    { "name": "Số tầng hỗ trợ", "value": "4-6", "unit": "tầng" },
+                    { "name": "Tốc độ di chuyển", "value": "2.0", "unit": "m/s" },
+                    { "name": "Kích thước", "value": "1600x1100x500", "unit": "mm" },
+                    { "name": "Trọng lượng", "value": "400", "unit": "kg" }
+                  ]
+                },
+                {
+                  "id": "storage",
+                  "name": "Khả năng lưu trữ",
+                  "specs": [
+                    { "name": "Mật độ lưu trữ", "value": "Tăng 40%", "unit": "" },
+                    { "name": "Tự động sắp xếp", "value": "Có" },
+                    { "name": "Tối ưu hóa không gian", "value": "Có" }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "hairobotic-acr-a42t",
+              "name": "Telescopic Lift ACR A42T",
+              "image": "/assets/hairobot_robot/ACR/Telescopic Lift ACR A42T/cover.jpg",
+              "description": {
+                "line1": "Telescopic Lift ACR",
+                "line2": "Extendable lifting system"
+              },
+              "detail": "Hệ thống ACR với khả năng nâng hạ mở rộng, phù hợp cho các ứng dụng cần độ linh hoạt cao",
+              "mainCategories": [
+                {
+                  "id": "technical-specs",
+                  "name": "Thông số kỹ thuật",
+                  "specs": [
+                    { "name": "Tải trọng tối đa", "value": "1800", "unit": "kg" },
+                    { "name": "Độ cao nâng tối đa", "value": "600", "unit": "mm" },
+                    { "name": "Tốc độ di chuyển", "value": "1.6", "unit": "m/s" },
+                    { "name": "Kích thước", "value": "1550x1050x480", "unit": "mm" },
+                    { "name": "Trọng lượng", "value": "380", "unit": "kg" }
+                  ]
+                },
+                {
+                  "id": "lifting",
+                  "name": "Hệ thống nâng hạ",
+                  "specs": [
+                    { "name": "Cơ chế nâng", "value": "Telescopic", "unit": "" },
+                    { "name": "Độ ổn định", "value": "Cao" },
+                    { "name": "Điều khiển mượt mà", "value": "Có" }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "hairobotic-acr-a42t-e2",
+              "name": "Telescopic Grappling-hook ACR A42T-E2",
+              "image": "/assets/hairobot_robot/ACR/Telescopic Grappling-hook ACR A42T-E2/cover.png",
+              "description": {
+                "line1": "Telescopic Grappling-hook ACR",
+                "line2": "Advanced gripping system"
+              },
+              "detail": "Hệ thống ACR với móc gắp mở rộng và cơ chế gắp kẹp tiên tiến, phù hợp cho các container đặc biệt",
+              "mainCategories": [
+                {
+                  "id": "technical-specs",
+                  "name": "Thông số kỹ thuật",
+                  "specs": [
+                    { "name": "Tải trọng tối đa", "value": "2000", "unit": "kg" },
+                    { "name": "Độ cao nâng tối đa", "value": "800", "unit": "mm" },
+                    { "name": "Tốc độ di chuyển", "value": "1.8", "unit": "m/s" },
+                    { "name": "Kích thước", "value": "1600x1100x520", "unit": "mm" },
+                    { "name": "Trọng lượng", "value": "420", "unit": "kg" }
+                  ]
+                },
+                {
+                  "id": "gripping",
+                  "name": "Hệ thống gắp kẹp",
+                  "specs": [
+                    { "name": "Cơ chế gắp", "value": "Grappling-hook", "unit": "" },
+                    { "name": "Độ chính xác gắp", "value": "±5", "unit": "mm" },
+                    { "name": "Tự động điều chỉnh", "value": "Có" }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

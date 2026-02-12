@@ -1,0 +1,81 @@
+[
+  {
+    "id": "smart-school",
+    "title": "TRƯỜNG HỌC THÔNG MINH",
+    "image": "https://img.icons8.com/ios/50/1C9B9B/school.png",
+    "subtitle": "Smart School",
+    "color": "var(--primary)",
+    "description": "Giải pháp Trường học thông minh giúp nâng cao chất lượng dạy và học thông qua công nghệ hiện đại, tối ưu quản lý và mang lại trải nghiệm học tập tương tác.",
+    "features": [
+      "Lớp học ảo và học trực tuyến",
+      "Hệ thống quản lý học tập (LMS)",
+      "Ứng dụng AI cá nhân hóa học tập",
+      "Phân tích dữ liệu học tập"
+    ]
+  },
+  {
+    "id": "packing-system",
+    "title": "HỆ THỐNG ĐÓNG GÓI",
+    "image": "https://img.icons8.com/ios/50/1C9B9B/packing.png",
+    "subtitle": "Packing System",
+    "color": "var(--secondary)",
+    "description": "Dây chuyền đóng gói tự động cho nhà máy sản xuất",
+    "features": ["Đóng gói tự động", "Dây chuyền sản xuất", "Kiểm soát chất lượng", "Tối ưu hiệu suất"]
+  },
+  {
+    "id": "smart-warehouse",
+    "title": "KHO HÀNG THÔNG MINH",
+    "image": "https://img.icons8.com/ios/50/1C9B9B/warehouse.png",
+    "subtitle": "Smart Warehouse",
+    "color": "var(--accent)",
+    "description": "Hệ thống kho hàng tự động với AS/RS và robot vận chuyển",
+    "features": ["AS/RS tự động", "Robot vận chuyển", "Quản lý kho thông minh", "Truy xuất nhanh"]
+  },
+  {
+    "id": "services",
+    "title": "DỊCH VỤ LẮP ĐẶT & BẢO TRÌ",
+    "image": "https://img.icons8.com/ios/50/1C9B9B/service.png",
+    "subtitle": "Services",
+    "color": "var(--primary)",
+    "description": "Dịch vụ lắp đặt, bảo trì và hỗ trợ kỹ thuật chuyên nghiệp",
+    "features": ["Lắp đặt chuyên nghiệp", "Bảo trì định kỳ", "Hỗ trợ 24/7", "Đào tạo nhân viên"]
+  },
+  {
+    "id": "ai-vision-robot",
+    "title": "HỆ THỐNG ROBOT, CAMERA AI",
+    "image": "https://img.icons8.com/ios/50/1C9B9B/bot.png",
+    "subtitle": "AI Vision, Robot System",
+    "color": "var(--secondary)",
+    "description": "Hệ thống thị giác máy tính tích hợp AI cho robot",
+    "features": ["AI Vision Processing", "Computer Vision", "Machine Learning", "Real-time Analysis"]
+  },
+  {
+    "id": "smart-locker",
+    "title": "TỦ ĐỒ THÔNG MINH",
+    "image": "https://img.icons8.com/pulsar-line/50/1c9b9b/lockers.png",
+    "subtitle": "Smart Locker",
+    "color": "var(--accent)",
+    "description": "Hệ thống tủ khóa thông minh cho nhận/gửi bưu kiện tự động",
+    "features": ["Nhận/gửi tự động", "Bảo mật cao", "Quản lý thông minh", "Tích hợp IoT"]
+  },
+  {
+    "id": "smart-factory",
+    "title": "NHÀ MÁY THÔNG MINH",
+    "image": "https://img.icons8.com/ios/50/1C9B9B/factory.png",
+    "subtitle": "Smart Factory",
+    "color": "var(--primary)",
+    "description": "Nhà máy tự động hóa cao với robot và máy móc thông minh",
+    "features": ["Tự động hóa toàn diện", "Robot công nghiệp", "Trung tâm điều khiển", "IoT Integration"]
+  },
+  {
+    "id": "smart-building",
+    "title": "TÒA NHÀ THÔNG MINH",
+    "image": "https://img.icons8.com/external-tal-revivo-light-tal-revivo/24/1C9B9B/external-smart-building-with-wireless-isolated-on-white-background-network-light-tal-revivo.png",
+    "subtitle": "Smart Building",
+    "color": "var(--secondary)",
+    "description": "Hệ thống tòa nhà thông minh với camera an ninh và quản lý năng lượng",
+    "features": ["Camera an ninh", "Điều khiển ánh sáng", "Quản lý năng lượng", "Hệ thống thông minh"]
+  }
+]
+
+

@@ -1,0 +1,366 @@
+
+{
+  
+  "nav": {
+    "home": "Trang chủ",
+    "products": "Sản phẩm",
+    "solutions": "Giải pháp", 
+    "technology": "Công nghệ",
+  "about": "Về chúng tôi",
+  "blog": "Bài viết",
+  "contact": "Liên hệ",
+    "find_product": "Tìm kiếm danh mục sản phẩm",
+    "toggle_language": "Chuyển đổi ngôn ngữ",
+    "toggle_theme_light": "Chuyển sang chế độ sáng",
+    "toggle_theme_dark": "Chuyển sang chế độ tối",
+    "search": "Tìm kiếm"
+  },
+  "breadcrumb": {
+    "home": "Trang chủ",
+    "blog": "Bài viết"
+  },
+  "blog_page": {
+    "not_found": "Bài viết không tồn tại",
+    "author": "Tác giả",
+    "back_to_list": "Quay lại danh sách bài viết",
+    "list_title": "Tất cả bài viết",
+    "list_subtitle": "Khám phá các bài viết về lập trình và công nghệ"
+  },
+  "hero": {
+    "badge": "Giải pháp Robot thông minh",
+    "title_line1": "Tương lai của",
+    "title_highlight": "Tự động hóa",
+    "title_line2": "bắt đầu từ đây",
+    "btn_products": "Khám phá sản phẩm",
+    "btn_solutions": "Giải pháp",
+    "about_title": "Về Thadorobot",
+    "about_desc": "Công ty có đội ngũ kỹ sư với nhiều năm kinh nghiệm trong các lĩnh vực phần mềm điện, điện tử, tự động hóa. Chúng tôi cung cấp các giải pháp tự động hóa, thiết bị công nghiệp và chế tạo theo yêu cầu với mục tiêu nhằm nâng cao năng suất, chất lượng với giá thành hợp lý, cam kết thời gian giao hàng đúng tiến độ.",
+    "stats_projects": "Dự án thành công",
+    "stats_years": "Năm kinh nghiệm",
+    "stats_satisfaction": "Khách hàng hài lòng",
+    "robots_title": "Sản phẩm của chúng tôi",
+    "solutions_title": "Giải pháp của chúng tôi",
+    "feature_1_title": "Robot AGV tự động",
+    "feature_1_desc": "Hệ thống robot tự động di chuyển với AI và cảm biến tiên tiến",
+    "feature_2_title": "Camera AI nhận diện",
+    "feature_2_desc": "Phát hiện và nhận diện vật thể với độ chính xác cao",
+    "feature_3_title": "Kho thông minh",
+    "feature_3_desc": "Tự động hóa quy trình vận hành kho, đảm bảo độ an toàn và hiệu quả",
+    "tech_battery_title": "Pin Li-ion",
+    "tech_battery_desc": "Thời gian hoạt động lên đến 8 giờ",
+    "tech_5g_title": "Kết nối 5G",
+    "tech_5g_desc": "Kết nối siêu nhanh và ổn định",
+    "tech_ai_title": "AI Navigation",
+    "tech_ai_desc": "Định vị chính xác với AI",
+    "tech_safety_title": "Hệ thống an toàn",
+    "tech_safety_desc": "Hệ thống an toàn đa lớp"
+  },
+  "solutions_showcase": {
+    "section_title": "Giải Pháp Công Nghệ",
+    "section_subtitle": "Khám phá các giải pháp công nghệ tiên tiến giúp doanh nghiệp của bạn phát triển bền vững",
+    "btn_explore": "Khám phá chi tiết",
+    "btn_contact": "Liên hệ tư vấn",
+    "features_title": "Tính năng nổi bật",
+    "solution_badge": "Giải pháp"
+  },
+  "solutions_hex": {
+    "title_prefix": "Giải Pháp",
+    "subtitle": "Khám phá các hệ thống và dịch vụ thông minh giúp doanh nghiệp của bạn phát triển bền vững",
+    "features_title": "Tính năng chính",
+    "btn_explore": "Khám phá chi tiết",
+    "btn_contact": "Liên hệ tư vấn"
+  },
+  "solutions_3d": {
+    "hero_badge": "Giải pháp Công nghệ Hàng đầu",
+    "hero_title": "Tương lai của",
+    "hero_highlight": "Tự động hóa",
+    "hero_title_end": "bắt đầu từ đây",
+    "hero_subtitle": "Khám phá các giải pháp robot tự động hóa tiên tiến được thiết kế đặc biệt cho Industry 4.0",
+    "hero_stat_projects": "Dự án thành công",
+    "hero_stat_experience": "Năm kinh nghiệm",
+    "hero_stat_satisfaction": "Khách hàng hài lòng",
+    "menu_title": "Giải pháp của chúng tôi",
+    "menu_subtitle": "Chọn giải pháp để xem chi tiết",
+    "tab_overview": "Tổng quan",
+    "tab_features": "Tính năng",
+    "tab_technology": "Công nghệ",
+    "tab_benefits": "Lợi ích",
+    "overview_applications": "Ứng dụng chính",
+    "model_title": "Mô hình 3D",
+    "model_subtitle": "Tương tác với mô hình 3D để khám phá chi tiết kỹ thuật",
+    "model_loading": "Đang tải model 3D...",
+    "model_controls": {
+      "rotate": "Xoay",
+      "zoom": "Zoom",
+      "vr": "VR"
+    },
+    "cta_title": "Sẵn sàng bắt đầu dự án của bạn?",
+    "cta_subtitle": "Liên hệ với chúng tôi để được tư vấn miễn phí và nhận báo giá chi tiết",
+    "cta_contact": "Liên hệ ngay",
+    "cta_demo": "Yêu cầu demo",
+    "cta_consultation": "Tư vấn triển khai",
+    "cta_brochure": "Tải brochure",
+    "cta_view_demo": "Xem demo",
+    "chat_text": "Chat với chúng tôi"
+  },
+  "services": {
+    "section_title": "Dịch vụ Công nghệ",
+    "section_subtitle": "Cung cấp các dịch vụ công nghệ tiên tiến để thúc đẩy chuyển đổi số",
+    "ai_ml": {
+      "title": "AI & Machine Learning",
+      "description": "Phát triển các giải pháp AI và ML cho tự động hóa thông minh.",
+      "features": [
+        "Thị giác máy tính",
+        "Xử lý ngôn ngữ tự nhiên", 
+        "Dự đoán phân tích",
+        "Mô hình học sâu"
+      ]
+    },
+    "iot": {
+      "title": "Internet of Things",
+      "description": "Kết nối và giám sát thiết bị thông minh trong hệ sinh thái IoT.",
+      "features": [
+        "Mạng Sensor",
+        "Giám sát thời gian thực",
+        "Data Analytics", 
+        "Tích hợp Cloud"
+      ]
+    },
+    "robotics": {
+      "title": "Industrial Robotics",
+      "description": "Giải pháp robot công nghiệp cho sản xuất tự động hóa.",
+      "features": [
+        "Robot cộng tác",
+        "Tự động hóa lắp ráp",
+        "Kiểm tra chất lượng",
+        "Vận chuyển vật liệu"
+      ]
+    },
+    "automation": {
+      "title": "Process Automation",
+      "description": "Tự động hóa quy trình sản xuất và kinh doanh.",
+      "features": [
+        "Tự động hóa quy trình",
+        "Tối ưu hóa quy trình",
+        "Giám sát hiệu suất",
+        "Ngăn ngừa lỗi"
+      ]
+    },
+    "analytics": {
+      "title": "Data Analytics",
+      "description": "Phân tích dữ liệu để tối ưu hóa hiệu suất và ra quyết định.",
+      "features": [
+        "Xử lý dữ liệu lớn",
+        "Kinh doanh thông minh",
+        "Chỉ số hiệu suất",
+        "Dự đoán mô hình"
+      ]
+    },
+    "maintenance": {
+      "title": "Predictive Maintenance",
+      "description": "Bảo trì dự đoán để giảm thiểu thời gian ngừng máy.",
+      "features": [
+        "Giám sát điều kiện",
+        "Dự đoán lỗi",
+        "Lịch bảo trì",
+        "Tối ưu hóa chi phí"
+      ]
+    }
+  },
+  "home_sections": {
+    "case_studies_title": "Dự Án Tiêu Biểu",
+    "case_studies_subtitle": "Những dự án thành công đã được chúng tôi triển khai",
+    "services_support_title": "Dịch Vụ Hỗ Trợ",
+    "services_support_subtitle": "Đội ngũ chuyên gia giàu kinh nghiệm sẵn sàng hỗ trợ 24/7",
+    "cta_title": "Sẵn Sàng Chuyển Đổi Số?",
+    "cta_desc": "Hãy liên hệ với chúng tôi ngay hôm nay để được tư vấn miễn phí và bắt đầu hành trình chuyển đổi số cùng THADOROBOT",
+    "cta_btn_contact": "Liên Hệ Ngay",
+    "cta_btn_demo": "Yêu Cầu Demo",
+    "cta_btn_docs": "Tài Liệu Kỹ Thuật",
+    "services_cards": {
+      "strategy_title": "Tư Vấn Chiến Lược",
+      "strategy_desc": "Đánh giá và đề xuất giải pháp tối ưu cho doanh nghiệp",
+      "deployment_title": "Triển Khai Hệ Thống",
+      "deployment_desc": "Lắp đặt và cấu hình hệ thống robot tự động hóa",
+      "training_title": "Đào Tạo Nhân Sự",
+      "training_desc": "Huấn luyện đội ngũ vận hành và bảo trì hệ thống",
+      "maintenance_title": "Bảo Trì Định Kỳ",
+      "maintenance_desc": "Kiểm tra và bảo trì hệ thống theo lịch trình",
+      "support_title": "Hỗ Trợ 24/7",
+      "support_desc": "Đội ngũ kỹ thuật sẵn sàng hỗ trợ mọi lúc mọi nơi",
+      "optimization_title": "Tối Ưu Hóa Liên Tục",
+      "optimization_desc": "Cải tiến và nâng cấp hệ thống theo thời gian thực"
+    }
+  },
+  "technology_page": {
+    "section_title": "Công nghệ Tiên tiến",
+    "section_subtitle": "Khám phá các công nghệ hiện đại trong tự động hóa và robot",
+    "btn_solutions": "Xem giải pháp",
+    "btn_products": "Sản phẩm",
+    "stat_accuracy": "Độ chính xác",
+    "stat_uptime": "Hoạt động",
+    "stat_cost": "Tiết kiệm chi phí",
+    "stat_productivity": "Tăng hiệu suất lên đến",
+    "features_title": "Tính năng chính",
+    "applications_title": "Ứng dụng"
+  },
+  "product": {
+    "view_details": "Xem chi tiết",
+    "all_brands": "Tất cả hãng",
+    "all_categories": "Tất cả danh mục",
+    "categories": "Danh mục",
+    "products": "sản phẩm",
+    "no_products": "Không có sản phẩm",
+    "no_products_in_category": "Không có sản phẩm nào trong {{brand}} - {{category}}",
+    "no_products_found": "Không có sản phẩm nào được tìm thấy với bộ lọc hiện tại.",
+    "not_found": "Sản phẩm không tồn tại",
+    "back_to_list": "Quay lại danh sách sản phẩm",
+    "description": "Mô tả sản phẩm",
+    "list_title": "Sản phẩm của chúng tôi",
+    "list_subtitle": "Chúng tôi cung cấp đa dạng sản phẩm để đáp ứng nhu cầu của bạn",
+    "no_products_title": "Không có sản phẩm nào",
+    "no_products_message": "Danh mục này chưa có sản phẩm nào. Vui lòng chọn danh mục khác."
+  },
+  "about": {
+    "section_title": "Về",
+    "section_subtitle": "là một doanh nghiệp hàng đầu tại Việt Nam, chuyên cung cấp các giải pháp công nghệ tiên tiến trong lĩnh vực Robot và Nhà máy thông minh. Chúng tôi hoạt động mạnh mẽ trong các lĩnh vực chủ chốt như Hệ thống đóng gói tự động (APS), Giải pháp tự động hóa nhà máy (FAS), và Giải pháp quản lý kho thông minh (SWS)",
+    "stats": {
+      "experience": "Năm kinh nghiệm",
+      "projects": "Dự án thành công",
+      "clients": "Khách hàng tin tưởng",
+      "satisfaction": "Tỷ lệ hài lòng"
+    },
+    "values": {
+      "mission": {
+        "title": "Sứ mệnh",
+        "description": "Sáng tạo và phát triển công nghệ để mang lại tương lai tốt đẹp, ấm no và hạnh phúc hơn cho xã hội."
+      },
+      "vision": {
+        "title": "Tầm nhìn",
+        "description": "Trở thành công ty hàng đầu Đông Nam Á về lĩnh vực Robot và Nhà máy thông minh."
+      },
+      "core": {
+        "title": "Giá trị cốt lõi",
+        "description": "Đổi mới sáng tạo, phát triển bền vững để phục vụ con người và xã hội."
+      }
+    },
+    "timeline_title": "Hành trình phát triển",
+    "timeline": {
+      "2020": {
+        "title": "Thành lập công ty",
+        "description": "Thadorobot được thành lập với sứ mệnh đưa công nghệ robot vào Việt Nam"
+      },
+      "2021": {
+        "title": "Dự án đầu tiên",
+        "description": "Triển khai thành công hệ thống AGV đầu tiên cho nhà máy sản xuất"
+      },
+      "2022": {
+        "title": "Mở rộng thị trường",
+        "description": "Mở rộng hoạt động ra các tỉnh thành và bắt đầu xuất khẩu"
+      },
+      "2023": {
+        "title": "Công nghệ AI",
+        "description": "Tích hợp AI và Machine Learning vào các sản phẩm robot"
+      },
+      "2024": {
+        "title": "Industry 4.0",
+        "description": "Trở thành đối tác chiến lược trong cuộc cách mạng công nghiệp 4.0"
+      },
+      "2025": {
+        "title": "Tương lai",
+        "description": "Tiếp tục đổi mới và dẫn đầu trong lĩnh vực tự động hóa"
+      }
+    },
+    "team_title": "Đội ngũ lãnh đạo",
+    "team": {
+      "ceo": {
+        "position": "CEO & Founder",
+        "description": "Chuyên gia robot với 20+ năm kinh nghiệm trong lĩnh vực tự động hóa"
+      },
+      "cco": {
+        "position": "CCO",
+        "description": "Chuyên gia về kinh doanh"
+      },
+      "rd": {
+        "position": "Head of R&D",
+        "description": "Chuyên gia nghiên cứu và phát triển sản phẩm robot công nghiệp"
+      }
+    },
+    "cta": {
+      "title": "Sẵn sàng hợp tác?",
+      "description": "Hãy liên hệ với chúng tôi để được tư vấn và hỗ trợ tốt nhất",
+      "contact_btn": "Liên hệ ngay",
+      "solutions_btn": "Xem giải pháp"
+    }
+  },
+  "timeline": {
+    "default": {
+      "2018": {
+        "title": "Khởi đầu",
+        "description": "Thành lập với tầm nhìn chuyển đổi trải nghiệm số và tạo ra những kết nối có ý nghĩa."
+      },
+      "2019": {
+        "title": "Tăng trưởng & Đổi mới",
+        "description": "Mở rộng đội ngũ và ra mắt những sản phẩm đột phá định nghĩa lại tiêu chuẩn ngành."
+      },
+      "2020": {
+        "title": "Mở rộng toàn cầu",
+        "description": "Bất chấp thách thức, chúng tôi phát triển quốc tế và thích ứng để phục vụ khách hàng toàn cầu."
+      },
+      "2021": {
+        "title": "Chuyển đổi số",
+        "description": "Dẫn đầu cuộc cách mạng số với các giải pháp tiên tiến và phương pháp đổi mới."
+      },
+      "2022": {
+        "title": "Dẫn đầu ngành",
+        "description": "Trở thành những nhà lãnh đạo ngành được công nhận, thiết lập tiêu chuẩn mới cho sự xuất sắc."
+      },
+      "2023": {
+        "title": "Tầm nhìn tương lai",
+        "description": "Tiếp tục đổi mới và định hình tương lai của công nghệ và kết nối con người."
+      }
+    }
+  },
+  "contact": {
+    "section_title": "Liên Hệ",
+    "section_subtitle": "Hãy liên hệ với chúng tôi để được tư vấn và hỗ trợ tốt nhất",
+    "phone": {
+      "title": "Điện thoại",
+      "number": "+84 986 249 212"
+    },
+    "email": {
+      "title": "Email",
+      "address": "info@thadosoft.vn"
+    },
+    "address": {
+      "title": "Địa chỉ",
+      "line1": "C25-C26, 28/5 Dương Khuê, P. Từ Liêm",
+      "line2": "TP. Hà Nội, Việt Nam"
+    },
+    "hours": {
+      "title": "Giờ làm việc",
+      "weekdays": "Thứ 2 - Thứ 6: 8:00 - 17:00",
+      "saturday": "Thứ 7: 8:00 - 12:00"
+    },
+    "form": {
+      "title": "Gửi tin nhắn cho chúng tôi",
+      "name_placeholder": "Họ và tên",
+      "email_placeholder": "Email",
+      "phone_placeholder": "Số điện thoại",
+      "message_placeholder": "Nội dung tin nhắn",
+      "submit_btn": "Gửi tin nhắn"
+    },
+    "stats": {
+      "support": "Hỗ trợ khách hàng",
+      "projects": "Dự án thành công",
+      "clients": "Khách hàng tin tưởng"
+    }
+  }
+  ,
+  "logo_carousel": {
+    "partners": "Đối tác",
+    "certificates": "Chứng nhận",
+    "customers": "Khách hàng"
+  }
+}
+

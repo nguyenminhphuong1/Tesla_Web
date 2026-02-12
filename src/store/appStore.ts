@@ -23,6 +23,9 @@ interface AppState {
   // Performance
   fps: number;
   
+  // Internationalization
+  language: 'vi' | 'en';
+  
   // Actions
   setLoading: (loading: boolean) => void;
   setLoadingProgress: (progress: number, text: string) => void;
@@ -37,6 +40,7 @@ interface AppState {
   toggleControls: () => void;
   setFPS: (fps: number) => void;
   resetCamera: () => void;
+  setLanguage: (lang: 'vi' | 'en') => void;
 }
 
 export const useAppStore = create<AppState>((set, get) => ({
@@ -53,6 +57,7 @@ export const useAppStore = create<AppState>((set, get) => ({
   isProductInfoVisible: false,
   isControlsVisible: true,
   fps: 60,
+  language: (typeof window !== 'undefined' && localStorage.getItem('thadorobot-lang') === 'en') ? 'en' : 'vi',
   
   // Actions
   setLoading: (loading) => set({ isLoading: loading }),
@@ -70,6 +75,10 @@ export const useAppStore = create<AppState>((set, get) => ({
   resetCamera: () => {
     // This will be handled by the 3D scene component
     console.log('Reset camera called');
+  },
+  setLanguage: (lang) => {
+    localStorage.setItem('thadorobot-lang', lang);
+    set({ language: lang });
   },
 }));
 

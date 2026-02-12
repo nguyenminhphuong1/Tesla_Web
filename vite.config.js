@@ -6,16 +6,22 @@ export default defineConfig({
   
   root: '.',
   
+  assetsInclude: ['**/*.glb', '**/*.gltf', '**/*.png', '**/*.jpg', '**/*.jpeg', '**/*.mp4', '**/*.webm', '**/*.svg'],
+  
   server: {
+    host: '0.0.0.0',
     port: 3000,
     open: true,
-    hmr: {
+    allowedHosts: [
+      '3f06a6eedb2d.ngrok-free.app'
+    ],
+      hmr: {
       overlay: true
     }
   },
   
   build: {
-    outDir: 'dist',
+    outDir: 'build',
     sourcemap: true
   }
 }); 

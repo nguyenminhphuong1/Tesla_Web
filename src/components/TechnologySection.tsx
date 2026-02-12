@@ -1,8 +1,12 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Environment, Float } from '@react-three/drei';
 import { useGLTF } from '@react-three/drei';
-import { useAppStore } from '../store/appStore';
+import { useTranslation } from 'react-i18next';
+import technologiesData from '../data/technologies.json';
+
+
 
 // 3D Model Components
 const RobotModel = () => {
@@ -13,7 +17,7 @@ const RobotModel = () => {
   }
   
   try {
-    const { scene } = useGLTF('/models/logistic_robot_test__2.glb');
+    const { scene } = useGLTF('/assets/models/logistic_robot_test__2.glb');
     return <primitive object={scene} scale={0.8} />;
   } catch (error) {
     console.warn('Error loading Robot Model:', error);
@@ -30,7 +34,7 @@ const LaserModel = () => {
   }
   
   try {
-    const { scene } = useGLTF('/models/simulation_laser_cutting_robot_systems.glb');
+    const { scene } = useGLTF('/assets/models/simulation_laser_cutting_robot_systems.glb');
     return <primitive object={scene} scale={0.8} />;
   } catch (error) {
     console.warn('Error loading Laser Model:', error);
@@ -47,7 +51,7 @@ const AGVModel = () => {
   }
   
   try {
-    const { scene } = useGLTF('/models/industrial_-_3d_agv__trolley_-_omrom.glb');
+    const { scene } = useGLTF('/assets/models/industrial_-_3d_agv__trolley_-_omrom.glb');
     return <primitive object={scene} scale={0.8} />;
   } catch (error) {
     console.warn('Error loading AGV Model:', error);
@@ -64,86 +68,26 @@ const ModelFallback = ({ color }: { color: string }) => (
 );
 
 const TechnologySection: React.FC = () => {
-  const { setCurrentSection } = useAppStore();
+  const navigate = useNavigate();
+  const { t } = useTranslation();
+  const { t: tTech } = useTranslation('technologies');
   const [activeTechnology, setActiveTechnology] = useState(0);
 
-  const technologies = [
-    {
-      id: 'ai-ml',
-      name: 'AI & Machine Learning',
-      category: 'Artificial Intelligence',
-      description: 'Công nghệ trí tuệ nhân tạo và học máy tiên tiến cho tự động hóa thông minh.',
-      features: [
-        'Computer Vision',
-        'Natural Language Processing',
-        'Predictive Analytics',
-        'Deep Learning',
-        'Neural Networks',
-        'Reinforcement Learning'
-      ],
-      applications: [
-        'Nhận diện hình ảnh',
-        'Xử lý ngôn ngữ tự nhiên',
-        'Dự đoán bảo trì',
-        'Tối ưu hóa quy trình',
-        'Kiểm soát chất lượng',
-        'Phân tích dữ liệu'
-      ],
-      model: RobotModel,
-      color: '#00d4ff',
-      icon: '🧠'
-    },
-    {
-      id: 'iot',
-      name: 'Internet of Things',
-      category: 'IoT & Connectivity',
-      description: 'Hệ thống kết nối thiết bị thông minh và thu thập dữ liệu real-time.',
-      features: [
-        'Sensor Networks',
-        'Real-time Monitoring',
-        'Cloud Integration',
-        'Edge Computing',
-        'Wireless Communication',
-        'Data Analytics'
-      ],
-      applications: [
-        'Giám sát nhà máy',
-        'Quản lý năng lượng',
-        'Theo dõi tài sản',
-        'Bảo trì dự đoán',
-        'An toàn lao động',
-        'Tối ưu hóa sản xuất'
-      ],
-      model: LaserModel,
-      color: '#ff6b35',
-      icon: '🌐'
-    },
-    {
-      id: 'robotics',
-      name: 'Industrial Robotics',
-      category: 'Advanced Robotics',
-      description: 'Robot công nghiệp thông minh với độ chính xác cao và khả năng thích ứng.',
-      features: [
-        'Collaborative Robots',
-        'Precision Control',
-        'Safety Systems',
-        'Easy Programming',
-        'Flexible Integration',
-        'Remote Monitoring'
-      ],
-      applications: [
-        'Lắp ráp tự động',
-        'Hàn và cắt',
-        'Xử lý vật liệu',
-        'Kiểm tra chất lượng',
-        'Đóng gói',
-        'Vận chuyển'
-      ],
-      model: AGVModel,
-      color: '#8b5cf6',
-      icon: '🤖'
-    }
-  ];
+  const modelMap: Record<string, React.FC> = {
+    logistic_robot_test__2: RobotModel,
+    simulation_laser_cutting_robot_systems: LaserModel,
+    industrial_agv_trolley_omrom: AGVModel,
+  };
+  
+  // Combine data from technologies.json with translations
+  const technologies = (technologiesData as any[]).map((tech) => {
+    const translatedData = tTech(tech.id, { returnObjects: true }) as any;
+    return {
+      ...tech,
+      ...translatedData,
+      model: modelMap[tech.modelKey] || (() => null),
+    };
+  });
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -161,14 +105,14 @@ const TechnologySection: React.FC = () => {
       <section className="technology-section">
         <div className="container">
           <div className="section-header">
-            <h2 className="section-title">Công nghệ Tiên tiến</h2>
+            <h2 className="section-title">{t('technology_page.section_title')}</h2>
             <p className="section-subtitle">
-              Khám phá các công nghệ hiện đại trong tự động hóa và robot
+              {t('technology_page.section_subtitle')}
             </p>
           </div>
           <div className="loading-3d">
             <div className="spinner"></div>
-            <p>Đang tải công nghệ...</p>
+            <p>...</p>
           </div>
         </div>
       </section>
@@ -179,9 +123,9 @@ const TechnologySection: React.FC = () => {
     <section className="technology-section">
       <div className="container">
         <div className="section-header">
-          <h2 className="section-title">Công nghệ Tiên tiến</h2>
+          <h2 className="section-title">{t('technology_page.section_title')}</h2>
           <p className="section-subtitle">
-            Khám phá các công nghệ hiện đại trong tự động hóa và robot
+            {t('technology_page.section_subtitle')}
           </p>
         </div>
 
@@ -223,8 +167,7 @@ const TechnologySection: React.FC = () => {
                   onClick={() => setActiveTechnology(index)}
                   style={{ '--indicator-color': tech.color } as any}
                 >
-                  <span className="indicator-icon">{tech.icon}</span>
-                  <span className="indicator-label">{tech.name}</span>
+                  <span style={{color: 'var(--text-primary)'}} className="indicator-label">{tech.name}</span>
                 </button>
               ))}
             </div>
@@ -243,9 +186,9 @@ const TechnologySection: React.FC = () => {
 
             <div className="technology-content">
               <div className="technology-features">
-                <h4>Tính năng chính</h4>
+                <h4>{t('technology_page.features_title')}</h4>
                 <ul>
-                  {currentTech.features.map((feature, index) => (
+                  {(currentTech.features as string[]).map((feature: string, index: number) => (
                     <li key={index}>
                       <span className="feature-icon">⚡</span>
                       <span>{feature}</span>
@@ -255,11 +198,10 @@ const TechnologySection: React.FC = () => {
               </div>
 
               <div className="technology-applications">
-                <h4>Ứng dụng</h4>
+                <h4>{t('technology_page.applications_title')}</h4>
                 <div className="applications-grid">
-                  {currentTech.applications.map((app, index) => (
+                  {(currentTech.applications as string[]).map((app: string, index: number) => (
                     <div key={index} className="application-item">
-                      <span className="app-icon">🎯</span>
                       <span>{app}</span>
                     </div>
                   ))}
@@ -270,18 +212,16 @@ const TechnologySection: React.FC = () => {
             <div className="technology-actions">
               <button 
                 className="btn btn-primary"
-                onClick={() => setCurrentSection('solutions')}
+                onClick={() => navigate('/solutions')}
               >
-                <span>💡</span>
-                <span>Xem giải pháp</span>
+                <span>{t('technology_page.btn_solutions')}</span>
               </button>
               
               <button 
                 className="btn btn-secondary"
-                onClick={() => setCurrentSection('products')}
+                onClick={() => navigate('/products')}
               >
-                <span>🤖</span>
-                <span>Sản phẩm</span>
+                <span>{t('technology_page.btn_products')}</span>
               </button>
             </div>
           </div>
@@ -291,19 +231,19 @@ const TechnologySection: React.FC = () => {
         <div className="technology-stats">
           <div className="stat-item">
             <div className="stat-number">99.9%</div>
-            <div className="stat-label">Độ chính xác</div>
+            <div className="stat-label">{t('technology_page.stat_accuracy')}</div>
           </div>
           <div className="stat-item">
             <div className="stat-number">24/7</div>
-            <div className="stat-label">Hoạt động</div>
+            <div className="stat-label">{t('technology_page.stat_uptime')}</div>
           </div>
           <div className="stat-item">
             <div className="stat-number">50%</div>
-            <div className="stat-label">Tiết kiệm chi phí</div>
+            <div className="stat-label">{t('technology_page.stat_cost')}</div>
           </div>
           <div className="stat-item">
             <div className="stat-number">300%</div>
-            <div className="stat-label">Tăng hiệu suất</div>
+            <div className="stat-label">{t('technology_page.stat_productivity')}</div>
           </div>
         </div>
       </div>

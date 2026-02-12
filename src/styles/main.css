@@ -6,9 +6,9 @@
 /* ===== CSS VARIABLES - ULTRA MODERN TECH THEME ===== */
 :root {
   /* Color Palette - Ultra Modern Tech */
-  --primary: #00d4ff;
-  --primary-dark: #0099cc;
-  --primary-light: #33ddff;
+  --primary: #1c9b9b;
+  --primary-dark: #1c9b9b30;
+  --primary-light: #1c9b9b;
   --secondary: #ff6b35;
   --accent: #ff6b35;
   --accent-purple: #8b5cf6;
@@ -19,6 +19,8 @@
   --bg-secondary: #0a0a0f;
   --bg-tertiary: #0a0a0f;
   --bg-glass: rgba(255, 255, 255, 0.03);
+  --bg-glass-sticky: rgba(1, 1, 1, 0.5);
+  --bg-glass-sticky-light: rgba(255, 255, 255, 0.2);
   --bg-glass-dark: rgba(0, 0, 0, 0.5);
   
   /* Text Colors */
@@ -35,7 +37,7 @@
   --shadow-xl: 0 16px 64px rgba(0, 0, 0, 0.6);
   
   /* Gradients */
-  --gradient-primary: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%);
+  --gradient-primary: linear-gradient(135deg, #5c9191cb 0%, #23b8b8 100%);
   --gradient-secondary: linear-gradient(135deg, #ff6b35 0%, #ff8c42 100%);
   --gradient-accent: linear-gradient(135deg, #8b5cf6 0%, #a855f7 100%);
   --gradient-bg: linear-gradient(135deg, #0a0a0f 0%, #1a1a2e 50%, #16213e 100%);
@@ -70,7 +72,7 @@
   --z-tooltip: 1060;
   
   /* Hexagon Colors */
-  --hex-color: var(--primary);
+  --hex-color: var(--bg-primary);
 }
 
 /* ===== GLOBAL STYLES - ULTRA MODERN TECH ===== */
@@ -79,19 +81,27 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+main{
+  margin-top: 75px;
+}
 html {
-  scroll-behavior: smooth;
-  font-size: 16px;
+  font-size: 13px;
 }
 
+@media (max-width: 1400px) {
+  html{
+    font-size: 12px;
+  }
+}
+
+
 body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family:  -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   line-height: 1.6;
   color: var(--text-primary);
   background: var(--bg-primary);
-  overflow-x: hidden;
   position: relative;
+  z-index: 100;
 }
 
 /* ===== ULTRA MODERN TECH BACKGROUND ===== */
@@ -100,8 +110,9 @@ body::before {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 100vw;
   height: 100%;
+  background-image: url('../assets/1.png');
   background: 
     radial-gradient(circle at 20% 80%, rgba(0, 212, 255, 0.15) 0%, transparent 50%),
     radial-gradient(circle at 80% 20%, rgba(255, 107, 53, 0.1) 0%, transparent 50%),
@@ -109,24 +120,125 @@ body::before {
     linear-gradient(135deg, #0a0a0f 0%, #1a1a2e 50%, #16213e 100%);
   z-index: -3;
   animation: backgroundShift 20s ease-in-out infinite;
+  overflow-x: hidden;
 }
 
-/* ===== ANIMATED GRID BACKGROUND ===== */
-body::after {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
+
+
+/* ===== LIGHT THEME STYLES ===== */
+body.light-theme {
+  /* Override CSS Variables for Light Theme */
+  --bg-primary: #ffffff !important;
+  --bg-secondary: #f8fafc !important;
+  --bg-tertiary: #f1f5f9 !important;
+  --bg-glass: rgba(255, 255, 255, 0.908) !important;
+  --bg-glass-dark: rgba(235, 235, 235, 0.841) !important;
+  
+  --text-primary: #0f172a !important;
+  --text-secondary: rgba(15, 23, 42, 0.8) !important;
+  --text-muted: rgba(15, 23, 42, 0.6) !important;
+  
+  --border: rgba(0, 0, 0, 0.1) !important;
+  --border-glow: rgba(0, 212, 255, 0.3) !important;
+  
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.15) !important;
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.2) !important;
+  --shadow-xl: 0 16px 64px rgba(0, 0, 0, 0.25) !important;
+  
+  --bg-glass-sticky: var(--bg-glass) !important;
+  --bg-glass-sticky-light: var(--bg-glass) !important;
+
+  --gradient-bg: linear-gradient(135deg, #ffffff 0%, #f8fafc 50%, #f1f5f9 100%) !important;
+
+}
+
+body.light-theme::before {
+  background: 
+    radial-gradient(circle at 20% 80%, rgba(0, 212, 255, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(255, 107, 53, 0.06) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(139, 92, 246, 0.05) 0%, transparent 50%),
+    linear-gradient(135deg, #ffffff 0%, #f8fafc 50%, #f1f5f9 100%);
+    animation: none !important; /* để có thể chuyển màu background cần tắt animation */
+}
+
+
+body.light-theme .particle {
+  background: var(--primary);
+  opacity: 0.3;
+}
+
+/* ===== THEME TRANSITION ANIMATIONS ===== */
+body {
+  transition: all var(--transition-normal);
+}
+
+body * {
+  transition: background-color var(--transition-normal), 
+              color var(--transition-normal), 
+              border-color var(--transition-normal),
+              box-shadow var(--transition-normal);
+}
+
+
+/* Logo Background */
+.logo-bg {
+  display:flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
+  height: 10%;
+  z-index: -1;
+  opacity: 0.08;
+  pointer-events: none;
+}
+.logo-bg img{
+  top: 15%;
+  position: fixed;
+  width: 50%;
   height: 100%;
-  background-image: 
-    linear-gradient(rgba(0, 212, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 212, 255, 0.03) 1px, transparent 1px);
-  background-size: 60px 60px;
-  animation: gridMove 30s linear infinite;
-  z-index: -2;
+  object-fit: cover;
 }
 
+/* ===== THEME TOGGLE BUTTON ANIMATION ===== */
+.theme-toggle {
+  transition: all var(--transition-normal);
+  position: relative;
+  overflow: hidden;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+}
+
+.theme-toggle span {
+  transition: all var(--transition-normal);
+  display: inline-block;
+}
+
+.theme-toggle:hover span {
+  transform: rotate(15deg) scale(1.2);
+}
+
+/* ===== THEME TOGGLE RIPPLE EFFECT ===== */
+.theme-toggle::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(0, 212, 255, 0.3);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.theme-toggle:active::before {
+  width: 100px;
+  height: 100px;
+} 
 /* ===== FLOATING PARTICLES ===== */
 .particles-container {
   position: fixed;
@@ -195,11 +307,11 @@ body::after {
 
 /* ===== CONTAINER & LAYOUT ===== */
 .container {
-  max-width: 1200px;
+  max-width: 1350px;
   margin: 0 auto;
-  padding: 0 var(--space-lg);
   position: relative;
   z-index: 1;
+  text-align: center;  /* Căn giữa text và inline elements */
 }
 
 /* ===== BUTTONS - ULTRA MODERN ===== */
@@ -247,14 +359,14 @@ body::after {
 }
 
 .btn-secondary {
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--bg-glass);
   color: var(--text-primary);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid var(--border);
 }
 
 .btn-secondary:hover {
-  background: rgba(255, 255, 255, 0.15);
-  border-color: rgba(255, 255, 255, 0.3);
+  background: var(--bg-glass);
+  border-color: var(--border);
   transform: translateY(-2px);
 }
 
@@ -336,14 +448,6 @@ body::after {
   }
 }
 
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-}
 
 @keyframes pulse {
   0%, 100% {
@@ -392,19 +496,15 @@ body::after {
 
 /* ===== RESPONSIVE DESIGN ===== */
 @media (max-width: 768px) {
-  .container {
-    padding: 0 var(--space-md);
+  html{
+    font-size: 10px;
   }
-  
   body::after {
     background-size: 40px 40px;
   }
 }
 
 @media (max-width: 480px) {
-  .container {
-    padding: 0 var(--space-sm);
-  }
   
   body::after {
     background-size: 30px 30px;

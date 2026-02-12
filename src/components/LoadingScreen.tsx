@@ -5,7 +5,7 @@ export const LoadingScreen: React.FC = () => {
     <div className="loading-screen">
       <div className="loading-content">
         <div className="loading-logo">
-          <h1>Thadorobot</h1>
+          <h1 className="text-company">Thadorobot</h1>
         </div>
         
         <div className="loading-spinner">

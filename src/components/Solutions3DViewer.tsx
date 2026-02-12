@@ -2,7 +2,13 @@ import React, { useState, useEffect, Suspense } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Environment, useGLTF, Float, Html } from '@react-three/drei';
-import { useAppStore } from '../store/appStore';
+// import { useAppStore } from '../store/appStore'; // No longer needed
+import { useTranslation } from 'react-i18next';
+import { useNavigate } from 'react-router-dom';
+import solutionsData from '../data/solutions.json';
+import VideoViewer from './VideoViewer';
+
+
 
 interface Solution {
   id: string;
@@ -51,201 +57,42 @@ const ModelComponent: React.FC<{ modelPath: string }> = ({ modelPath }) => {
   }
 };
 
-const solutions: Solution[] = [
-  {
-    id: 'agv',
-    title: 'AGV Tự động',
-    titleEn: 'Automated Guided Vehicle',
-    description: 'Hệ thống xe tự động dẫn đường thông minh cho logistics và sản xuất',
-    icon: '🚛',
-    color: '#00d4ff',
-    gradient: 'linear-gradient(135deg, #00d4ff, #0099cc)',
-    features: [
-      'Dẫn đường laser SLAM',
-      'Tải trọng 500-2000kg',
-      'Tích hợp WMS/ERP',
-      'Bảo mật đa lớp',
-      'Báo cáo real-time',
-      'Bảo trì dự đoán'
-    ],
-    applications: [
-      'Kho hàng tự động',
-      'Sản xuất linh hoạt',
-      'Bệnh viện',
-      'Trung tâm phân phối',
-      'Nhà máy thông minh',
-      'Logistics'
-    ],
-    modelPath: '/models/agv.glb',
-    stats: [
-      { label: 'Tải trọng', value: '2000kg' },
-      { label: 'Tốc độ', value: '2m/s' },
-      { label: 'Pin', value: '8h' },
-      { label: 'Độ chính xác', value: '±5mm' }
-    ],
-    benefits: [
-      'Giảm 60% chi phí vận hành',
-      'Tăng 80% hiệu suất',
-      'An toàn 100%',
-      'Linh hoạt 24/7'
-    ],
-    technology: [
-      'SLAM Navigation',
-      'LiDAR Sensing',
-      'AI Path Planning',
-      '5G Connectivity',
-      'Edge Computing',
-      'IoT Integration'
-    ]
-  },
-  {
-    id: 'amr',
-    title: 'AMR Thông minh',
-    titleEn: 'Autonomous Mobile Robot',
-    description: 'Robot di động tự chủ với AI tiên tiến cho môi trường phức tạp',
-    icon: '🤖',
-    color: '#ff6b35',
-    gradient: 'linear-gradient(135deg, #ff6b35, #cc5500)',
-    features: [
-      'AI Navigation',
-      'Multi-sensor fusion',
-      'Dynamic path planning',
-      'Human detection',
-      'Voice control',
-      'Cloud integration'
-    ],
-    applications: [
-      'E-commerce',
-      'Manufacturing',
-      'Healthcare',
-      'Retail',
-      'Education',
-      'Research'
-    ],
-    modelPath: '/models/amr.glb',
-    stats: [
-      { label: 'Tải trọng', value: '1500kg' },
-      { label: 'Tốc độ', value: '1.5m/s' },
-      { label: 'Pin', value: '10h' },
-      { label: 'Độ chính xác', value: '±3mm' }
-    ],
-    benefits: [
-      'Tự học và thích nghi',
-      'Tương tác tự nhiên',
-      'Bảo mật cao',
-      'Mở rộng dễ dàng'
-    ],
-    technology: [
-      'Deep Learning',
-      'Computer Vision',
-      'Natural Language Processing',
-      'Cloud AI',
-      '5G Network',
-      'Blockchain'
-    ]
-  },
-  {
-    id: 'cobot',
-    title: 'Cobot Hợp tác',
-    titleEn: 'Collaborative Robot',
-    description: 'Robot cộng tác an toàn làm việc cùng con người trong sản xuất',
-    icon: '🦾',
-    color: '#8b5cf6',
-    gradient: 'linear-gradient(135deg, #8b5cf6, #6b46c1)',
-    features: [
-      'Force sensing',
-      'Human detection',
-      'Easy programming',
-      'Quick deployment',
-      'Safety certified',
-      'Flexible mounting'
-    ],
-    applications: [
-      'Assembly line',
-      'Quality inspection',
-      'Packaging',
-      'Material handling',
-      'Welding',
-      'Painting'
-    ],
-    modelPath: '/models/cobot.glb',
-    stats: [
-      { label: 'Tải trọng', value: '10kg' },
-      { label: 'Độ chính xác', value: '±0.1mm' },
-      { label: 'Tốc độ', value: '2m/s' },
-      { label: 'Phạm vi', value: '1.3m' }
-    ],
-    benefits: [
-      'An toàn tuyệt đối',
-      'Dễ sử dụng',
-      'ROI nhanh',
-      'Linh hoạt cao'
-    ],
-    technology: [
-      'Force Control',
-      'Vision Systems',
-      'Safety Sensors',
-      'IoT Platform',
-      'Edge Computing',
-      'Digital Twin'
-    ]
-  },
-  {
-    id: 'warehouse',
-    title: 'Kho thông minh',
-    titleEn: 'Smart Warehouse',
-    description: 'Hệ thống kho tự động hóa hoàn toàn với robot và AI',
-    icon: '🏭',
-    color: '#10b981',
-    gradient: 'linear-gradient(135deg, #10b981, #059669)',
-    features: [
-      'AS/RS System',
-      'Multi-level storage',
-      'Automated picking',
-      'Real-time tracking',
-      'Predictive analytics',
-      'Energy optimization'
-    ],
-    applications: [
-      'E-commerce',
-      'Manufacturing',
-      'Pharmaceuticals',
-      'Food & Beverage',
-      'Automotive',
-      'Electronics'
-    ],
-    modelPath: '/models/warehouse.glb',
-    stats: [
-      { label: 'Dung tích', value: '50,000m³' },
-      { label: 'Thông lượng', value: '10,000/h' },
-      { label: 'Độ chính xác', value: '99.9%' },
-      { label: 'Tiết kiệm', value: '70%' }
-    ],
-    benefits: [
-      'Tối ưu không gian',
-      'Giảm lỗi',
-      'Tăng tốc độ',
-      'Tiết kiệm chi phí'
-    ],
-    technology: [
-      'AS/RS Technology',
-      'WMS Integration',
-      'IoT Sensors',
-      'AI Analytics',
-      'Cloud Platform',
-      'Digital Twin'
-    ]
-  }
-];
+// Solutions data will be loaded from translation files
 
 const Solutions3DViewer: React.FC = () => {
-  const [selectedSolution, setSelectedSolution] = useState<Solution>(solutions[0]!);
+  const { t } = useTranslation();
+  const { t: tSolutions } = useTranslation('solutions');
   const [isLoading, setIsLoading] = useState(true);
   const [activeTab, setActiveTab] = useState<'overview' | 'features' | 'technology' | 'benefits'>('overview');
-  const { setCurrentSection } = useAppStore();
+  const navigate = useNavigate();
+  
+  // Combine data from solutions.json with translations
+  const solutions: Solution[] = (solutionsData as any[]).map((solution) => {
+    const translatedData = tSolutions(solution.id, { returnObjects: true }) as any;
+    return {
+      ...solution,
+      ...translatedData,
+      stats: translatedData.stats?.map((stat: any) => ({
+        ...stat,
+        label: tSolutions(`stats.${stat.labelKey}`)
+      })) || []
+    };
+  });
+
+  const [selectedSolutionIndex, setSelectedSolutionIndex] = useState<number>(0);
+
+  // Handle CTA button clicks
+  const handleContactClick = () => {
+    navigate('/contactus');
+  };
+
+  const handleDemoClick = () => {
+    // Navigate to contact page with demo parameter
+    navigate('/contactus?type=demo');
+  };
 
   useEffect(() => {
-    const timer = setTimeout(() => setIsLoading(false), 1000);
+    const timer = setTimeout(() => setIsLoading(false), 500);
     return () => clearTimeout(timer);
   }, []);
 
@@ -258,60 +105,41 @@ const Solutions3DViewer: React.FC = () => {
     );
   }
 
+  const selectedSolution = solutions[selectedSolutionIndex];
+
+  if (!selectedSolution) {
+    return (
+      <div className="solutions-loading">
+        <div className="loading-spinner"></div>
+        <h2>Đang tải giải pháp...</h2>
+      </div>
+    );
+  }
+
   return (
     <div className="solutions-3d-viewer">
-      {/* Hero Section */}
-      <div className="solutions-hero">
-        <div className="hero-content">
-          <div className="hero-badge">
-            <span>🚀</span>
-            <span>Giải pháp Công nghệ Hàng đầu</span>
-          </div>
-          <h1 className="hero-title">
-            Tương lai của <span className="title-highlight">Tự động hóa</span> bắt đầu từ đây
-          </h1>
-          <p className="hero-subtitle">
-            Khám phá các giải pháp robot tự động hóa tiên tiến được thiết kế đặc biệt cho Industry 4.0
-          </p>
-          <div className="hero-stats">
-            <div className="stat-item">
-              <div className="stat-number">500+</div>
-              <div className="stat-label">Dự án thành công</div>
-            </div>
-            <div className="stat-item">
-              <div className="stat-number">15+</div>
-              <div className="stat-label">Năm kinh nghiệm</div>
-            </div>
-            <div className="stat-item">
-              <div className="stat-number">99%</div>
-              <div className="stat-label">Khách hàng hài lòng</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
       {/* Main Content */}
       <div className="solutions-main">
+        {/* Video Viewer Component */}
+        <VideoViewer />
+        
         <div className="solutions-grid">
           {/* Menu Panel */}
           <div className="solutions-menu-panel">
             <div className="menu-header">
-              <h3>Giải pháp của chúng tôi</h3>
-              <p>Chọn giải pháp để xem chi tiết</p>
+              <h3>{t('solutions_3d.menu_title')}</h3>
+              <p>{t('solutions_3d.menu_subtitle')}</p>
             </div>
             <div className="solutions-menu">
-              {solutions.map((solution) => (
+              {solutions.map((solution, index) => (
                 <motion.div
                   key={solution.id}
-                  className={`solution-menu-item ${selectedSolution.id === solution.id ? 'active' : ''}`}
-                  onClick={() => setSelectedSolution(solution)}
+                  className={`solution-menu-item ${selectedSolutionIndex === index ? 'active' : ''}`}
+                  onClick={() => setSelectedSolutionIndex(index)}
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                 >
                   <div className="menu-item-content">
-                    <div className="menu-item-icon" style={{ color: solution.color }}>
-                      {solution.icon}
-                    </div>
                     <div className="menu-item-info">
                       <h4 className="menu-item-title">{solution.title}</h4>
                       <p className="menu-item-subtitle">{solution.titleEn}</p>
@@ -327,9 +155,6 @@ const Solutions3DViewer: React.FC = () => {
           {/* Details Panel */}
           <div className="solution-details-panel">
             <div className="solution-header">
-              <div className="solution-icon" style={{ color: selectedSolution.color }}>
-                {selectedSolution.icon}
-              </div>
               <div className="solution-info">
                 <h2 className="solution-title">{selectedSolution.title}</h2>
                 <p className="solution-subtitle">{selectedSolution.titleEn}</p>
@@ -347,7 +172,7 @@ const Solutions3DViewer: React.FC = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1 }}
                 >
-                  <div className="stat-value" style={{ color: selectedSolution.color }}>
+                  <div className="stat-value" style={{ color: 'var(--primary)' }}>
                     {stat.value}
                   </div>
                   <div className="stat-label">{stat.label}</div>
@@ -361,25 +186,25 @@ const Solutions3DViewer: React.FC = () => {
                 className={`tab-btn ${activeTab === 'overview' ? 'active' : ''}`}
                 onClick={() => setActiveTab('overview')}
               >
-                Tổng quan
+                {t('solutions_3d.tab_overview')}
               </button>
               <button
                 className={`tab-btn ${activeTab === 'features' ? 'active' : ''}`}
                 onClick={() => setActiveTab('features')}
               >
-                Tính năng
+                {t('solutions_3d.tab_features')}
               </button>
               <button
                 className={`tab-btn ${activeTab === 'technology' ? 'active' : ''}`}
                 onClick={() => setActiveTab('technology')}
               >
-                Công nghệ
+                {t('solutions_3d.tab_technology')}
               </button>
               <button
                 className={`tab-btn ${activeTab === 'benefits' ? 'active' : ''}`}
                 onClick={() => setActiveTab('benefits')}
               >
-                Lợi ích
+                {t('solutions_3d.tab_benefits')}
               </button>
             </div>
 
@@ -397,7 +222,7 @@ const Solutions3DViewer: React.FC = () => {
                   {activeTab === 'overview' && (
                     <div className="overview-content">
                       <div className="overview-section">
-                        <h3>Ứng dụng chính</h3>
+                        <h3>{t('solutions_3d.overview_applications')}</h3>
                         <div className="applications-grid">
                           {selectedSolution.applications.map((app, index) => (
                             <motion.div
@@ -426,7 +251,7 @@ const Solutions3DViewer: React.FC = () => {
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ delay: index * 0.1 }}
                           >
-                            <div className="feature-icon">✓</div>
+                            <div className="feature-icon" style={{ color: 'var(--primary)' }}>✓</div>
                             <div className="feature-text">{feature}</div>
                           </motion.div>
                         ))}
@@ -441,7 +266,7 @@ const Solutions3DViewer: React.FC = () => {
                           <motion.div
                             key={index}
                             className="technology-item"
-                            style={{ background: selectedSolution.gradient }}
+                            style={{ background: 'var(--gradient-primary)' }}
                             initial={{ opacity: 0, scale: 0.8 }}
                             animate={{ opacity: 1, scale: 1 }}
                             transition={{ delay: index * 0.1 }}
@@ -464,7 +289,6 @@ const Solutions3DViewer: React.FC = () => {
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: index * 0.1 }}
                           >
-                            <div className="benefit-icon">🎯</div>
                             <div className="benefit-text">{benefit}</div>
                           </motion.div>
                         ))}
@@ -479,19 +303,16 @@ const Solutions3DViewer: React.FC = () => {
             <div className="solution-cta">
               <button
                 className="btn btn-primary"
-                style={{ background: selectedSolution.gradient }}
-                onClick={() => setCurrentSection('contact')}
+                style={{ background: 'var(--gradient-primary)' }}
+                onClick={handleContactClick}
               >
-                <span>📞</span>
-                <span>Tư vấn triển khai</span>
+                <span>{t('solutions_3d.cta_consultation')}</span>
               </button>
-              <button className="btn btn-secondary">
-                <span>📋</span>
-                <span>Tải brochure</span>
+              <button className="btn btn-secondary" onClick={handleDemoClick}>
+                <span>{t('solutions_3d.cta_brochure')}</span>
               </button>
-              <button className="btn btn-outline">
-                <span>🎥</span>
-                <span>Xem demo</span>
+              <button className="btn btn-outline" onClick={handleDemoClick}>
+                <span>{t('solutions_3d.cta_view_demo')}</span>
               </button>
             </div>
           </div>
@@ -501,8 +322,8 @@ const Solutions3DViewer: React.FC = () => {
       {/* Model Section */}
       <div className="model-section">
         <div className="model-header">
-          <h2>Mô hình 3D {selectedSolution.title}</h2>
-          <p>Tương tác với mô hình 3D để khám phá chi tiết kỹ thuật</p>
+          <h2>{t('solutions_3d.model_title')} {selectedSolution.title}</h2>
+          <p>{t('solutions_3d.model_subtitle')}</p>
         </div>
         <div className="model-viewer-container">
           <div className="model-viewer">
@@ -513,7 +334,7 @@ const Solutions3DViewer: React.FC = () => {
                   <span></span>
                   <span></span>
                 </div>
-                <p>Đang tải model 3D...</p>
+                <p>{t('solutions_3d.model_loading')}</p>
               </div>
             }>
               <Canvas
@@ -530,140 +351,42 @@ const Solutions3DViewer: React.FC = () => {
             </Suspense>
             <div className="model-controls">
               <button className="control-btn">
-                <span>🔄</span>
-                <span>Xoay</span>
+                <span>{t('solutions_3d.model_controls.rotate')}</span>
               </button>
               <button className="control-btn">
-                <span>🔍</span>
-                <span>Zoom</span>
+                <span>{t('solutions_3d.model_controls.zoom')}</span>
               </button>
               <button className="control-btn">
-                <span>📱</span>
-                <span>VR</span>
+                <span>{t('solutions_3d.model_controls.vr')}</span>
               </button>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Additional Sections */}
-      <div className="additional-sections">
-        {/* Case Studies Section */}
-        <div className="case-studies-section">
-          <div className="section-header">
-            <h2>Dự án tiêu biểu</h2>
-            <p>Khám phá các dự án thành công của chúng tôi</p>
-          </div>
-          <div className="case-studies-grid">
-            {[
-              { title: 'VinFast Factory', description: 'Tự động hóa dây chuyền sản xuất ô tô', image: '🚗' },
-              { title: 'Viettel Data Center', description: 'Hệ thống kho thông minh', image: '🏢' },
-              { title: 'FPT Software', description: 'Robot cộng tác trong R&D', image: '💻' },
-              { title: 'Vingroup Mall', description: 'AGV logistics tự động', image: '🛒' }
-            ].map((project, index) => (
-              <motion.div
-                key={index}
-                className="case-study-card"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <div className="case-study-image">{project.image}</div>
-                <h3>{project.title}</h3>
-                <p>{project.description}</p>
-                <button className="btn btn-outline">Xem chi tiết</button>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-
-        {/* Technology Stack Section */}
-        <div className="tech-stack-section">
-          <div className="section-header">
-            <h2>Công nghệ nền tảng</h2>
-            <p>Được xây dựng trên các công nghệ tiên tiến nhất</p>
-          </div>
-          <div className="tech-stack-grid">
-            {[
-              { name: 'AI/ML', icon: '🧠', description: 'Trí tuệ nhân tạo và học máy' },
-              { name: 'IoT', icon: '🌐', description: 'Internet of Things' },
-              { name: '5G', icon: '📡', description: 'Kết nối 5G tốc độ cao' },
-              { name: 'Cloud', icon: '☁️', description: 'Điện toán đám mây' },
-              { name: 'Edge', icon: '⚡', description: 'Xử lý biên' },
-              { name: 'Blockchain', icon: '🔗', description: 'Công nghệ chuỗi khối' }
-            ].map((tech, index) => (
-              <motion.div
-                key={index}
-                className="tech-stack-item"
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <div className="tech-icon">{tech.icon}</div>
-                <h3>{tech.name}</h3>
-                <p>{tech.description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-
-        {/* Services Section */}
-        <div className="services-section">
-          <div className="section-header">
-            <h2>Dịch vụ hỗ trợ</h2>
-            <p>Đồng hành cùng bạn trong mọi giai đoạn</p>
-          </div>
-          <div className="services-grid">
-            {[
-              { title: 'Tư vấn', icon: '💡', description: 'Phân tích và thiết kế giải pháp' },
-              { title: 'Triển khai', icon: '🚀', description: 'Cài đặt và tích hợp hệ thống' },
-              { title: 'Đào tạo', icon: '🎓', description: 'Huấn luyện nhân viên vận hành' },
-              { title: 'Bảo trì', icon: '🔧', description: 'Bảo trì và nâng cấp liên tục' },
-              { title: 'Hỗ trợ 24/7', icon: '🆘', description: 'Hỗ trợ kỹ thuật không ngừng' },
-              { title: 'Tối ưu', icon: '📈', description: 'Tối ưu hóa hiệu suất hệ thống' }
-            ].map((service, index) => (
-              <motion.div
-                key={index}
-                className="service-card"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <div className="service-icon">{service.icon}</div>
-                <h3>{service.title}</h3>
-                <p>{service.description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-
-        {/* Contact CTA Section */}
-        <div className="contact-cta-section">
-          <div className="cta-content">
-            <h2>Sẵn sàng bắt đầu dự án của bạn?</h2>
-            <p>Liên hệ với chúng tôi để được tư vấn miễn phí và nhận báo giá chi tiết</p>
-            <div className="cta-buttons">
-              <button className="btn btn-primary" onClick={() => setCurrentSection('contact')}>
-                <span>📞</span>
-                <span>Liên hệ ngay</span>
-              </button>
-              <button className="btn btn-secondary">
-                <span>📋</span>
-                <span>Yêu cầu demo</span>
-              </button>
-            </div>
+      {/* Contact CTA Section */}
+      <div className="contact-cta-section">
+        <div className="cta-content">
+          <h2>{t('solutions_3d.cta_title')}</h2>
+          <p>{t('solutions_3d.cta_subtitle')}</p>
+          <div className="cta-buttons">
+            <button className="btn btn-primary" onClick={handleContactClick}>
+              <span>{t('solutions_3d.cta_contact')}</span>
+            </button>
+            <button className="btn btn-secondary" onClick={handleDemoClick}>
+              <span>{t('solutions_3d.cta_demo')}</span>
+            </button>
           </div>
         </div>
       </div>
+
 
       {/* Chat Button */}
       <div className="chat-button">
+        <a href="https://zalo.me/84986249212"style={{textDecoration: 'none',color: 'var(--text-primary)'}}>
         <span className="chat-icon">💬</span>
         <span className="chat-text">Chat với chúng tôi</span>
-        <span className="chat-emoji">👋</span>
+        </a>
       </div>
     </div>
   );

@@ -1,98 +1,133 @@
-import React from 'react';
+import React, { useRef } from 'react';
+import { motion, useInView, useAnimation } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 const ServicesHub: React.FC = () => {
+  const { t } = useTranslation();
+  
   const services = [
     {
       id: 'ai-ml',
-      title: 'AI & Machine Learning',
-      description: 'Phát triển các giải pháp AI và ML cho tự động hóa thông minh.',
-      icon: '🧠',
-      features: [
-        'Computer Vision',
-        'Natural Language Processing',
-        'Predictive Analytics',
-        'Deep Learning Models'
-      ]
+      title: t('services.ai_ml.title'),
+      description: t('services.ai_ml.description'),
+      features: t('services.ai_ml.features', { returnObjects: true }) as string[]
     },
     {
       id: 'iot',
-      title: 'Internet of Things',
-      description: 'Kết nối và giám sát thiết bị thông minh trong hệ sinh thái IoT.',
-      icon: '🌐',
-      features: [
-        'Sensor Networks',
-        'Real-time Monitoring',
-        'Data Analytics',
-        'Cloud Integration'
-      ]
+      title: t('services.iot.title'),
+      description: t('services.iot.description'),
+      features: t('services.iot.features', { returnObjects: true }) as string[]
     },
     {
       id: 'robotics',
-      title: 'Industrial Robotics',
-      description: 'Giải pháp robot công nghiệp cho sản xuất tự động hóa.',
-      icon: '🤖',
-      features: [
-        'Collaborative Robots',
-        'Automated Assembly',
-        'Quality Inspection',
-        'Material Handling'
-      ]
+      title: t('services.robotics.title'),
+      description: t('services.robotics.description'),
+      features: t('services.robotics.features', { returnObjects: true }) as string[]
     },
     {
       id: 'automation',
-      title: 'Process Automation',
-      description: 'Tự động hóa quy trình sản xuất và kinh doanh.',
-      icon: '⚙️',
-      features: [
-        'Workflow Automation',
-        'Process Optimization',
-        'Performance Monitoring',
-        'Error Prevention'
-      ]
+      title: t('services.automation.title'),
+      description: t('services.automation.description'),
+      features: t('services.automation.features', { returnObjects: true }) as string[]
     },
     {
       id: 'analytics',
-      title: 'Data Analytics',
-      description: 'Phân tích dữ liệu để tối ưu hóa hiệu suất và ra quyết định.',
-      icon: '📊',
-      features: [
-        'Big Data Processing',
-        'Business Intelligence',
-        'Performance Metrics',
-        'Predictive Modeling'
-      ]
+      title: t('services.analytics.title'),
+      description: t('services.analytics.description'),
+      features: t('services.analytics.features', { returnObjects: true }) as string[]
     },
     {
       id: 'maintenance',
-      title: 'Predictive Maintenance',
-      description: 'Bảo trì dự đoán để giảm thiểu thời gian ngừng máy.',
-      icon: '🔧',
-      features: [
-        'Condition Monitoring',
-        'Failure Prediction',
-        'Maintenance Scheduling',
-        'Cost Optimization'
-      ]
+      title: t('services.maintenance.title'),
+      description: t('services.maintenance.description'),
+      features: t('services.maintenance.features', { returnObjects: true }) as string[]
     }
   ];
+  // Animation refs và controls
+  const headerRef = useRef(null);
+  const gridRef = useRef(null);
+  
+  const headerInView = useInView(headerRef, { once: true });
+  const gridInView = useInView(gridRef, { once: true });
+  
+  const headerControls = useAnimation();
+  const gridControls = useAnimation();
+
+  // Animation effects
+  React.useEffect(() => {
+    if (headerInView) {
+      headerControls.start("visible");
+    }
+  }, [headerInView, headerControls]);
+
+  React.useEffect(() => {
+    if (gridInView) {
+      gridControls.start("visible");
+    }
+  }, [gridInView, gridControls]);
+
+  // Animation variants
+  const headerVariants = {
+    hidden: { opacity: 0, y: -100 },
+    visible: { opacity: 1, y: 0 }
+  };
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+        delayChildren: 0.1
+      }
+    }
+  };
+
+  const cardVariants = {
+    hidden: { opacity: 0, scale: 0.1 },
+    visible: { 
+      opacity: 1, 
+      scale: 1,
+      transition: {
+        duration: 0.4,
+        ease: "easeOut"
+      }
+    }
+  };
 
   return (
     <section className="services">
       <div className="container">
-        <div className="section-header">
-          <h2 className="section-title">Dịch vụ Công nghệ</h2>
+        <motion.div 
+          ref={headerRef}
+          className="section-header"
+          variants={headerVariants}
+          initial="hidden"
+          animate={headerControls}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+        >
+          <h2 className="section-title">{t('services.section_title')}</h2>
           <p className="section-subtitle">
-            Cung cấp các dịch vụ công nghệ tiên tiến để thúc đẩy chuyển đổi số
+            {t('services.section_subtitle')}
           </p>
-        </div>
+        </motion.div>
 
-        <div className="services-grid">
+        <motion.div 
+          ref={gridRef}
+          className="services-grid"
+          variants={containerVariants}
+          initial="hidden"
+          animate={gridControls}
+        >
           {services.map((service) => (
-            <div key={service.id} className="service-card">
-              <div className="service-icon">
-                {service.icon}
-              </div>
-              
+            <motion.div 
+              key={service.id} 
+              className="service-card"
+              variants={cardVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{amount: 0.2 }}
+            >
               <h3 className="service-title">{service.title}</h3>
               <p className="service-description">{service.description}</p>
               
@@ -101,9 +136,9 @@ const ServicesHub: React.FC = () => {
                   <li key={index}>{feature}</li>
                 ))}
               </ul>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

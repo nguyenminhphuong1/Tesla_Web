@@ -1,0 +1,134 @@
+{
+  "agv": {
+    "title": "AGV Tự động",
+    "titleEn": "Automated Guided Vehicle",
+    "description": "Hệ thống xe tự động dẫn đường thông minh cho logistics và sản xuất",
+    "features": [
+      "Dẫn đường laser SLAM",
+      "Tải trọng 500-2000kg",
+      "Tích hợp WMS/ERP",
+      "Bảo mật đa lớp",
+      "Báo cáo real-time",
+      "Bảo trì dự đoán"
+    ],
+    "applications": [
+      "Kho hàng tự động",
+      "Sản xuất linh hoạt",
+      "Bệnh viện",
+      "Trung tâm phân phối",
+      "Nhà máy thông minh",
+      "Logistics"
+    ],
+    "benefits": [
+      "Giảm 60% chi phí vận hành",
+      "Tăng 80% hiệu suất",
+      "An toàn 100%",
+      "Linh hoạt 24/7"
+    ],
+    "technology": [
+      "SLAM Navigation",
+      "LiDAR Sensing",
+      "AI Path Planning",
+      "5G Connectivity",
+      "Edge Computing",
+      "IoT Integration"
+    ],
+    "stats": [
+      { "labelKey": "load_capacity", "value": "2000kg" },
+      { "labelKey": "speed", "value": "2m/s" },
+      { "labelKey": "battery", "value": "8h" },
+      { "labelKey": "accuracy", "value": "±5mm" }
+    ]
+  },
+  "camera": {
+    "title": "Camera AI nhận diện",
+    "titleEn": "Autonomous Mobile Robot",
+    "description": "Robot di động tự chủ với AI tiên tiến cho môi trường phức tạp",
+    "features": [
+      "Nhận diện khuôn mặt",
+      "Nhận diện đối tượng",
+      "Theo dõi chuyển động",
+      "Nhận diện biển số",
+      "Kiểm tra chất lượng sản phẩm",
+      "Giám sát an ninh & an toàn"
+    ],
+    "applications": [
+      "Thương mại điện tử & bán lẻ",
+      "Sản xuất",
+      "Logistics & Chuỗi cung ứng",
+      "Thực phẩm & đồ uống",
+      "Y tế & Dược phẩm",
+      "Giám sát & nhận diện"
+    ],
+    "benefits": [
+      "Tự học và thích nghi",
+      "Tương tác tự nhiên",
+      "Bảo mật cao",
+      "Mở rộng dễ dàng"
+    ],
+    "technology": [
+      "Deep Learning",
+      "Computer Vision",
+      "Natural Language Processing",
+      "Cloud AI",
+      "5G Network",
+      "Blockchain"
+    ],
+    "stats": [
+      { "labelKey": "load_capacity", "value": "1500kg" },
+      { "labelKey": "speed", "value": "1.5m/s" },
+      { "labelKey": "battery", "value": "10h" },
+      { "labelKey": "accuracy", "value": "±3mm" }
+    ]
+  },
+  "warehouse": {
+    "title": "Kho thông minh",
+    "titleEn": "Smart Warehouse",
+    "description": "Hệ thống kho tự động hóa hoàn toàn với robot và AI",
+    "features": [
+      "Quản lý tồn kho theo thời gian thực",
+      "Tự động hóa vận chuyển nội bộ",
+      "Tối ưu không gian lưu trữ",
+      "Xử lý đơn hàng nhanh chóng",
+      "Phân tích & dự báo bằng dữ liệu",
+      "Giám sát & an ninh thông minh"
+    ],
+    "applications": [
+      "Thương mại điện tử",
+      "Sản xuất",
+      "Dược phẩm",
+      "Thực phẩm và đồ uống",
+      "Ô tô",
+      "Điện tử"
+    ],
+    "benefits": [
+      "Tối ưu không gian",
+      "Giảm lỗi",
+      "Tăng tốc độ",
+      "Tiết kiệm chi phí"
+    ],
+    "technology": [
+      "AS/RS Technology",
+      "WMS Integration",
+      "IoT Sensors",
+      "AI Analytics",
+      "Cloud Platform",
+      "Digital Twin"
+    ],
+    "stats": [
+      { "labelKey": "capacity", "value": "50,000m³" },
+      { "labelKey": "throughput", "value": "10,000/h" },
+      { "labelKey": "accuracy", "value": "99.9%" },
+      { "labelKey": "savings", "value": "70%" }
+    ]
+  },
+  "stats": {
+    "load_capacity": "Tải trọng",
+    "speed": "Tốc độ",
+    "battery": "Pin",
+    "accuracy": "Độ chính xác",
+    "capacity": "Dung tích",
+    "throughput": "Thông lượng",
+    "savings": "Tiết kiệm"
+  }
+}

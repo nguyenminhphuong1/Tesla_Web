@@ -1,0 +1,65 @@
+{
+  "ai-ml": {
+    "name": "Trí tuệ nhân tạo ",
+    "category": "Trí tuệ nhân tạo",
+    "description": "Công nghệ trí tuệ nhân tạo và học máy tiên tiến cho tự động hóa thông minh.",
+    "features": [
+      "Thị giác máy tính",
+      "Ngôn ngữ tự nhiên",
+      "Dự đoán bảo trì",
+      "Học sâu",
+      "Mạng nơ-ron",
+      "Học tăng cường"
+    ],
+    "applications": [
+      "Nhận diện hình ảnh",
+      "Xử lý ngôn ngữ tự nhiên",
+      "Dự đoán bảo trì",
+      "Tối ưu hóa quy trình",
+      "Kiểm soát chất lượng",
+      "Phân tích dữ liệu"
+    ]
+  },
+  "iot": {
+    "name": "IoT & Kết nối",
+    "category": "IoT & Kết nối",
+    "description": "Hệ thống kết nối thiết bị thông minh và thu thập dữ liệu real-time.",
+    "features": [
+      "Mạng cảm biến",
+      "Giám sát thời gian thực",
+      "Tích hợp Cloud",
+      "Edge Computing",
+      "Giao tiếp không dây",
+      "Phân tích dữ liệu"
+    ],
+    "applications": [
+      "Giám sát nhà máy",
+      "Quản lý năng lượng",
+      "Theo dõi tài sản",
+      "Bảo trì dự đoán",
+      "An toàn lao động",
+      "Tối ưu hóa sản xuất"
+    ]
+  },
+  "robotics": {
+    "name": "Robot công nghiệp",
+    "category": "Robot tiên tiến",
+    "description": "Robot công nghiệp thông minh với độ chính xác cao và khả năng thích ứng.",
+    "features": [
+      "Robot cộng tác",
+      "Điều khiển chính xác",
+      "Hệ thống an toàn",
+      "Lập trình dễ dàng",
+      "Tích hợp linh hoạt",
+      "Giám sát từ xa"
+    ],
+    "applications": [
+      "Lắp ráp tự động",
+      "Hàn và cắt",
+      "Xử lý vật liệu",
+      "Kiểm tra chất lượng",
+      "Đóng gói",
+      "Vận chuyển"
+    ]
+  }
+}

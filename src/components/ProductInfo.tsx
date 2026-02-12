@@ -1,294 +1,242 @@
-import React, { useState, useEffect } from 'react';
-import { Canvas } from '@react-three/fiber';
-import { OrbitControls, Environment, Float } from '@react-three/drei';
-import { useGLTF } from '@react-three/drei';
-import { useAppStore } from '../store/appStore';
+import { useEffect, useMemo, useState } from "react"
+import { motion, AnimatePresence } from "framer-motion"
+import { useNavigate, useLocation } from "react-router-dom"
+import { useTranslation } from "react-i18next"
+import { ProductCard } from "./ProductCard"
+import productsData from "../data/products.json"
+import type { Brand, Category, Product } from "../types/products"
 
-// 3D Model Components
-const RobotModel = () => {
-  const [error, setError] = useState(false);
-  
-  if (error) {
-    return <ModelFallback color="#00d4ff" />;
+// Sử dụng dữ liệu từ file JSON
+const mockBrands: Brand[] = productsData.brands
+
+// Export để các component khác có thể sử dụng
+export { mockBrands }
+
+export default function ProductInfo() {
+  const [selectedBrand, setSelectedBrand] = useState<Brand | null>(null)
+  const [selectedCategory, setSelectedCategory] = useState<Category | null>(null)
+  const navigate = useNavigate()
+  const location = useLocation()
+  const { t } = useTranslation()
+
+  // Tạo all brands và all categories
+  const allBrands = { id: "all", name: t('product.all_brands'), categories: [] }
+  const allCategories = { id: "all", name: t('product.all_categories'), products: [] }
+
+  // Lấy tất cả sản phẩm từ tất cả hãng
+  const getAllProducts = () => {
+    const allProducts: Product[] = []
+    mockBrands.forEach(brand => {
+      brand.categories.forEach(category => {
+        allProducts.push(...category.products)
+      })
+    })
+    return allProducts
   }
-  
-  try {
-    const { scene } = useGLTF('/models/logistic_robot_test__2.glb');
-    return <primitive object={scene} scale={0.8} />;
-  } catch (error) {
-    console.warn('Error loading Robot Model:', error);
-    setError(true);
-    return <ModelFallback color="#00d4ff" />;
+
+  // Lấy tất cả danh mục từ tất cả hãng (gộp các danh mục trùng tên)
+  const getAllCategories = () => {
+    const categoryMap = new Map<string, Category>()
+    
+    mockBrands.forEach(brand => {
+      brand.categories.forEach(category => {
+        if (categoryMap.has(category.name)) {
+          // Nếu danh mục đã tồn tại, gộp sản phẩm
+          const existingCategory = categoryMap.get(category.name)!
+          existingCategory.products.push(...category.products)
+        } else {
+          // Nếu danh mục chưa tồn tại, tạo mới
+          categoryMap.set(category.name, {
+            id: category.name, // Sử dụng name làm id để gộp
+            name: category.name,
+            products: [...category.products]
+          })
+        }
+      })
+    })
+    
+    return Array.from(categoryMap.values())
   }
-};
 
-const AGVModel = () => {
-  const [error, setError] = useState(false);
-  
-  if (error) {
-    return <ModelFallback color="#ff6b35" />;
-  }
-  
-  try {
-    const { scene } = useGLTF('/models/industrial_-_3d_agv__trolley_-_omrom.glb');
-    return <primitive object={scene} scale={0.8} />;
-  } catch (error) {
-    console.warn('Error loading AGV Model:', error);
-    setError(true);
-    return <ModelFallback color="#ff6b35" />;
-  }
-};
+  const allCategoriesList = useMemo(() => getAllCategories(), [])
 
-const LaserModel = () => {
-  const [error, setError] = useState(false);
-  
-  if (error) {
-    return <ModelFallback color="#8b5cf6" />;
-  }
-  
-  try {
-    const { scene } = useGLTF('/models/simulation_laser_cutting_robot_systems.glb');
-    return <primitive object={scene} scale={0.8} />;
-  } catch (error) {
-    console.warn('Error loading Laser Model:', error);
-    setError(true);
-    return <ModelFallback color="#8b5cf6" />;
-  }
-};
-
-const ModelFallback = ({ color }: { color: string }) => (
-  <mesh>
-    <boxGeometry args={[2, 2, 2]} />
-    <meshStandardMaterial color={color} />
-  </mesh>
-);
-
-const ProductInfo: React.FC = () => {
-  const { setCurrentSection } = useAppStore();
-  const [activeProduct, setActiveProduct] = useState(0);
-
-  const products = [
-    {
-      id: 'industrial-robot',
-      name: 'Robot Công nghiệp',
-      category: 'Industrial Robotics',
-      description: 'Robot công nghiệp 6 trục với độ chính xác cao, phù hợp cho các ứng dụng lắp ráp, hàn, và xử lý vật liệu.',
-      features: [
-        'Độ chính xác ±0.02mm',
-        'Tải trọng 6-20kg',
-        'Tầm với 1.4-2.1m',
-        'Tích hợp AI Vision',
-        'Giao diện người dùng thân thiện',
-        'Bảo trì dễ dàng'
-      ],
-      specs: {
-        'Tốc độ': '2.5 m/s',
-        'Độ chính xác': '±0.02mm',
-        'Tải trọng': '6-20kg',
-        'Tầm với': '1.4-2.1m',
-        'Nguồn điện': '220V/380V',
-        'Bảo hành': '24 tháng'
-      },
-      model: RobotModel,
-      color: '#00d4ff',
-      icon: '🤖'
-    },
-    {
-      id: 'agv-system',
-      name: 'Hệ thống AGV',
-      category: 'Automated Guided Vehicle',
-      description: 'Xe tự hành AGV thông minh cho vận chuyển và logistics trong nhà máy, kho bãi.',
-      features: [
-        'Điều hướng SLAM',
-        'Tải trọng 500-2000kg',
-        'Tốc độ 1.5 m/s',
-        'Pin Li-ion 8-12h',
-        'Hệ thống an toàn đa lớp',
-        'Tích hợp WMS/ERP'
-      ],
-      specs: {
-        'Tốc độ': '1.5 m/s',
-        'Tải trọng': '500-2000kg',
-        'Pin': 'Li-ion 8-12h',
-        'Độ chính xác': '±10mm',
-        'Nhiệt độ': '-10°C ~ 50°C',
-        'Bảo hành': '18 tháng'
-      },
-      model: AGVModel,
-      color: '#ff6b35',
-      icon: '🚗'
-    },
-    {
-      id: 'laser-cutting',
-      name: 'Máy Cắt Laser',
-      category: 'Laser Cutting System',
-      description: 'Hệ thống cắt laser CNC tự động với công nghệ fiber laser, phù hợp cho sản xuất công nghiệp.',
-      features: [
-        'Công suất 1-6kW',
-        'Độ chính xác ±0.1mm',
-        'Tốc độ cắt cao',
-        'Tự động thay đổi lens',
-        'Hệ thống làm mát',
-        'Giao diện CNC'
-      ],
-      specs: {
-        'Công suất': '1-6kW',
-        'Độ chính xác': '±0.1mm',
-        'Tốc độ cắt': '50m/min',
-        'Kích thước bàn': '1500x3000mm',
-        'Độ dày tối đa': '25mm',
-        'Bảo hành': '12 tháng'
-      },
-      model: LaserModel,
-      color: '#8b5cf6',
-      icon: '⚡'
-    }
-  ];
-
+  // Đồng bộ selectedCategory theo query ?category=
   useEffect(() => {
-    const interval = setInterval(() => {
-      setActiveProduct((prev) => (prev + 1) % products.length);
-    }, 8000);
+    const params = new URLSearchParams(location.search)
+    const categoryQuery = params.get('category')
+    if (!categoryQuery) {
+      return
+    }
+    const found = allCategoriesList.find(c => c.name.toLowerCase() === categoryQuery.toLowerCase())
+    if (found) {
+      setSelectedBrand(null)
+      setSelectedCategory(found)
+    }
+  }, [location.search, allCategoriesList])
 
-    return () => clearInterval(interval);
-  }, [products.length]);
+  // Lấy sản phẩm dựa trên brand và category được chọn (đã sắp xếp theo tên)
+  const getCurrentProducts = () => {
+    let products: Product[] = []
 
-  const currentProduct = products[activeProduct];
-  const ModelComponent = currentProduct?.model;
+    if (!selectedBrand || selectedBrand.id === "all") {
+      if (!selectedCategory || selectedCategory.id === "all") {
+        products = getAllProducts()
+      } else {
+        // Lấy sản phẩm từ category cụ thể trong tất cả hãng
+        mockBrands.forEach(brand => {
+          brand.categories.forEach(category => {
+            if (category.name === selectedCategory.name) {
+              products.push(...category.products)
+            }
+          })
+        })
+      }
+    } else {
+      if (!selectedCategory || selectedCategory.id === "all") {
+        // Lấy tất cả sản phẩm từ brand cụ thể
+        selectedBrand.categories.forEach(category => {
+          products.push(...category.products)
+        })
+      } else {
+        // Lấy sản phẩm từ brand và category cụ thể
+        products = selectedCategory.products
+      }
+    }
 
-  if (!currentProduct || !ModelComponent) {
-    return (
-      <section className="products-section">
-        <div className="container">
-          <div className="section-header">
-            <h2 className="section-title">Sản phẩm Công nghệ</h2>
-            <p className="section-subtitle">
-              Khám phá các sản phẩm robot và tự động hóa tiên tiến của chúng tôi
-            </p>
-          </div>
-          <div className="loading-3d">
-            <div className="spinner"></div>
-            <p>Đang tải sản phẩm...</p>
-          </div>
-        </div>
-      </section>
-    );
+    // return products.slice().sort((a, b) => a.name.localeCompare(b.name, 'vi', { numeric: true, sensitivity: 'base' }))
+    return products.slice()
+  }
+
+  const handleBrandChange = (brand: Brand | null) => {
+    setSelectedBrand(brand)
+    setSelectedCategory(null)
+  }
+
+  const handleCategoryChange = (category: Category | null) => {
+    setSelectedCategory(category)
+  }
+
+  const handleViewDetails = (product: Product) => {
+    // Navigate to product detail page
+    navigate(`/product/${product.id}`)
   }
 
   return (
-    <section className="products-section">
-      <div className="container">
-        <div className="section-header">
-          <h2 className="section-title">Sản phẩm Công nghệ</h2>
-          <p className="section-subtitle">
-            Khám phá các sản phẩm robot và tự động hóa tiên tiến của chúng tôi
-          </p>
-        </div>
-
-        <div className="product-showcase">
-          <div className="product-visual">
-            <div className="product-3d-container">
-              <Canvas
-                camera={{ position: [0, 0, 8], fov: 50 }}
-                onError={(error) => console.warn('Canvas error:', error)}
-              >
-                <ambientLight intensity={0.6} />
-                <pointLight position={[10, 10, 10]} intensity={1} />
-                <pointLight position={[-10, -10, -10]} intensity={0.5} />
-                <Float
-                  speed={2}
-                  rotationIntensity={0.5}
-                  floatIntensity={0.5}
-                >
-                  <ModelComponent />
-                </Float>
-                <OrbitControls 
-                  enableZoom={true}
-                  enablePan={false}
-                  enableRotate={true}
-                  zoomSpeed={0.5}
-                  rotateSpeed={0.5}
-                  minDistance={4}
-                  maxDistance={12}
-                />
-                <Environment preset="city" />
-              </Canvas>
-            </div>
-            
-            <div className="product-indicators">
-              {products.map((product, index) => (
-                <button
-                  key={product.id}
-                  className={`product-indicator ${activeProduct === index ? 'active' : ''}`}
-                  onClick={() => setActiveProduct(index)}
-                  style={{ '--indicator-color': product.color } as any}
-                >
-                  <span className="indicator-icon">{product.icon}</span>
-                  <span className="indicator-label">{product.name}</span>
-                </button>
-              ))}
-            </div>
-          </div>
-
-          <div className="product-details">
-            <div className="product-header">
-              <div className="product-badge" style={{ '--badge-color': currentProduct.color } as any}>
-                <span>{currentProduct.icon}</span>
-                <span>{currentProduct.category}</span>
-              </div>
-              
-              <h3 className="product-name">{currentProduct.name}</h3>
-              <p className="product-description">{currentProduct.description}</p>
-            </div>
-
-            <div className="product-content">
-              <div className="product-features">
-                <h4>Tính năng nổi bật</h4>
-                <ul>
-                  {currentProduct.features.map((feature, index) => (
-                    <li key={index}>
-                      <span className="feature-icon">✓</span>
-                      <span>{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <div className="product-specs">
-                <h4>Thông số kỹ thuật</h4>
-                <div className="specs-grid">
-                  {Object.entries(currentProduct.specs).map(([key, value]) => (
-                    <div key={key} className="spec-item">
-                      <span className="spec-label">{key}</span>
-                      <span className="spec-value">{value}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-
-            <div className="product-actions">
-              <button 
-                className="btn btn-primary"
-                onClick={() => setCurrentSection('contact')}
-              >
-                <span>📞</span>
-                <span>Tư vấn ngay</span>
-              </button>
-              
-              <button 
-                className="btn btn-secondary"
-                onClick={() => setCurrentSection('solutions')}
-              >
-                <span>💡</span>
-                <span>Xem giải pháp</span>
-              </button>
-            </div>
-          </div>
+    <div className="product-info-container">
+      {/* Brand Tabs */}
+      <div className="brand-tabs">
+        <div className="brand-tabs-wrapper">
+          {/* All Brands Tab */}
+          <button
+            onClick={() => handleBrandChange(null)}
+            className={`brand-tab ${!selectedBrand ? "active" : "inactive"}`}
+          >
+            {allBrands.name}
+          </button>
+          
+          {/* Individual Brand Tabs */}
+          {mockBrands.map((brand) => (
+            <button
+              key={brand.id}
+              onClick={() => handleBrandChange(brand)}
+              className={`brand-tab ${selectedBrand?.id === brand.id ? "active" : "inactive"}`}
+            >
+              {brand.name}
+            </button>
+          ))}
         </div>
       </div>
-    </section>
-  );
-};
 
-export default ProductInfo; 
+      <div className="main-layout">
+        {/* Category Sidebar */}
+        <AnimatePresence mode="wait">
+            <motion.div
+             key={selectedBrand?.id || 'all'}
+             initial={{ opacity: 0, x: -20 }}
+             animate={{ opacity: 1, x: 0 }}
+             exit={{ opacity: 0, x: 20 }}
+             transition={{ duration: 0.3 }}
+             className="category-sidebar"
+           >
+            <div className="category-sidebar-content">
+              <h3 className="category-title">{t('product.categories')}</h3>
+              <div className="category-buttons">
+                {/* All Categories Tab */}
+                <button
+                  onClick={() => handleCategoryChange(null)}
+                  className={`category-button ${!selectedCategory ? "active" : "inactive"}`}
+                >
+                  {allCategories.name}
+                  <span className="category-product-count">
+                    {getCurrentProducts().length} {t('product.products')}
+                  </span>
+                </button>
+                
+                {/* Individual Category Tabs */}
+                {(selectedBrand ? selectedBrand.categories : getAllCategories()).map((category) => (
+                  <button
+                    key={category.id}
+                    onClick={() => handleCategoryChange(category)}
+                    className={`category-button ${selectedCategory?.id === category.id ? "active" : "inactive"}`}
+                  >
+                    {category.name}
+                                         <span className="category-product-count">
+                       {selectedBrand 
+                         ? category.products.length 
+                         : mockBrands.reduce((total, brand) => {
+                             const cat = brand.categories.find(c => c.name === category.name)
+                             return total + (cat ? cat.products.length : 0)
+                           }, 0)
+                       } {t('product.products')}
+                     </span>
+                  </button>
+                ))}
+              </div>
+            </div>
+          </motion.div>
+        </AnimatePresence>
+
+        {/* Main Content */}
+        <div className="main-content">
+          {/* Products Grid */}
+          <AnimatePresence mode="wait">
+                         <motion.div
+               key={`${selectedBrand?.id || 'all'}-${selectedCategory?.id || 'all'}`}
+               initial={{ opacity: 0, y: 20 }}
+               animate={{ opacity: 1, y: 0 }}
+               exit={{ opacity: 0, y: -20 }}
+               transition={{ duration: 0.4 }}
+             >
+              <div className="content-header">
+                <h2 className="content-title">
+                  {selectedBrand ? selectedBrand.name : allBrands.name} - {selectedCategory ? selectedCategory.name : allCategories.name}
+                </h2>
+                <p className="content-subtitle">{getCurrentProducts().length} {t('product.products')}</p>
+              </div>
+
+              <div className="products-grid">
+                {getCurrentProducts().map((product) => (
+             
+                  <ProductCard product={product} onViewDetails={handleViewDetails} />
+                ))}
+              </div>
+            </motion.div>
+          </AnimatePresence>
+
+          {/* Empty State */}
+          {getCurrentProducts().length === 0 && (
+            <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="empty-state">
+              <h3 className="empty-state-title">{t('product.no_products')}</h3>
+              <p className="empty-state-description">
+                {selectedBrand && selectedCategory 
+                  ? t('product.no_products_in_category', { brand: selectedBrand.name, category: selectedCategory.name })
+                  : t('product.no_products_found')
+                }
+              </p>
+            </motion.div>
+          )}
+        </div>
+      </div>
+    </div>
+  )
+}

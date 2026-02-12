@@ -1,0 +1,65 @@
+{
+  "ai-ml": {
+    "name": "AI & Machine Learning",
+    "category": "Artificial Intelligence",
+    "description": "Advanced artificial intelligence and machine learning technology for intelligent automation.",
+    "features": [
+      "Computer Vision",
+      "Natural Language Processing",
+      "Predictive Analytics",
+      "Deep Learning",
+      "Neural Networks",
+      "Reinforcement Learning"
+    ],
+    "applications": [
+      "Image Recognition",
+      "Natural Language Processing",
+      "Predictive Maintenance",
+      "Process Optimization",
+      "Quality Control",
+      "Data Analysis"
+    ]
+  },
+  "iot": {
+    "name": "Internet of Things",
+    "category": "IoT & Connectivity",
+    "description": "Smart device connection system and real-time data collection.",
+    "features": [
+      "Sensor Networks",
+      "Real-time Monitoring",
+      "Cloud Integration",
+      "Edge Computing",
+      "Wireless Communication",
+      "Data Analytics"
+    ],
+    "applications": [
+      "Factory Monitoring",
+      "Energy Management",
+      "Asset Tracking",
+      "Predictive Maintenance",
+      "Workplace Safety",
+      "Production Optimization"
+    ]
+  },
+  "robotics": {
+    "name": "Industrial Robotics",
+    "category": "Advanced Robotics",
+    "description": "Intelligent industrial robots with high precision and adaptability.",
+    "features": [
+      "Collaborative Robots",
+      "Precision Control",
+      "Safety Systems",
+      "Easy Programming",
+      "Flexible Integration",
+      "Remote Monitoring"
+    ],
+    "applications": [
+      "Automated Assembly",
+      "Welding and Cutting",
+      "Material Handling",
+      "Quality Inspection",
+      "Packaging",
+      "Transportation"
+    ]
+  }
+}
